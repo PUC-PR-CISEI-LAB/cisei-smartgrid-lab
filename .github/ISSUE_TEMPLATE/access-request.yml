@@ -1,0 +1,65 @@
+name: Solicitação de acesso
+description: Pedido de acesso aos repositórios privados do CISEI Smart Grid Lab
+title: "[acesso] <nome completo>"
+labels: ["access-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Preencha todos os campos. Solicitações incompletas ou sem vínculo institucional verificável serão fechadas sem concessão.
+        **Não inclua dados sensíveis** (documentos, telefones) — apenas as informações solicitadas.
+  - type: input
+    id: full-name
+    attributes:
+      label: Nome completo
+    validations:
+      required: true
+  - type: input
+    id: institutional-email
+    attributes:
+      label: E-mail institucional PUC-PR
+      description: "Formato: nome@pucpr.br ou nome@pucpr.edu.br"
+    validations:
+      required: true
+  - type: input
+    id: github-username
+    attributes:
+      label: Usuário GitHub
+      description: O convite será enviado a esta conta.
+    validations:
+      required: true
+  - type: dropdown
+    id: role
+    attributes:
+      label: Vínculo
+      options:
+        - Estudante de pós-graduação (mestrado/doutorado)
+        - Estudante de iniciação científica / graduação
+        - Docente / pesquisador PUC-PR
+        - Parceiro externo (acordo institucional)
+    validations:
+      required: true
+  - type: input
+    id: advisor
+    attributes:
+      label: Orientador(a)
+      description: Obrigatório para estudantes. Nome do(a) orientador(a) vinculado(a) ao laboratório.
+  - type: dropdown
+    id: research-line
+    attributes:
+      label: Linha de pesquisa pretendida
+      options:
+        - IA/ML aplicada a dados de comunicação
+        - Experimentos de topologia wireless (900 MHz)
+        - Simulação de redes (NS-3 / LTE)
+        - SDN e protocolos de rede elétrica
+        - Outra / ainda não definida
+    validations:
+      required: true
+  - type: textarea
+    id: justification
+    attributes:
+      label: Justificativa
+      description: Objetivo da pesquisa e uso pretendido do laboratório (3–5 linhas).
+    validations:
+      required: true
