@@ -1,0 +1,1241 @@
+% Arquivo de referências bibliográficas — cisei-smartgrid-lab
+%
+% ==============================================================================
+% NATUREZA DO CONTEÚDO E LICENÇA (ADR-022, ação 8)
+% ==============================================================================
+% As entradas deste arquivo são REGISTROS BIBLIOGRÁFICOS que descrevem obras de
+% terceiros — artigos, normas, livros, relatórios e documentação de ferramentas.
+%
+% 1. As obras descritas NÃO são licenciadas por este repositório. Cada uma
+%    permanece sujeita aos termos de seu próprio detentor de direitos.
+% 2. Nenhum texto integral, PDF, norma ou anexo de terceiro é distribuído aqui:
+%    este arquivo contém exclusivamente metadados de identificação e localização.
+% 3. A compilação — a seleção, a organização e as chaves de citação — é obra do
+%    CISEI Lab (PUC-PR) e segue a licença de documentação do repositório.
+% 4. Referência a uma obra não implica endosso, afiliação ou autorização de
+%    redistribuição por parte de seus autores ou editores.
+%
+% Ver LICENSE-DOCS.md, NOTICE e ADR-022 (Política de Licenciamento).
+%
+% INSTRUÇÕES DE USO:
+% 1. Importe este arquivo no Zotero via Arquivo > Importar > BibTeX
+% 2. Verifique cada entrada: DOI, URL, número de edição e ano podem ter mudado
+% 3. Use o Better BibTeX (plugin Zotero) para manter sincronização automática
+% 4. Chaves de citação no formato AutorAno (ex: Kazman2000)
+%
+% FORMATO DE SAÍDA ABNT NBR 6023:2018:
+% No Zotero, instale o CSL "ABNT NBR 6023:2018 (author-date)" via:
+%   Editar > Preferências > Citar > Estilos > Obter estilos adicionais
+% Buscar: "ABNT NBR 6023"
+% Isso permite exportar referências em formato ABNT diretamente do Zotero.
+%
+% ATENÇÃO: entradas marcadas com % [VERIFICAR] precisam de confirmação
+% antes de uso em submissão acadêmica.
+
+% ===========================================================================
+% ENQUADRAMENTO NORMATIVO E CIENTÍFICO DO LABORATÓRIO (README — Referências)
+% Três níveis: (1) política/regulação nacional, (2) regulação técnica,
+% (3) frameworks de pesquisa e arquitetura de sistemas.
+% Datas de acesso conferidas em 2026-06-23. IEC 61850 e IEC 62443 já têm
+% entradas próprias acima ([IEC61850], [IEC62443]) e não são duplicadas aqui.
+% ===========================================================================
+
+% --- Nível 1 — Âncoras de Política e Regulação Nacional --------------------
+
+@misc{PortariaMME440_2010,
+  author       = {{Brasil. Ministério de Minas e Energia}},
+  title        = {Portaria {MME} nº 440, de 2010},
+  year         = {2010},
+  howpublished = {Diário Oficial da União},
+  note         = {Institui o Grupo de Trabalho interministerial (MME, EPE, Eletrobras, CEPEL, ANEEL) para subsidiar o Programa Brasileiro de Rede Elétrica Inteligente; identifica IEC 61850 e ICCP como trajetória tecnológica nacional e interoperabilidade via ABNT/CB-03. % [VERIFICAR] dia/mês exatos da portaria. Acesso em: 23 jun. 2026.}
+}
+
+@misc{Decreto12068_2024,
+  author       = {{Brasil}},
+  title        = {Decreto nº 12.068, de 20 de junho de 2024},
+  year         = {2024},
+  howpublished = {Diário Oficial da União},
+  note         = {Incorpora o estímulo à digitalização progressiva das redes de distribuição como condicionante das renovações de concessão; estabelece governança e indicadores de continuidade e eficiência. Disponível em: https://www.gov.br/mme/pt-br/acesso-a-informacao/legislacao/decretos/2024/decreto-n-12-068-2024.pdf. Acesso em: 23 jun. 2026.}
+}
+
+@misc{PortariaMME111_2025,
+  author       = {{Brasil. Ministério de Minas e Energia}},
+  title        = {Portaria Normativa {MME} nº 111, de 18 de junho de 2025},
+  year         = {2025},
+  howpublished = {Diário Oficial da União},
+  note         = {Diretrizes gerais para digitalização gradual das redes e serviços de distribuição de baixa tensão: Open Energy, segurança cibernética, interoperabilidade AMI, resiliência climática e resposta da demanda. Disponível em: https://www.gov.br/mme/pt-br/acesso-a-informacao/legislacao/portarias/2025/portaria-normativa-mme-n-111-2025.pdf. Acesso em: 23 jun. 2026.}
+}
+
+@misc{PortariaMME126_2026,
+  author       = {{Brasil. Ministério de Minas e Energia}},
+  title        = {Portaria Normativa {MME} nº 126, de 28 de janeiro de 2026},
+  year         = {2026},
+  howpublished = {Diário Oficial da União},
+  note         = {Operacionaliza a Portaria 111/2025: meta compulsória de 2\% a.a. de UCs com medição inteligente a partir de mar. 2026, requisitos mínimos de funcionalidade (comunicação remota AMI, segurança cibernética, corte/religamento remoto, interoperabilidade), Plano de Investimentos quinquenal e ACB até fev. 2028. Disponível em: https://www.gov.br/mme/pt-br/acesso-a-informacao/legislacao/portarias/2026/portaria-normativa-mme-n-126-2026.pdf. Acesso em: 23 jun. 2026.}
+}
+
+@techreport{EPEpde2032,
+  author      = {{Empresa de Pesquisa Energética}},
+  title       = {Plano Decenal de Expansão de Energia 2032},
+  institution = {EPE / Ministério de Minas e Energia},
+  year        = {2023},
+  address     = {Brasília, DF, Brasil},
+  note        = {Planejamento estratégico decenal do setor elétrico: expansão de DER, microrredes e digitalização da distribuição. % [VERIFICAR] ano de publicação do PDE 2032. Disponível em: https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/plano-decenal-de-expansao-de-energia-pde. Acesso em: 23 jun. 2026.}
+}
+
+@misc{ANEELagenda2025,
+  author       = {{Agência Nacional de Energia Elétrica}},
+  title        = {Agenda Regulatória 2025--2026},
+  year         = {2025},
+  howpublished = {ANEEL},
+  note         = {Prioridades normativas em curso: medição inteligente (AIR em elaboração), modelo DSO e resiliência de redes. Disponível em: https://www.aneel.gov.br/agenda-regulatoria. Acesso em: 23 jun. 2026.}
+}
+
+@techreport{IEAgrids2023,
+  author      = {{International Energy Agency}},
+  title       = {Electricity Grids and Secure Energy Transitions},
+  institution = {IEA},
+  year        = {2023},
+  address     = {Paris, France},
+  note        = {Modernização das redes exige avanços simultâneos em infraestrutura física, digitalização, operação e governança. % [VERIFICAR] ano da edição citada. Disponível em: https://www.iea.org/reports/electricity-grids-and-secure-energy-transitions. Acesso em: 23 jun. 2026.}
+}
+
+% --- Nível 2 — Âncoras Regulatórias Técnicas -------------------------------
+% IEC 61850 → ver [IEC61850]; IEC 62443 → ver [IEC62443] (entradas acima).
+
+@misc{ANEELprodist,
+  author       = {{Agência Nacional de Energia Elétrica}},
+  title        = {{PRODIST} --- Procedimentos de Distribuição de Energia Elétrica no Sistema Elétrico Nacional},
+  year         = {2024},
+  howpublished = {ANEEL},
+  note         = {Requisitos técnicos nacionais de qualidade, medição e operação da distribuição; documento em revisões periódicas. % [VERIFICAR] módulo e revisão vigente. Disponível em: https://www.aneel.gov.br/prodist. Acesso em: 23 jun. 2026.}
+}
+
+@standard{ABNT16968_2022,
+  title        = {Perfil {DLMS/COSEM} para medidores inteligentes de energia elétrica},
+  organization = {ABNT},
+  number       = {NBR 16968:2022},
+  year         = {2022},
+  note         = {Padrão nacional de comunicação AMI baseado em IEC 62056. Disponível em: https://www.abnt.org.br. Acesso em: 23 jun. 2026.}
+}
+
+@standard{IEC62351,
+  title        = {Power Systems Management and Associated Information Exchange --- Data and Communications Security},
+  organization = {IEC},
+  number       = {62351},
+  year         = {2018},
+  note         = {Série de segurança para os protocolos IEC TC57: autenticação (TLS, HMAC), RBAC, gestão de PKI e monitoramento de rede (NSM). Verificar parte específica citada. Disponível em: https://webstore.iec.ch/publication/6903. Acesso em: 23 jun. 2026. % [VERIFICAR] ano/parte}
+}
+
+% --- Nível 3 — Frameworks de Pesquisa e Arquitetura de Sistemas ------------
+
+@techreport{NISTsp1108r4,
+  author      = {{National Institute of Standards and Technology}},
+  title       = {{NIST} Framework and Roadmap for Smart Grid Interoperability Standards, Release 4.0},
+  institution = {NIST},
+  year        = {2021},
+  number      = {Special Publication 1108r4},
+  address     = {Gaithersburg, MD, USA},
+  doi         = {10.6028/NIST.SP.1108r4},
+  note        = {Quatro cenários de comunicação (Legacy Utility, High-DER, Microgrid, Advanced Bulk), perfis de interoperabilidade e estratégias de segurança. Disponível em: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1108r4.pdf. Acesso em: 23 jun. 2026.}
+}
+
+@techreport{NISTIR7628r1,
+  author      = {{National Institute of Standards and Technology}},
+  title       = {Guidelines for Smart Grid Cybersecurity},
+  institution = {NIST},
+  year        = {2014},
+  number      = {NISTIR 7628 Rev. 1},
+  address     = {Gaithersburg, MD, USA},
+  doi         = {10.6028/NIST.IR.7628r1},
+  note        = {Metodologia de avaliação de risco e requisitos de segurança para ambientes smart grid. Disponível em: https://csrc.nist.gov/pubs/ir/7628/r1/final. Acesso em: 23 jun. 2026.}
+}
+
+@standard{IEEE2030_2011,
+  title        = {{IEEE} Guide for Smart Grid Interoperability of Energy Technology and Information Technology Operation with the Electric Power System ({EPS}), End-Use Applications, and Loads},
+  organization = {IEEE},
+  number       = {Std 2030-2011},
+  year         = {2011},
+  doi          = {10.1109/IEEESTD.2011.6018239},
+  note         = {Smart Grid Interoperability Reference Model (SGIRM): perspectivas integradas de energia, comunicação e TI. Disponível em: https://standards.ieee.org/ieee/2030/11367/. Acesso em: 23 jun. 2026.}
+}
+
+@standard{IECtr62357,
+  title        = {{TC57} Architecture --- Reference Architecture for {TC57}},
+  organization = {IEC},
+  number       = {TR 62357-1:2016},
+  year         = {2016},
+  note         = {Arquitetura de referência de integração entre os padrões IEC TC57 (harmonização IEC 61850, CIM IEC 61968/61970). Disponível em: https://webstore.iec.ch/publication/6912. Acesso em: 23 jun. 2026. % [VERIFICAR] parte/edição}
+}
+
+@misc{DOEgmi,
+  author       = {{U.S. Department of Energy}},
+  title        = {Grid Modernization Initiative},
+  year         = {2026},
+  howpublished = {U.S. DOE},
+  note         = {Referência metodológica para pesquisa em testbeds: coordenação entre laboratórios, medição, análise preditiva, proteção e controle. Disponível em: https://www.energy.gov/gmi/grid-modernization-initiative. Acesso em: 23 jun. 2026.}
+}
+
+@misc{DOEgmlc,
+  author       = {{U.S. Department of Energy}},
+  title        = {Grid Modernization Lab Consortium},
+  year         = {2026},
+  howpublished = {U.S. DOE},
+  note         = {Consórcio de laboratórios nacionais para modernização da rede; complementa [DOEgmi]. Disponível em: https://www.energy.gov/gmi/grid-modernization-lab-consortium. Acesso em: 23 jun. 2026.}
+}
+
+@misc{ETSIzsm,
+  author       = {{ETSI}},
+  title        = {Zero-touch Network and Service Management ({ZSM})},
+  year         = {2026},
+  howpublished = {ETSI Technical Groups},
+  note         = {Arquiteturas de automação em malha fechada e operação orientada por intenção (IBN). Disponível em: https://www.etsi.org/technical-groups/zsm/. Acesso em: 23 jun. 2026.}
+}
+
+@misc{NRELgrid,
+  author       = {{National Renewable Energy Laboratory}},
+  title        = {Grid Modernization Research},
+  year         = {2026},
+  howpublished = {U.S. DOE / NREL},
+  note         = {Referência metodológica complementar para simulação, sensoriamento e análise preditiva em sistemas elétricos. Disponível em: https://www.nrel.gov/grid/. Acesso em: 23 jun. 2026.}
+}
+
+% ---------------------------------------------------------------------------
+% METODOLOGIA ARQUITETURAL — ATAM
+% ---------------------------------------------------------------------------
+
+@techreport{Kazman2000,
+  author      = {Kazman, Rick and Klein, Mark and Clements, Paul},
+  title       = {{ATAM}: Method for Architecture Evaluation},
+  institution = {Software Engineering Institute, Carnegie Mellon University},
+  year        = {2000},
+  number      = {CMU/SEI-2000-TR-004},
+  address     = {Pittsburgh, PA, USA},
+  url         = {https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=5177},
+  note        = {Relatório técnico de acesso livre. Verificar URL antes de submissão.}
+}
+
+@book{Clements2002,
+  author    = {Clements, Paul and Kazman, Rick and Klein, Mark},
+  title     = {Evaluating Software Architectures: Methods and Case Studies},
+  publisher = {Addison-Wesley},
+  year      = {2002},
+  address   = {Boston, MA, USA},
+  isbn      = {978-0-201-70482-2},
+  note      = {% [VERIFICAR] ISBN e edição}
+}
+
+@book{Bass2012,
+  author    = {Bass, Len and Clements, Paul and Kazman, Rick},
+  title     = {Software Architecture in Practice},
+  edition   = {3},
+  publisher = {Addison-Wesley},
+  year      = {2012},
+  address   = {Upper Saddle River, NJ, USA},
+  isbn      = {978-0-321-81573-6},
+  note      = {% [VERIFICAR] Uma 4ª edição (2021) pode estar disponível}
+}
+
+@standard{ISO42010,
+  title        = {Systems and Software Engineering --- Architecture Description},
+  organization = {ISO/IEC/IEEE},
+  number       = {42010:2011},
+  year         = {2011},
+  note         = {status:superseded --- cancelada e substituída pela 2ª edição [ISO42010_2022] em 07 nov. 2022. Mantida por estar citada em ADR-001 e ADR-002, que avaliaram esta edição no momento da decisão; citação histórica, não usar em documento novo. Reconciliação das duas ADRs pendente}
+}
+
+@standard{ISO42010_2022,
+  title        = {Software, Systems and Enterprise --- Architecture Description},
+  organization = {ISO/IEC/IEEE},
+  number       = {42010:2022},
+  edition      = {2},
+  year         = {2022},
+  month        = nov,
+  url          = {https://www.iso.org/standard/74393.html},
+  urldate      = {2026-08-12},
+  langid       = {english},
+  note         = {2ª edição, publicada em 07 nov. 2022; cancela e substitui a ISO/IEC/IEEE 42010:2011 [ISO42010], tecnicamente revisada. Amplia o escopo para software, sistemas e empresa, e eleva decisão de arquitetura e respectiva razão a elemento explícito da descrição de arquitetura --- que é a base da linha de decisão arquitetural na tabela SSoT do Product Charter. Também publicada como IEEE Std 42010-2022}
+}
+
+@standard{ISO29148,
+  title        = {Systems and Software Engineering --- Life Cycle Processes --- Requirements Engineering},
+  organization = {ISO/IEC/IEEE},
+  number       = {29148:2018},
+  edition      = {2},
+  year         = {2018},
+  url          = {https://www.iso.org/standard/72089.html},
+  urldate      = {2026-08-06},
+  langid       = {english}
+}
+
+% ---------------------------------------------------------------------------
+% NORMAS TÉCNICAS — SMART GRID E SEGURANÇA
+% ---------------------------------------------------------------------------
+
+@standard{IEC62443,
+  title        = {Industrial Automation and Control Systems Security},
+  organization = {IEC},
+  number       = {62443},
+  year         = {2018},
+  note         = {Série normativa; verificar a parte específica citada (ex: IEC 62443-3-3)}
+}
+
+@standard{IEC61850,
+  title        = {Communication Networks and Systems for Power Utility Automation},
+  organization = {IEC},
+  number       = {61850},
+  year         = {2013},
+  note         = {Série normativa; verificar parte específica (ex: IEC 61850-8-1 MMS, IEC 61850-9-2 SV)}
+}
+
+@standard{ISO17025,
+  title        = {General Requirements for the Competence of Testing and Calibration Laboratories},
+  organization = {ISO/IEC},
+  number       = {17025:2017},
+  year         = {2017}
+}
+
+% ---------------------------------------------------------------------------
+% FRAMEWORK DE DOCUMENTAÇÃO — arc42
+% ---------------------------------------------------------------------------
+
+@book{Starke2016,
+  author    = {Starke, Gernot and Hruschka, Peter},
+  title     = {arc42 in Aktion},
+  subtitle  = {Praktische Tipps zur Architekturdokumentation},
+  publisher = {Carl Hanser Verlag},
+  year      = {2016},
+  address   = {München},
+  note      = {% [VERIFICAR] ISBN antes de submissão}
+}
+
+@misc{arc42template,
+  author       = {Starke, Gernot and Hruschka, Peter},
+  title        = {arc42 Architecture Documentation Template},
+  year         = {2023},
+  howpublished = {arc42.org},
+  note         = {Licença Creative Commons Attribution-ShareAlike 4.0. Disponível em: https://arc42.org. Acesso em: 14 jun. 2026}
+}
+
+% ---------------------------------------------------------------------------
+% EPISTEMOLOGIA DE P&D E MATURIDADE — NÍVEIS DE PESQUISA (README §2.3)
+% Stubs % [VERIFICAR] — capturados fora do fluxo Zotero Z1-Z6; GOVERNANCE.md
+% §Convenções Bibliográficas exige curadoria e promoção antes de sustentar
+% README oficial ou submissão acadêmica. Curar via runbook 21.
+% ---------------------------------------------------------------------------
+
+@techreport{OECDFrascati2015,
+  author      = {{OECD}},
+  title       = {Frascati Manual 2015: Guidelines for Collecting and Reporting Data on Research and Experimental Development},
+  institution = {OECD Publishing},
+  year        = {2015},
+  address     = {Paris},
+  doi         = {10.1787/9789264239012-en},
+  note        = {Metadados confirmados pelo DOI em 2026-08-21: título, editora e ano conferem com a página oficial OECD Publishing. Captura formal no Zotero (Z1--Z6) permanece pendente em G33, sem impacto na exatidão da citação}
+}
+
+% ---------------------------------------------------------------------------
+% GESTÃO DE DADOS E RISCO DE IA — PRODUCT CHARTER §Nota Metodológica
+% Stubs % [VERIFICAR] — capturados fora do fluxo Zotero Z1-Z6. Substituir pelo
+% auto-export Better BibTeX antes de submissão acadêmica ou release documental.
+% ---------------------------------------------------------------------------
+
+@article{Wilkinson2016,
+  author  = {Wilkinson, Mark D. and Dumontier, Michel and Aalbersberg, IJsbrand Jan and others},
+  title   = {The {FAIR} Guiding Principles for Scientific Data Management and Stewardship},
+  journal = {Scientific Data},
+  volume  = {3},
+  pages   = {160018},
+  year    = {2016},
+  doi     = {10.1038/sdata.2016.18},
+  note    = {Metadados confirmados pelo DOI em 2026-08-21: Scientific Data, v. 3, art. 160018, 2016; autoria completa tem 54 nomes (Wilkinson, Dumontier, Aalbersberg et al.), truncada aqui por convenção BibTeX. Captura formal no Zotero (Z1--Z6) permanece pendente em G33}
+}
+
+@techreport{NISTAIRMF2023,
+  author      = {{National Institute of Standards and Technology}},
+  title       = {Artificial Intelligence Risk Management Framework ({AI} {RMF} 1.0)},
+  institution = {National Institute of Standards and Technology},
+  year        = {2023},
+  month       = jan,
+  address     = {Gaithersburg, MD},
+  number      = {NIST AI 100-1},
+  doi         = {10.6028/NIST.AI.100-1},
+  note        = {Metadados confirmados pelo DOI e pelo portal NIST em 2026-08-21: publicado em 26 jan. 2023. Captura formal no Zotero (Z1--Z6) permanece pendente em G33}
+}
+
+% ---------------------------------------------------------------------------
+% PRODUCT INNOVATION CHARTER — PRODUCT CHARTER v2.0
+% Stubs % [VERIFICAR] — pendentes do fluxo Zotero Z1-Z6. Substituir pelo
+% auto-export Better BibTeX antes da homologação do documento.
+% ---------------------------------------------------------------------------
+
+@article{Crawford1980,
+  author  = {Crawford, C. Merle},
+  title   = {Defining the Charter for Product Innovation},
+  journal = {Sloan Management Review},
+  volume  = {22},
+  number  = {1},
+  pages   = {3--12},
+  year    = {1980},
+  note    = {Metadados confirmados por fonte secundária convergente (ProQuest, Academia.edu) em 2026-08-21: Sloan Management Review, v. 22, n. 1 (Fall 1980), p. 3-12. Captura formal no Zotero (Z1--Z6) permanece pendente em G33}
+}
+
+@article{Bart2002,
+  author  = {Bart, Christopher K.},
+  title   = {Product Innovation Charters: Mission Statements for New Products},
+  journal = {R\&D Management},
+  volume  = {32},
+  number  = {1},
+  pages   = {23--34},
+  year    = {2002},
+  doi     = {10.1111/1467-9310.00236},
+  note    = {Metadados confirmados pelo DOI em 2026-08-21: R\&D Management, v. 32, n. 1, p. 23-34, 2002. Captura formal no Zotero (Z1--Z6) permanece pendente em G33}
+}
+
+@article{BartPujari2007,
+  author  = {Bart, Christopher K. and Pujari, Ashish},
+  title   = {The Performance Impact of Content and Process in Product Innovation Charters},
+  journal = {Journal of Product Innovation Management},
+  volume  = {24},
+  number  = {1},
+  pages   = {3--19},
+  year    = {2007},
+  doi     = {10.1111/j.1540-5885.2006.00229.x},
+  note    = {Metadados confirmados pelo DOI em 2026-08-21: Journal of Product Innovation Management, v. 24, n. 1, p. 3-19, 2007. Captura formal no Zotero (Z1--Z6) permanece pendente em G33}
+}
+
+@book{Anderson2024,
+  author    = {Anderson, Allan and McAllister, Chad and Harris, Ernie},
+  title     = {Product Development and Management Body of Knowledge: A Guidebook for Product Innovation Training and Certification},
+  edition   = {3},
+  publisher = {John Wiley \& Sons},
+  address   = {Hoboken},
+  year      = {2024},
+  month     = apr,
+  isbn      = {978-1-119-82994-2},
+  note      = {Metadados confirmados no catálogo Wiley em 2026-08-21: 3. ed., abr. 2024, ISBN 978-1-119-82994-2. Captura formal no Zotero (Z1--Z6) permanece pendente em G33}
+}
+
+@techreport{Mankins1995,
+  author      = {Mankins, John C.},
+  title       = {Technology Readiness Levels: A White Paper},
+  institution = {NASA Office of Space Access and Technology},
+  year        = {1995},
+  note        = {% [VERIFICAR] URL original (hq.nasa.gov/office/codeq/trl/trl.pdf) retorna HTTP 403 em 2026-07-26; localizar mirror vivo (Wayback Machine ou NASA SE Handbook NPR 7123.1) antes de uso oficial}
+}
+
+@article{Kephart2003,
+  author  = {Kephart, Jeffrey O. and Chess, David M.},
+  title   = {The Vision of Autonomic Computing},
+  journal = {Computer},
+  volume  = {36},
+  number  = {1},
+  pages   = {41--50},
+  year    = {2003},
+  doi     = {10.1109/MC.2003.1160055},
+  note    = {% [VERIFICAR] Não capturado no Zotero; metadados a confirmar contra fonte primária (IEEE Xplore)}
+}
+
+% ---------------------------------------------------------------------------
+% DIAGRAM AS CODE — ADR-014
+% ---------------------------------------------------------------------------
+
+@misc{Mermaid2014,
+  author       = {{Mermaid}},
+  title        = {Mermaid: diagramming and charting tool},
+  year         = {2014},
+  howpublished = {mermaid.js.org},
+  note         = {Licença MIT. Disponível em: https://mermaid.js.org. Acesso em: 14 jun. 2026}
+}
+
+@misc{PlantUML2009,
+  author       = {Arnaud, Roques},
+  title        = {{PlantUML}: open-source tool that uses simple textual descriptions to draw {UML} diagrams},
+  year         = {2009},
+  howpublished = {plantuml.com},
+  note         = {Licença GPL. Disponível em: https://plantuml.com. Acesso em: 14 jun. 2026}
+}
+
+@misc{D2lang2022,
+  author       = {{Terrastruct}},
+  title        = {{D2}: a modern diagram scripting language},
+  year         = {2022},
+  howpublished = {d2lang.com},
+  note         = {Licença MPL 2.0. Disponível em: https://d2lang.com. Acesso em: 14 jun. 2026}
+}
+
+@misc{Structurizr2014,
+  author       = {Brown, Simon},
+  title        = {Structurizr: software architecture diagrams using the {C4} model},
+  year         = {2014},
+  howpublished = {structurizr.com},
+  note         = {Disponível em: https://structurizr.com. Acesso em: 14 jun. 2026}
+}
+
+@misc{Brown2018,
+  author       = {Brown, Simon},
+  title        = {The {C4} model for visualising software architecture},
+  year         = {2018},
+  howpublished = {c4model.com},
+  note         = {Disponível em: https://c4model.com. Acesso em: 14 jun. 2026. % [VERIFICAR] ano de publicação original}
+}
+
+% ---------------------------------------------------------------------------
+% PRIOR ART — SMART GRID PLATFORMS
+% ---------------------------------------------------------------------------
+
+@inproceedings{GridScope2021,
+  author    = {Mattlet, Benoit and Bustamante Mparsakis, Xavier and Piraux, Olivier},
+  title     = {{Grid Scope} --- An Online Platform for Better Distribution System Planning},
+  booktitle = {CIRED 2021 --- 26th International Conference on Electricity Distribution},
+  year      = {2021},
+  number    = {Paper 552},
+  address   = {Online Conference},
+  note      = {Produto comercial da NEXXTLAB (Bélgica/Luxemburgo): simulador estocástico de cargas + solver de fluxo de potência (pandapower) para operadores de sistema de distribuição. Citado como prior art — nome "Grid Scope" descartado do SmartLabLens por colisão no domínio smart grid.}
+}
+
+% ---------------------------------------------------------------------------
+% PARA ADICIONAR VIA ZOTERO
+% (entradas placeholder — preencher com dados reais do Zotero)
+% ---------------------------------------------------------------------------
+
+% SDN / OpenFlow / ONOS / OpenDaylight — adicionar ao fechar ADR de SDN controller
+% NS-3 / srsRAN / LTE Band 31 — adicionar ao fechar ADRs de simulação
+% DNP3 / IEC 61850 — adicionar ao escrever capítulo de grid protocols
+% FAIR data principles — adicionar ao escrever ADR de dataset/AI-ML
+
+% ---------------------------------------------------------------------------
+% SISTEMA DE GERENCIAMENTO DE REFERÊNCIAS — ADR-020
+% Entradas manuais provisórias; importar e validar no Zotero ao concluir G2.
+% ---------------------------------------------------------------------------
+
+@misc{ZoteroSync2026,
+  author       = {{Zotero}},
+  title        = {Syncing},
+  year         = {2026},
+  howpublished = {Zotero Documentation},
+  note         = {Disponível em: https://www.zotero.org/support/sync. Acesso em: 20 jun. 2026}
+}
+
+@misc{ZoteroFiles2025,
+  author       = {{Zotero}},
+  title        = {Adding Files to your Zotero Library},
+  year         = {2025},
+  howpublished = {Zotero Documentation},
+  note         = {Disponível em: https://www.zotero.org/support/attaching_files. Acesso em: 20 jun. 2026}
+}
+
+@misc{ZoteroSourceCode2024,
+  author       = {{Zotero}},
+  title        = {Zotero Source Code},
+  year         = {2024},
+  howpublished = {Zotero Documentation},
+  note         = {Licença AGPLv3, salvo indicação em contrário. Disponível em: https://www.zotero.org/support/dev/source_code. Acesso em: 20 jun. 2026}
+}
+
+@misc{ZoteroStorage2026,
+  author       = {{Zotero}},
+  title        = {Zotero Storage},
+  year         = {2026},
+  howpublished = {Zotero},
+  note         = {Disponível em: https://www.zotero.org/storage. Acesso em: 20 jun. 2026}
+}
+
+@misc{JabRef2026,
+  author       = {{JabRef}},
+  title        = {JabRef: Free Reference Manager},
+  year         = {2026},
+  howpublished = {JabRef},
+  note         = {Disponível em: https://www.jabref.org/. Acesso em: 20 jun. 2026}
+}
+
+@misc{Mendeley2026,
+  author       = {{Elsevier}},
+  title        = {Mendeley Reference Manager},
+  year         = {2026},
+  howpublished = {Mendeley},
+  note         = {Disponível em: https://www.mendeley.com/reference-management/reference-manager. Acesso em: 20 jun. 2026}
+}
+
+@misc{Paperpile2026,
+  author       = {{Paperpile}},
+  title        = {Paperpile Reference Manager},
+  year         = {2026},
+  howpublished = {Paperpile},
+  note         = {Disponível em: https://paperpile.com/. Acesso em: 20 jun. 2026}
+}
+
+@misc{EndNote2026,
+  author       = {{Clarivate}},
+  title        = {EndNote},
+  year         = {2026},
+  howpublished = {Clarivate},
+  note         = {Disponível em: https://endnote.com/. Acesso em: 20 jun. 2026}
+}
+
+% ---------------------------------------------------------------------------
+% GESTÃO DE SEGREDOS — ADR-009
+% Entradas manuais provisórias; importar e validar no Zotero ao concluir G2.
+% ---------------------------------------------------------------------------
+
+@misc{OpenBaoSource2026,
+  author       = {{OpenBao}},
+  title        = {OpenBao},
+  year         = {2026},
+  howpublished = {GitHub},
+  note         = {Código-fonte sob licença MPL 2.0. Disponível em: https://github.com/openbao/openbao. Acesso em: 21 jun. 2026}
+}
+
+@misc{OpenBaoIntegratedStorage2026,
+  author       = {{OpenBao}},
+  title        = {Integrated Storage},
+  year         = {2026},
+  howpublished = {OpenBao Documentation},
+  note         = {Disponível em: https://openbao.org/docs/concepts/integrated-storage/. Acesso em: 21 jun. 2026}
+}
+
+@misc{OpenBaoAuth2026,
+  author       = {{OpenBao}},
+  title        = {Auth Methods},
+  year         = {2026},
+  howpublished = {OpenBao Documentation},
+  note         = {Disponível em: https://openbao.org/docs/auth/. Acesso em: 21 jun. 2026}
+}
+
+@misc{OpenBaoAudit2026,
+  author       = {{OpenBao}},
+  title        = {Audit Devices},
+  year         = {2026},
+  howpublished = {OpenBao Documentation},
+  note         = {Disponível em: https://openbao.org/docs/audit/. Acesso em: 21 jun. 2026}
+}
+
+@misc{OpenBaoPKI2026,
+  author       = {{OpenBao}},
+  title        = {{PKI} Secrets Engine},
+  year         = {2026},
+  howpublished = {OpenBao Documentation},
+  note         = {Disponível em: https://openbao.org/docs/secrets/pki/. Acesso em: 21 jun. 2026}
+}
+
+@misc{HashiCorpVaultLicense2026,
+  author       = {{HashiCorp} and {IBM}},
+  title        = {Vault License},
+  year         = {2026},
+  howpublished = {GitHub},
+  note         = {Business Source License 1.1 para Vault 1.15.0 ou posterior. Disponível em: https://github.com/hashicorp/vault/blob/main/LICENSE. Acesso em: 21 jun. 2026}
+}
+
+@misc{InfisicalSource2026,
+  author       = {{Infisical}},
+  title        = {Infisical},
+  year         = {2026},
+  howpublished = {GitHub},
+  note         = {Núcleo sob licença MIT Expat; conteúdo em diretórios ee sob licença própria. Disponível em: https://github.com/Infisical/infisical. Acesso em: 21 jun. 2026}
+}
+
+@misc{InfisicalAudit2026,
+  author       = {{Infisical}},
+  title        = {Audit Logs},
+  year         = {2026},
+  howpublished = {Infisical Documentation},
+  note         = {Recurso pago em implantações self-hosted. Disponível em: https://infisical.com/docs/documentation/platform/audit-logs. Acesso em: 21 jun. 2026}
+}
+
+@misc{InfisicalHA2026,
+  author       = {{Infisical}},
+  title        = {Linux ({HA})},
+  year         = {2026},
+  howpublished = {Infisical Documentation},
+  note         = {Arquitetura de referência para implantação Linux em alta disponibilidade. Disponível em: https://infisical.com/docs/self-hosting/reference-architectures/linux-deployment-ha. Acesso em: 21 jun. 2026}
+}
+
+@misc{ConjurSource2026,
+  author       = {{CyberArk}},
+  title        = {Conjur},
+  year         = {2026},
+  howpublished = {GitHub},
+  note         = {Servidor sob LGPLv3; clientes e extensões sob Apache 2.0. Disponível em: https://github.com/cyberark/conjur. Acesso em: 21 jun. 2026}
+}
+
+@misc{KeycloakFeatures2026,
+  author       = {{Keycloak}},
+  title        = {Features},
+  year         = {2026},
+  howpublished = {Keycloak Server Administration Guide},
+  note         = {Disponível em: https://github.com/keycloak/keycloak/blob/main/docs/documentation/server\_admin/topics/overview/features.adoc. Acesso em: 21 jun. 2026}
+}
+
+@misc{KeycloakVault2026,
+  author       = {{Keycloak}},
+  title        = {Using a Vault},
+  year         = {2026},
+  howpublished = {Keycloak Server Guide},
+  note         = {Disponível em: https://github.com/keycloak/keycloak/blob/main/docs/guides/server/vault.adoc. Acesso em: 21 jun. 2026}
+}
+
+@misc{KeycloakLicense2026,
+  author       = {{Keycloak}},
+  title        = {License},
+  year         = {2026},
+  howpublished = {Keycloak Server Administration Guide},
+  note         = {Apache Software License 2.0. Disponível em: https://github.com/keycloak/keycloak/blob/main/docs/documentation/server\_admin/topics/License.adoc. Acesso em: 21 jun. 2026}
+}
+
+@misc{AnsibleVault2026,
+  author       = {{Red Hat}},
+  title        = {Protecting Sensitive Data with Ansible Vault},
+  year         = {2026},
+  howpublished = {Ansible Community Documentation},
+  note         = {Disponível em: https://docs.ansible.com/projects/ansible/latest/vault\_guide/index.html. Acesso em: 21 jun. 2026}
+}
+
+% Entradas manuais provisórias; importar e validar no Zotero ao concluir G2.
+
+@misc{ApacheLicense20,
+  author       = {{Apache Software Foundation}},
+  title        = {Apache License, Version 2.0},
+  year         = {2004},
+  howpublished = {Apache Software Foundation},
+  note         = {SPDX short identifier: Apache-2.0. Disponível em: https://www.apache.org/licenses/LICENSE-2.0. Acesso em: 24 jun. 2026}
+}
+
+@misc{OSIApache20,
+  author       = {{Open Source Initiative}},
+  title        = {Apache License, Version 2.0},
+  year         = {2026},
+  howpublished = {Open Source Initiative},
+  note         = {Licença aprovada pela Open Source Initiative; SPDX short identifier: Apache-2.0. Disponível em: https://opensource.org/license/apache-2.0. Acesso em: 24 jun. 2026}
+}
+
+@misc{CreativeCommonsBY40,
+  author       = {{Creative Commons}},
+  title        = {Attribution 4.0 International ({CC BY} 4.0) Legal Code},
+  year         = {2026},
+  howpublished = {Creative Commons},
+  note         = {Disponível em: https://creativecommons.org/licenses/by/4.0/legalcode.en. Acesso em: 24 jun. 2026}
+}
+
+@misc{SPDXCCBY40,
+  author       = {{Software Package Data Exchange}},
+  title        = {Creative Commons Attribution 4.0 International},
+  year         = {2026},
+  howpublished = {SPDX License List},
+  note         = {SPDX short identifier: CC-BY-4.0. Disponível em: https://spdx.org/licenses/CC-BY-4.0.html. Acesso em: 24 jun. 2026}
+}
+
+% Testbeds/projetos open source comparáveis — ver docs/reviews/comparable-open-source-testbeds-2026-06-24.md
+% [VERIFICAR] confirmar autoria, ano e versão/commit no Zotero antes de promover.
+
+% [VERIFICAR]
+@misc{HELICS2024,
+  author       = {{Grid Modernization Laboratory Consortium}},
+  title        = {{HELICS}: Hierarchical Engine for Large-scale Infrastructure Co-Simulation},
+  year         = {2024},
+  howpublished = {Repositório GitHub},
+  note         = {U.S. Department of Energy / GMLC-TDC. Disponível em: https://github.com/GMLC-TDC/HELICS. Acesso em: 24 jun. 2026}
+}
+
+% [VERIFICAR]
+@misc{GridLABD2024,
+  author       = {{Pacific Northwest National Laboratory}},
+  title        = {{GridLAB-D} Simulation Software},
+  year         = {2024},
+  howpublished = {Projeto open source (BSD-3)},
+  note         = {Disponível em: https://www.gridlabd.org. Acesso em: 24 jun. 2026}
+}
+
+% [VERIFICAR]
+@misc{GridAttackSim2021,
+  author       = {{Cyber Range Organization and Design Lab, JAIST}},
+  title        = {{GridAttackSim}: Smart Grid Attack Simulation Framework},
+  year         = {2021},
+  howpublished = {Repositório GitHub (BSD-3)},
+  note         = {Co-simulação NS-3 + GridLAB-D + FNCS. Disponível em: https://github.com/crond-jaist/GridAttackSim. Acesso em: 24 jun. 2026}
+}
+
+% [VERIFICAR]
+@misc{AutoSGCR2025,
+  author       = {{Smart Grid ADSC}},
+  title        = {Auto-{SGCR}: Automated Generation of Smart Grid Cyber Range Using {IEC} 61850 Standard Models},
+  year         = {2025},
+  howpublished = {Repositório GitHub; arXiv:2507.18249; IEEE},
+  note         = {Confirmar autores e referência IEEE. Disponível em: https://github.com/smartgridadsc/CyberRange e https://arxiv.org/abs/2507.18249. Acesso em: 24 jun. 2026}
+}
+
+% [VERIFICAR]
+@misc{LibIEC61850,
+  author       = {{MZ Automation GmbH}},
+  title        = {{libIEC61850}: Open-Source Library for the {IEC} 61850 Protocols},
+  year         = {2026},
+  howpublished = {Repositório GitHub (GPLv3 + comercial)},
+  note         = {MMS, GOOSE, SV; lib60870 para IEC 60870-5. Disponível em: https://github.com/mz-automation/libiec61850. Acesso em: 24 jun. 2026}
+}
+
+% [VERIFICAR]
+@misc{OpenDNP3,
+  author       = {{Automatak}},
+  title        = {{OpenDNP3}: {DNP3} Protocol Stack},
+  year         = {2026},
+  howpublished = {Repositório GitHub (Apache-2.0)},
+  note         = {Atividade/manutenção não reverificada — confirmar último commit. Disponível em: https://github.com/automatak/dnp3. Acesso em: 24 jun. 2026}
+}
+
+% [VERIFICAR]
+@misc{OpenSCADADMS2024,
+  author       = {Robin Massink},
+  title        = {{open\_scada\_dms}: Open Source {EMS/DMS} {SCADA} System},
+  year         = {2024},
+  howpublished = {Repositório GitHub (Apache-2.0)},
+  note         = {Confirmar autoria e data. HMI IEC 60870-5-104. Disponível em: https://github.com/robidev/open_scada_dms. Acesso em: 24 jun. 2026}
+}
+
+% [VERIFICAR]
+@misc{Testbed5GUnisinos2023,
+  author       = {Kopper, Gabriel},
+  title        = {5G Testbed using {srsRAN}, {srsUE} and {Open5GS}},
+  year         = {2023},
+  howpublished = {Repositório GitHub (BSD-2), UNISINOS},
+  note         = {Confirmar autoria e ano. Disponível em: https://github.com/gckopper/5G-testbed. Acesso em: 24 jun. 2026}
+}
+
+% [VERIFICAR]
+@misc{AmarisoftDigitalTwin2024,
+  author       = {Granelli, Fabrizio},
+  title        = {Network Digital Twin of a Private Cellular Network},
+  year         = {2024},
+  howpublished = {Repositório GitHub},
+  note         = {Confirmar autoria e ano. Disponível em: https://github.com/fabrizio-granelli/Amarisoft.digital.twin. Acesso em: 24 jun. 2026}
+}
+
+% [VERIFICAR]
+@misc{SmartGridSimNS3,
+  author       = {Ferreira, Alex},
+  title        = {{smartgridsim}: {NS-3} Simulation of Smart Grid Communication over {4G}},
+  year         = {2019},
+  howpublished = {Repositório GitHub (GPL-3)},
+  note         = {Confirmar autoria. Dormante desde 2019. Disponível em: https://github.com/alexfrt/smartgridsim. Acesso em: 24 jun. 2026}
+}
+
+% ===========================================================================
+% DOCUMENTAÇÃO DE FABRICANTE — RÁDIOS GE MDS ORBIT MCR
+% Fonte primária: fabricante (GOVERNANCE.md §Fontes de verdade). Entrada manual
+% de placeholder (GOVERNANCE.md §177): capturar no Zotero (Z1–Z6) e substituir
+% por export do Better BibTeX antes de gate oficial.
+% ===========================================================================
+
+% [VERIFICAR]
+@manual{GEVernovaOrbitRN2026,
+  author       = {{GE Vernova MDS LLC}},
+  title        = {{MDS} {Orbit} {MCR/ECR} Product Release Notes Rev {AW}: Firmware Version 9.9.10},
+  organization = {GE Vernova MDS LLC},
+  address      = {Rochester, NY, USA},
+  year         = {2026},
+  month        = apr,
+  note         = {Data de release declarada: 20 abr. 2026; arquivos publicados em 04 maio 2026. Cobre mudanças desde a REV 9.9.4. Sustenta a decisão D-16 (retarget da campanha G32 de 9.9.2 para 9.9.10) em razão do item de correção "SNMP: Fixed IF-MIB ifHCInOctets/ifHCOutOctets OIDs [CICLCS-313]", que afeta os contadores coletados pelo contrato telemetry.mcr.radio.v2 e, por consequência, a validade do baseline de P1-AC-05. Documenta também a sintaxe verificada de reversão: request system recovery rollback which-image { inactive } snapshot Auto. Confirmar URL de origem e revisão no portal do fabricante. % [VERIFICAR] URL e data de acesso}
+}
+
+% ===========================================================================
+% TOPOLOGIA DE REPOSITÓRIOS — ADR-034
+% Fonte primária: ACM Digital Library (DOI verificado em 2026-07-29). Entradas
+% manuais: a biblioteca Zotero do dev box está vazia (ADR-032 F-03), portanto o
+% caminho Better BibTeX ainda não está disponível. Substituir por export do
+% Better BibTeX quando a estação de captura do ctd-1 entrar em operação.
+% ===========================================================================
+
+@article{Parnas1972,
+  author  = {Parnas, D. L.},
+  title   = {On the Criteria to Be Used in Decomposing Systems into Modules},
+  journal = {Communications of the ACM},
+  year    = {1972},
+  volume  = {15},
+  number  = {12},
+  pages   = {1053--1058},
+  month   = dec,
+  doi     = {10.1145/361598.361623},
+  note    = {Critério fundacional de decomposição modular: separar por ocultação de informação e por probabilidade de mudança conjunta, não por etapa de fluxograma. Sustenta o eixo R da ADR-034 — a fronteira entre repositórios segue o acoplamento medido, não a audiência declarada}
+}
+
+@article{Potvin2016,
+  author  = {Potvin, Rachel and Levenberg, Josh},
+  title   = {Why Google Stores Billions of Lines of Code in a Single Repository},
+  journal = {Communications of the ACM},
+  year    = {2016},
+  volume  = {59},
+  number  = {7},
+  pages   = {78--87},
+  doi     = {10.1145/2854146},
+  note    = {Relato de engenharia sobre repositório único em escala. Citado na ADR-034 pelos custos de ferramental que a escala impõe — custos que o laboratório nao possui, o que enfraquece o argumento de escala como motivador da separação}
+}
+
+@inproceedings{Jaspan2018,
+  author    = {Jaspan, Ciera and Jorde, Matthew and Knight, Andrea and Sadowski, Caitlin and Smith, Edward K. and Winter, Collin and Murphy-Hill, Emerson},
+  title     = {Advantages and Disadvantages of a Monolithic Repository: A Case Study at Google},
+  booktitle = {Proceedings of the 40th International Conference on Software Engineering: Software Engineering in Practice (ICSE-SEIP '18)},
+  year      = {2018},
+  pages     = {225--234},
+  publisher = {ACM},
+  doi       = {10.1145/3183519.3183550},
+  note      = {Estudo misto (survey + logs) sobre as vantagens e desvantagens percebidas do repositório monolítico. Achado citado na ADR-034: a visibilidade do código é a vantagem dominante do monorepo, e é exatamente o que a separação consome}
+}
+
+@inproceedings{Brousse2019,
+  author    = {Brousse, Nicolas},
+  title     = {The Issue of Monorepo and Polyrepo in Large Enterprises},
+  booktitle = {Companion Proceedings of the 3rd International Conference on the Art, Science, and Engineering of Programming (Programming '19)},
+  year      = {2019},
+  address   = {Genova, Italy},
+  publisher = {ACM},
+  doi       = {10.1145/3328433.3328435},
+  note      = {Caracteriza estruturas multi-repositório, mono-repositório e o modelo híbrido, e observa que a estrutura multi-repositório frequentemente resulta de evolução orgânica, não de escolha deliberada. Sustenta o registro explícito do modelo híbrido adotado pela ADR-034}
+}
+
+% ===========================================================================
+% BASE NORMATIVA DA TABELA SSoT — docs/products/product-charter.md §1
+% Cada linha da tabela de fonte única declara a prática ou norma da qual tira
+% autoridade. As entradas abaixo sustentam essas declarações.
+% [W3CPROVDM], [GoFAIR] e [DataCite44] estavam CITADAS na ADR-023 sem entrada
+% correspondente neste arquivo (citações órfãs, constatado em 2026-08-10).
+% ===========================================================================
+
+@standard{ISO21502,
+  title        = {Project, Programme and Portfolio Management --- Guidance on Project Management},
+  organization = {ISO},
+  number       = {21502:2020},
+  year         = {2020},
+  url          = {https://www.iso.org/standard/74947.html},
+  langid       = {english},
+  note         = {Sustenta as linhas de termo de abertura e de plano de gerenciamento na tabela SSoT do Product Charter}
+}
+
+@standard{ABNT21502_2021,
+  title        = {Gerenciamento de Projetos, Programas e Portfólios --- Orientação sobre Gerenciamento de Projetos},
+  organization = {ABNT},
+  number       = {NBR ISO 21502:2021},
+  year         = {2021},
+  month        = dec,
+  address      = {Rio de Janeiro},
+  pages        = {60},
+  langid       = {portuguese},
+  note         = {Adoção nacional da ISO 21502:2020 [ISO21502]; é o referencial de gerenciamento declarado adotado pelo PGP §2.3.2. Situação de vigência conferida no ciclo de vida do organismo emissor --- catálogo de revendedor comercial não é fonte de status normativo e já produziu leitura equivocada de cancelamento sobre esta família de normas em 2026-08-12}
+}
+
+@book{PMBOK2021,
+  author       = {{Project Management Institute}},
+  title        = {A Guide to the Project Management Body of Knowledge ({PMBOK} Guide) --- Seventh Edition and The Standard for Project Management},
+  edition      = {7},
+  year         = {2021},
+  month        = jul,
+  address      = {Newtown Square, PA},
+  publisher    = {Project Management Institute},
+  isbn         = {978-1-62825-664-2},
+  url          = {https://pmi.bookstore.ipgbook.com/a-guide-to-the-project-management-body-of-knowledge--pmbok---guide------seventh-edition-and-the-standard-for-project-management--english--products-9781628256642.php},
+  urldate      = {2026-08-12},
+  langid       = {english},
+  note         = {ISBN e ano conferidos na livraria oficial da PMI em 2026-08-12. O volume reúne o PMBOK Guide 7ª ed. e The Standard for Project Management num único título --- citar o título completo evita atribuir ao guia o que pertence à norma}
+}
+
+@book{PMIWBS2019,
+  author       = {{Project Management Institute}},
+  title        = {Practice Standard for Work Breakdown Structures},
+  edition      = {3},
+  year         = {2019},
+  month        = jul,
+  address      = {Newtown Square, PA},
+  publisher    = {Project Management Institute},
+  isbn         = {978-1-62825-619-2},
+  note         = {Sustenta a linha de EAP da tabela SSoT. % [VERIFICAR] edição, ano e ISBN convergentes em quatro catálogos de livraria (consulta em 2026-08-12), mas não conferidos no catálogo da própria PMI, que é a fonte primária exigida pela GOVERNANCE.md}
+}
+
+@misc{SchwaberSutherland2020,
+  author       = {Schwaber, Ken and Sutherland, Jeff},
+  title        = {The Scrum Guide: The Definitive Guide to Scrum --- The Rules of the Game},
+  year         = {2020},
+  month        = {11},
+  url          = {https://scrumguides.org/scrum-guide.html},
+  langid       = {english},
+  note         = {Sustenta a linha de estado de execução (Issues + Project) da tabela SSoT}
+}
+
+@misc{Nygard2011,
+  author       = {Nygard, Michael},
+  title        = {Documenting Architecture Decisions},
+  year         = {2011},
+  month        = {11},
+  howpublished = {Cognitect Blog},
+  url          = {https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions},
+  urldate      = {2026-08-10},
+  langid       = {english},
+  note         = {Origem do formato ADR. O termo canônico é Architecture Decision RECORD --- não Register}
+}
+
+@misc{W3CPROVDM,
+  author       = {Moreau, Luc and Missier, Paolo},
+  title        = {PROV-DM: The PROV Data Model},
+  year         = {2013},
+  month        = {4},
+  howpublished = {W3C Recommendation},
+  organization = {World Wide Web Consortium},
+  url          = {https://www.w3.org/TR/prov-dm/},
+  urldate      = {2026-08-10},
+  langid       = {english},
+  note         = {Trio entity/activity/agent. Mapeamento canônico do laboratório em ADR-023 e DMP §5.3: ScenarioRun -> Activity, EvidenceBundle -> Entity, operador e automação -> Agent. Para emissão em JSON-LD a ontologia correspondente é PROV-O, ainda não catalogada}
+}
+
+@misc{GoFAIR,
+  author       = {{GO FAIR International Support and Coordination Office}},
+  title        = {FAIR Principles},
+  howpublished = {GO FAIR Initiative},
+  url          = {https://www.go-fair.org/fair-principles/},
+  urldate      = {2026-08-10},
+  langid       = {english},
+  note         = {% [VERIFICAR] a âncora acadêmica dos princípios é Wilkinson et al. (2016), Scientific Data 3:160018, doi:10.1038/sdata.2016.18 --- capturar no Zotero e citar em submissão, reservando esta entrada para a referência operacional}
+}
+
+@misc{DataCite44,
+  author       = {{DataCite Metadata Working Group}},
+  title        = {DataCite Metadata Schema Documentation for the Publication and Citation of Research Data and Other Research Outputs},
+  version      = {4.4},
+  year         = {2021},
+  publisher    = {DataCite e.V.},
+  doi          = {10.14454/3w3z-sa82},
+  langid       = {english},
+  note         = {% [VERIFICAR] versão, ano e DOI não conferidos na fonte. Alinhamento diferido para P7 conforme autoavaliação FAIR do DMP §12.1}
+}
+
+% ===========================================================================
+% GESTÃO DE CONFIGURAÇÃO E CLASSIFICAÇÃO DE MUDANÇA
+% Âncoras do Catálogo de Classes de Mudança (docs/design/). Capturadas em
+% 2026-08-13; ver §Zotero abaixo em cada nota.
+% ===========================================================================
+
+@article{Manadhata2011,
+  author       = {Manadhata, Pratyusa K. and Wing, Jeannette M.},
+  title        = {An Attack Surface Metric},
+  journal      = {IEEE Transactions on Software Engineering},
+  volume       = {37},
+  number       = {3},
+  pages        = {371--386},
+  year         = {2011},
+  doi          = {10.1109/TSE.2010.60},
+  issn         = {0098-5589},
+  langid       = {english},
+  note         = {Formaliza a superfície de ataque de um sistema nas dimensões método, dado e canal, e a define como MÉTRICA comparável entre versões. Citada no Catálogo de Classes de Mudança pela razão inversa: é a origem da analogia "superfície de mudança", termo que o laboratório DESCARTOU por não haver definição estabelecida na literatura de IaC e por prometer quantificação que um catálogo enumerativo não entrega. Metadados conferidos no Crossref em 2026-08-13 (título, autores, periódico, v. 37, n. 3, p. 371-386, ISSN 0098-5589, DOI). % [VERIFICAR] pendente Z1--Z4: captura no Zotero da estação, preenchimento de Language, fixação da chave em Extra e promoção a Export.}
+}
+
+@standard{IEEE828,
+  title        = {{IEEE} Standard for Configuration Management in Systems and Software Engineering},
+  organization = {IEEE},
+  number       = {Std 828-2012},
+  year         = {2012},
+  langid       = {english},
+  note         = {Requisitos mínimos de processo para gestão de configuração: identificação e aquisição de itens de configuração, controle de mudanças, relato de estado, builds e engenharia de release. Âncora do eixo "o que muda" do Catálogo de Classes de Mudança --- as classes do catálogo são itens de configuração neste sentido. ATENÇÃO DE CURADORIA: publicada em 2012-03-16 e INATIVADA (Inactive-Reserved) em 2023-03-30; substituiu a IEEE 828-2005. Não há sucessora direta identificada --- a cobertura de GC migrou para a família ISO/IEC/IEEE de processos de ciclo de vida, ainda não catalogada aqui. Deve receber status:superseded no Zotero, não ser descartada (runbook 21 §16). % [VERIFICAR] DOI não conferido na fonte primária; sucessora normativa não confirmada; pendente Z1--Z4.}
+}
+
+@book{ITIL4,
+  author       = {{AXELOS}},
+  title        = {ITIL Foundation: ITIL 4 Edition},
+  publisher    = {TSO (The Stationery Office)},
+  year         = {2019},
+  langid       = {english},
+  note         = {Prática de change enablement e a tríade de tipos de mudança --- standard (pré-aprovada, baixo risco, repetível), normal (exige avaliação de risco e autorização) e emergency (expedita) --- que o Catálogo de Classes de Mudança usa como validação externa da divisão PIPE/TAG-HUM. FONTE AINDA NÃO CAPTURADA DA PRIMÁRIA: o levantamento de 2026-08-13 só alcançou material de fornecedor (blogs de ITSM e de fabricantes de ferramenta), que NÃO sustenta afirmação normativa conforme runbook 21 §14. Usar apenas em rascunho até a captura da publicação AXELOS/PeopleCert. % [VERIFICAR] autoria institucional, editora, ano, edição e ISBN não conferidos na fonte primária; a tríade de tipos precisa ser confirmada contra o texto oficial e não contra terceiros. Pendente Z1--Z4.}
+}
+
+% ===========================================================================
+% POSICIONAMENTO E GRAU DE INOVAÇÃO
+% Âncoras da comparação com arquiteturas e literatura que sustenta o grau de
+% inovação declarado no Product Charter §1.4. Levantadas por busca dirigida em
+% 2026-08-21; ver docs/reviews/innovation-positioning-2026-08-21.md.
+% TODAS as entradas deste bloco estão em [VERIFICAR] e entram na fila de G33.
+% Marcadas com "fonte secundária": o portal do editor (MDPI, ETSI, 3GPP)
+% recusou recuperação automatizada (HTTP 403) na sessão de levantamento; os
+% metadados vieram de fonte secundária e NÃO sustentam submissão.
+% ===========================================================================
+
+% [VERIFICAR]
+@article{Cintuglu2017,
+  author       = {Cintuglu, Mehmet H. and Mohammed, Osama A. and Akkaya, Kemal and Uluagac, A. Selcuk},
+  title        = {A Survey on Smart Grid Cyber-Physical System Testbeds},
+  journal      = {IEEE Communications Surveys \& Tutorials},
+  volume       = {19},
+  number       = {1},
+  pages        = {446--464},
+  year         = {2017},
+  doi          = {10.1109/COMST.2016.2627399},
+  langid       = {english},
+  note         = {Revisão de 28 testbeds ciberfísicos de rede elétrica, com taxonomia por domínio, objetivo de pesquisa, plataforma de teste e infraestrutura de comunicação. Usada no posicionamento por um achado NEGATIVO: os critérios de avaliação declarados --- capacidade de pesquisa, capacidade de comunicação, consciência de segurança e privacidade, suporte a protocolos e acesso remoto --- NÃO incluem proveniência, reprodutibilidade nem governança de dados. É essa lacuna de avaliação que o laboratório candidata a preencher. % [VERIFICAR] metadados por fonte secundária; PDF institucional respondeu HTTP 403. Confirmar páginas e DOI no IEEE Xplore. Pendente Z1--Z6.}
+}
+
+% [VERIFICAR]
+@article{Smadi2021,
+  author       = {Smadi, Abdallah A. and Ajao, Babatunde T. and Johnson, Brian K. and Lei, Hangtian and Chakhchoukh, Yacine and Abu Al-Haija, Qasem},
+  title        = {A Comprehensive Survey on Cyber-Physical Smart Grid Testbed Architectures: Requirements and Challenges},
+  journal      = {Electronics},
+  volume       = {10},
+  number       = {9},
+  pages        = {1043},
+  year         = {2021},
+  doi          = {10.3390/electronics10091043},
+  langid       = {english},
+  note         = {Confirma o recorte da Cintuglu2017: requisitos de arquitetura e componentes, não qualidade experimental do dado produzido. % [VERIFICAR] metadados por fonte secundária; MDPI respondeu HTTP 403. Pendente Z1--Z6.}
+}
+
+% [VERIFICAR]
+@article{PowderComnet2021,
+  author       = {Breen, Joe and Buffmire, Andrew and Duerig, Jonathon and Dutt, Kevin and Eide, Eric and Hibler, Mike and Johnson, David and Kasera, Sneha Kumar and Ricci, Robert and Stoller, Leigh and Van der Merwe, Jacobus and Webb, Kirk and Wong, Gary},
+  title        = {{POWDER}: Platform for Open Wireless Data-driven Experimental Research},
+  journal      = {Computer Networks},
+  volume       = {197},
+  pages        = {108281},
+  year         = {2021},
+  doi          = {10.1016/j.comnet.2021.108281},
+  langid       = {english},
+  note         = {Comparador que fixa em REPRODUÇÃO o eixo de perfis versionados de experimento sem fio: instalação de escala urbana com perfis repetíveis, rádio programável e visibilidade entre camadas. % [VERIFICAR] lista de autores truncada na fonte secundária --- completar no Zotero. Pendente Z1--Z6.}
+}
+
+% [VERIFICAR]
+@inproceedings{PosCoNEXT2021,
+  author       = {Gallenm{\"u}ller, Sebastian and Scholz, Dominik and Stubbe, Henning and Carle, Georg},
+  title        = {The pos Framework: A Methodology and Toolchain for Reproducible Network Experiments},
+  booktitle    = {Proceedings of the 17th International Conference on Emerging Networking EXperiments and Technologies (CoNEXT 2021)},
+  pages        = {259--266},
+  publisher    = {ACM},
+  year         = {2021},
+  doi          = {10.1145/3485983.3494841},
+  langid       = {english},
+  note         = {COMPARADOR DE REFERÊNCIA do critério de portabilidade perfil-ambiente (charter §3.1): definição de experimento portável entre plataformas sem alteração, adotada na infraestrutura de pesquisa SLICES. Antes de alegar contribuição em portabilidade, confrontar o critério não simétrico do charter com o deste trabalho. % [VERIFICAR] páginas e DOI não conferidos na ACM DL. Pendente Z1--Z6.}
+}
+
+% [VERIFICAR]
+@inproceedings{ChameleonATC2020,
+  author       = {Keahey, Kate and Anderson, Jason and Zhen, Zhuo and Riteau, Pierre and Ruth, Paul and Stanzione, Dan and Cevik, Mert and Colleran, Jacob and Gunawi, Haryadi S. and Hammock, Cody and Mambretti, Joe},
+  title        = {Lessons Learned from the Chameleon Testbed},
+  booktitle    = {Proceedings of the USENIX Annual Technical Conference (USENIX ATC 2020)},
+  publisher    = {USENIX Association},
+  year         = {2020},
+  langid       = {english},
+  note         = {Âncora do eixo "ambiente de execução declarado e recuperável" (charter §2.4.3) como prática estabelecida: milhares de artefatos digitais --- imagens, templates de orquestração e cadernos --- reutilizáveis para restabelecer ambientes experimentais. % [VERIFICAR] autoria e páginas não conferidas na fonte primária. Pendente Z1--Z6.}
+}
+
+% [VERIFICAR]
+@article{FABRIC2019,
+  author       = {Baldin, Ilya and Nikolich, Anita and Griffioen, James and Monga, Inder Deep Singh and Wang, Kuang-Ching and Lehman, Tom and Ruth, Paul},
+  title        = {{FABRIC}: A National-Scale Programmable Experimental Network Infrastructure},
+  journal      = {IEEE Internet Computing},
+  volume       = {23},
+  number       = {6},
+  pages        = {38--47},
+  year         = {2019},
+  doi          = {10.1109/MIC.2019.2958545},
+  langid       = {english},
+  note         = {Instalação federada com Chameleon e CloudLab; fixa federação e portabilidade entre instalações como arte prévia. % [VERIFICAR] volume, número, páginas e DOI por fonte secundária. Pendente Z1--Z6.}
+}
+
+% [VERIFICAR]
+@inproceedings{FeamsterRexford2018,
+  author       = {Feamster, Nick and Rexford, Jennifer},
+  title        = {Why (and How) Networks Should Run Themselves},
+  booktitle    = {Proceedings of the Applied Networking Research Workshop (ANRW 2018)},
+  publisher    = {ACM},
+  year         = {2018},
+  doi          = {10.1145/3232755.3234555},
+  langid       = {english},
+  note         = {Origem conceitual da rede autoconduzida: acoplar medição em tempo real a controle e substituir análise fechada de protocolo por modelos orientados a dado. Citada no posicionamento pela LACUNA que declara --- dados, casos de uso e ambiente de avaliação junto a redes operacionais ---, que é onde o laboratório pode contribuir sem competir em modelo. Preprint arXiv:1710.11583 (2017) verificado; versão ANRW pendente. % [VERIFICAR] DOI e páginas da versão publicada. Pendente Z1--Z6.}
+}
+
+% [VERIFICAR]
+@misc{Cornetto2026,
+  author       = {Protogeros, Ioannis and Asadli, Rufat and Hoffman, Benjamin and Vanbever, Laurent},
+  title        = {Benchmarking {LLM}-Driven Network Configuration Repair},
+  year         = {2026},
+  howpublished = {arXiv:2604.22513},
+  url          = {https://arxiv.org/abs/2604.22513},
+  urldate      = {2026-08-21},
+  langid       = {english},
+  note         = {Benchmark Cornetto: 9 modelos, 231 problemas, topologias de 20 a 754 nós, com verificação formal. Achado central para a trilha de IA aplicada à configuração: os modelos INTRODUZEM REGRESSÕES e o desempenho DEGRADA COM A ESCALA; automação confiável exige fluxo iterativo guiado por verificação formal. Consequência para o charter: a postura de verificação, reversão e política de atuação é a resposta correta, mas não é original --- é a conclusão da literatura. % [VERIFICAR] versão, data de submissão e lista de autores conferidas apenas na página de resumo do arXiv. Pendente Z1--Z6.}
+}
+
+@techreport{ITUY3090,
+  author       = {{International Telecommunication Union}},
+  title        = {Recommendation {ITU-T} {Y.3090}: Digital Twin Network --- Requirements and Architecture},
+  institution  = {ITU-T},
+  address      = {Geneva},
+  year         = {2022},
+  month        = {2},
+  url          = {https://www.itu.int/rec/T-REC-Y.3090-202202-I},
+  urldate      = {2026-08-21},
+  langid       = {english},
+  note         = {Define rede-gêmea digital como representação virtual que analisa, diagnostica, emula e controla a rede física com MAPEAMENTO INTERATIVO NOS DOIS SENTIDOS. A distinção normativa sombra x gêmeo do charter §2.5 converge com este critério e deve remeter a ele em vez de se apresentar como definição própria. Número, título, data de aprovação (2022-02-13) e status "em vigor" reconfirmados no portal ITU em 2026-08-21. Leitura do texto integral (além do sumário) e captura formal no Zotero (Z1--Z6) permanecem pendentes em G33, sem impacto na exatidão da citação}
+}
+
+% [VERIFICAR]
+@techreport{ITUY3093,
+  author       = {{International Telecommunication Union}},
+  title        = {Recommendation {ITU-T} {Y.3093}: Capability Levels and Evaluation Methods of Digital Twin Network Systems},
+  institution  = {ITU-T},
+  address      = {Geneva},
+  year         = {2025},
+  month        = {8},
+  langid       = {english},
+  note         = {Existe escada de maturidade normativa também para gêmeos digitais de rede; qualquer escada própria do laboratório precisa declarar convergência. % [VERIFICAR] título exato e data por fonte secundária (listagem ITU). Pendente Z1--Z6.}
+}
+
+@techreport{TS28100,
+  author       = {{3rd Generation Partnership Project}},
+  title        = {{TS} 28.100: Management and Orchestration; Levels of Autonomous Network},
+  institution  = {3GPP / ETSI},
+  address      = {Sophia Antipolis},
+  year         = {2024},
+  month        = may,
+  version      = {18.0.0},
+  langid       = {english},
+  note         = {Camada técnica dos níveis de rede autônoma, com descrição qualitativa da capacidade por tarefa ao longo do fluxo de trabalho. Junto de TMFAN, estabelece que a escada A0--A5 do charter NÃO É ORIGINAL: é convergente com L0--L5, inclusive na regra de pontuar por cenário/domínio em vez de globalmente. Versão v18.0.0 (2024-05) confirmada em 2026-08-21 via listagem de entrega da ETSI (etsi.org/deliver), que contorna o HTTP 403 anterior no domínio principal. Captura formal no Zotero (Z1--Z6) permanece pendente em G33}
+}
+
+@techreport{TMFAN,
+  author       = {{TM Forum}},
+  title        = {Autonomous Networks Levels Evaluation Methodology ({IG1252})},
+  institution  = {TM Forum},
+  address      = {Morristown},
+  year         = {2024},
+  month        = jul,
+  version      = {1.2.0},
+  langid       = {english},
+  note         = {Seis níveis, de L0 (operação manual) a L5 (rede plenamente autônoma), avaliados por categorias de tarefa --- execução, consciência, análise, decisão e tratamento de intenção --- e pontuados POR CENÁRIO/DOMÍNIO, não globalmente. Guia IG1252 confirmado em 2026-08-21 no catálogo tmforum.org: v1.0.0 (2021-09-21), v1.1.0 (2023-08-07), v1.2.0 (2024-07-31, versão citada aqui). Captura formal no Zotero (Z1--Z6) permanece pendente em G33}
+}
+
+@techreport{ZSM009,
+  author       = {{European Telecommunications Standards Institute}},
+  title        = {{ETSI} {GS} {ZSM} 009-1: Zero-touch Network and Service Management; Closed-Loop Automation; Enablers},
+  institution  = {ETSI},
+  address      = {Sophia Antipolis},
+  year         = {2021},
+  month        = jun,
+  version      = {1.1.1},
+  langid       = {english},
+  note         = {Especifica serviços de GOVERNANÇA de laço fechado: criação, execução e ciclo de vida do laço, configuração de políticas e regras que dirigem seu comportamento, e interação com o operador humano para supervisão. Arte prévia direta da "política de atuação" do charter §3.3. Versão V1.1.1 (2021-06-15) confirmada em 2026-08-21 via catálogo de terceiros (standards.iteh.ai, mystandards.biz), que contorna o HTTP 403 no domínio principal etsi.org. Captura formal no Zotero (Z1--Z6) permanece pendente em G33}
+}
+
+% [VERIFICAR]
+@article{WiSUNFormation2024,
+  author       = {{a confirmar}},
+  title        = {Analysis of {Wi-SUN} {FAN} Network Formation Time},
+  journal      = {Sensors},
+  year         = {2024},
+  langid       = {english},
+  note         = {COMPARADOR OBRIGATÓRIO do recorte 900 MHz: Wi-SUN FAN opera na mesma faixa 902--928 MHz, é aberto (IEEE 802.15.4g), autoformante e autocurativo, e está implantado por concessionárias em escala de milhões de nós. Um laboratório de 900 MHz ISM que não responda "por que não Wi-SUN?" não sobrevive à revisão. Também fixa a escala: estudos experimentais com cerca de 100 dispositivos tornam indefensável qualquer alegação de escalabilidade com 6 rádios. % [VERIFICAR] autoria, volume, número, páginas e DOI não levantados. Pendente Z1--Z6.}
+}
+
+% [VERIFICAR]
+@article{Energies2024,
+  author       = {{a confirmar}},
+  title        = {Toward Wireless Smart Grid Communications: An Evaluation of Protocol Latencies in an Open-Source {5G} Testbed},
+  journal      = {Energies},
+  volume       = {17},
+  number       = {2},
+  pages        = {373},
+  year         = {2024},
+  doi          = {10.3390/en17020373},
+  langid       = {english},
+  note         = {Precedente metodológico direto da comparação MCR 900 MHz x LTE Banda 31: avaliação de latência de protocolos de rede elétrica sobre testbed celular aberto. Rebaixa a novidade dessa comparação a contribuição de aplicação. % [VERIFICAR] autoria por levantar; MDPI respondeu HTTP 403. Pendente Z1--Z6.}
+}

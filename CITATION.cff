@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Se este trabalho for utilizado, por favor cite-o conforme os metadados abaixo."
+title: "CISEI SmartGrid Lab — Plataforma de Pesquisa em Comunicações para Redes Elétricas Inteligentes"
+abstract: >-
+  Registro público do CISEI SmartGrid Lab, contendo o Termo de Abertura da Plataforma de
+  Pesquisa, o glossário e as referências bibliográficas. A plataforma é um ambiente de rede
+  estável, configurável e orientado por dados para pesquisa aplicada em redes de comunicação
+  destinadas a sistemas elétricos inteligentes, com ênfase em experimentação reproduzível,
+  proveniência de dados e autonomia progressiva de operação.
+authors:
+  - family-names: Dantas
+    given-names: Fernando
+    affiliation: "Pontifícia Universidade Católica do Paraná (PUC-PR) — CISEI Lab"
+repository-code: "https://github.com/PUC-PR-CISEI-LAB/cisei-smartgrid-lab"
+license: CC-BY-4.0
+date-released: "2026-08-25"
+keywords:
+  - smart grid
+  - redes de comunicação
+  - testbed
+  - experimentação reproduzível
+  - proveniência de dados
+  - SDN
+  - NFV

@@ -1,0 +1,64 @@
+' SPDX-License-Identifier: CC-BY-4.0
+' Public, sanitized overview of the CISEI SmartGrid Lab experimental model.
+' This source intentionally excludes topology, asset, addressing, and operational details.
+@startuml experimental-environments-dark
+
+top to bottom direction
+
+skinparam backgroundColor transparent
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontColor #F4F4F4
+skinparam ArrowColor #C7C7C7
+skinparam ArrowThickness 2.0
+skinparam ArrowFontColor #F4F4F4
+skinparam ArrowFontSize 11
+skinparam roundCorner 10
+skinparam linetype ortho
+skinparam nodesep 20
+skinparam ranksep 35
+skinparam padding 10
+skinparam rectangle {
+  BorderColor #F4F4F4
+  BorderThickness 2.0
+  FontColor #F4F4F4
+  HorizontalAlignment center
+}
+skinparam frame {
+  BorderColor #C7C7C7
+  FontColor #F4F4F4
+  BackgroundColor transparent
+}
+
+rectangle "<b>Pergunta de Pesquisa / Research Question</b>" as Question #333333
+rectangle "<b>Cenário Configurável / Configurable Scenario</b>" as Scenario #185A77
+
+frame "<b>Ambientes Primários / Primary Environments</b>" {
+  rectangle "<b>Físico / Physical</b>\nMedição em equipamento e enlace reais\nMeasurement from real equipment and links" as Physical #006B52
+  rectangle "<b>Virtual ou Emulado / Virtual or Emulated</b>\nSoftware real em ambiente controlado\nReal software in a controlled environment" as Virtual #00557F
+  rectangle "<b>Simulado / Simulated</b>\nModelo computacional da rede\nComputational network model" as Simulated #9A5D00
+
+  Physical -[hidden]down-> Virtual
+  Virtual -[hidden]down-> Simulated
+}
+
+rectangle "<b>Experimento Híbrido / Hybrid Experiment</b>\nComposição declarada de dois ou mais ambientes\nDeclared composition of two or more environments" as Hybrid #7A468A
+rectangle "<b>Observação Independente / Independent Observation</b>" as Observation #555555
+rectangle "<b>Dados com Contexto e Proveniência</b>\nContextualized, Traceable Data" as Data #8E3B00
+rectangle "<b>Análise e Decisão Responsável</b>\nAnalysis and Responsible Decision-Making" as Analysis #333333
+
+Question --> Scenario
+Scenario ..> Physical : selecione um ou mais\nselect one or more
+Scenario ..> Virtual
+Scenario ..> Simulated
+Physical --> Observation
+Virtual --> Observation
+Simulated --> Observation
+Physical ..> Hybrid : pode compor / may compose
+Virtual ..> Hybrid
+Simulated ..> Hybrid
+Hybrid --> Observation
+Observation --> Data
+Data --> Analysis
+
+@enduml
