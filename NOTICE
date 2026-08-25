@@ -1,0 +1,44 @@
+cisei-smartgrid-lab
+Copyright 2026 Pontifícia Universidade Católica do Paraná (PUC-PR) — CISEI Lab
+
+Este repositório contém a documentação de divulgação pública do CISEI SmartGrid Lab,
+Pontifícia Universidade Católica do Paraná (PUC-PR).
+
+================================================================================
+Licenciamento
+================================================================================
+
+- Documentação, glossário e compilação bibliográfica: CC BY 4.0
+  (texto legal completo em LICENSE; escopo e atribuição em LICENSE-DOCS.md).
+
+================================================================================
+Atribuição recomendada
+================================================================================
+
+PUC-PR — CISEI Lab. CISEI SmartGrid Lab — Plataforma de Pesquisa em Comunicações
+para Redes Elétricas Inteligentes. Metadados de citação em CITATION.cff.
+
+================================================================================
+Referências bibliográficas e obras de terceiros
+================================================================================
+
+O arquivo docs/bibliography.bib contém REGISTROS BIBLIOGRÁFICOS que descrevem obras
+de terceiros — artigos, normas, livros, relatórios e documentação de ferramentas.
+
+1. As obras descritas NÃO são licenciadas por este repositório. Cada uma permanece
+   sujeita aos termos de seu próprio detentor de direitos.
+2. Nenhum texto integral, PDF, norma ou anexo de terceiro é distribuído aqui: o
+   arquivo contém exclusivamente metadados de identificação e localização.
+3. A compilação — a seleção, a organização e as chaves de citação — é obra do
+   CISEI Lab (PUC-PR) e segue a licença de documentação acima.
+4. Referência a uma obra não implica endosso, afiliação ou autorização de
+   redistribuição por parte de seus autores ou editores.
+
+================================================================================
+Exclusões
+================================================================================
+
+Estão fora da licença pública deste repositório: marcas e identidade visual de
+PUC-PR, CISEI, de parceiros e de fornecedores; documentos, normas, manuais, firmware e
+materiais de terceiros; credenciais e segredos; topologias de campo, endereçamento
+e identificação de equipamentos; dados de operação real não sanitizados.
