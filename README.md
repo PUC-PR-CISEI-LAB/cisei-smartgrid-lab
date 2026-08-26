@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/assets/img/banner-cisei-smartgrid-lab-dark.png">
-    <img src="docs/assets/img/banner-cisei-smartgrid-lab-light.png" alt="CISEI SmartGrid Lab — Lab Infrastructure Platform for Wireless Backhaul Network Research">
+    <img src="docs/assets/img/banner-cisei-smartgrid-lab-light.png" alt="CISEI SmartGrid Lab — Wireless Backhaul Network Research. Plataforma de pesquisa da PUCPR em comunicações para sistemas elétricos inteligentes: 900 MHz e LTE privada; configurar, executar, observar, reproduzir.">
   </picture>
 </p>
 
@@ -9,19 +9,6 @@
   <img src="https://img.shields.io/badge/P0_Underlay-conclu%C3%ADdo-009E73?style=flat-square" alt="P0 Underlay concluído">
   <img src="https://img.shields.io/badge/gate-P1_Baseline_T1_em_andamento-F0E442?style=flat-square" alt="P1 baseline T1 em andamento">
   <img src="https://img.shields.io/badge/licen%C3%A7a-CC--BY--4.0-555555?style=flat-square" alt="Documentação sob CC BY 4.0">
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/radio-900_MHz_ISM_GE_MDS-009E73?style=flat-square" alt="Rádio 900 MHz ISM">
-  <img src="https://img.shields.io/badge/LTE-Banda_31_450MHz-56B4E9?style=flat-square" alt="LTE Banda 31">
-  <img src="https://img.shields.io/badge/SDN-OVS_Faucet_FRR-0072B2?style=flat-square" alt="SDN">
-  <img src="https://img.shields.io/badge/NFV-VNFs_LXD_Docker-0072B2?style=flat-square" alt="NFV">
-  <img src="https://img.shields.io/badge/NS--3-simula%C3%A7%C3%A3o-E69F00?style=flat-square" alt="Simulação NS-3">
-  <img src="https://img.shields.io/badge/srsRAN-4G-E69F00?style=flat-square" alt="srsRAN 4G">
-  <img src="https://img.shields.io/badge/protocolo-DNP3-D55E00?style=flat-square" alt="DNP3">
-  <img src="https://img.shields.io/badge/protocolo-IEC_61850-D55E00?style=flat-square" alt="IEC 61850">
-  <img src="https://img.shields.io/badge/norma-IEC_62443-CC79A7?style=flat-square" alt="IEC 62443">
-  <img src="https://img.shields.io/badge/IaC-Ansible_+_Docker-555555?style=flat-square" alt="Infraestrutura como código com Ansible e Docker">
 </p>
 
 # CISEI SmartGrid Lab
