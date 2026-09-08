@@ -1,0 +1,34 @@
+# Perfis de assistente de IA — nunca publicados
+CLAUDE.md
+AGENTS.md
+.claude/
+.codex/
+
+# Segredos e credenciais
+*.key
+*.pem
+*.p12
+*.pfx
+.env
+.env.*
+vault.yml
+vault.yaml
+*vault_pass*
+secrets.*
+
+# Artefatos locais de ferramenta
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+.ruff_cache/
+node_modules/
+
+# Saídas de renderização local de diagramas
+plantuml.jar
+*.puml.png
