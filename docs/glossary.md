@@ -39,7 +39,9 @@ Este é um glossário centralizado de siglas e abreviações utilizadas na docum
 | **API**                     | *Application Programming Interface*                                                               | *Software*           |
 | **ASCII**                   | *American Standard Code for Information Interchange*                                              | *Software*           |
 | **ATAM**                    | *Architecture Tradeoff Analysis Method*                                                           | Metodologia          |
+| **BBU**                     | *BaseBand Unit*                                                                                   | Rádio                |
 | **BGP**                     | *Border Gateway Protocol*                                                                         | Protocolo            |
+| **BOM**                     | *Bill Of Materials*                                                                               | *Hardware*           |
 | **BRT**                     | Brasília Time                                                                                     | Operação             |
 | **CB**                      | Comitê Brasileiro                                                                                 | Metodologia          |
 | **CBAM**                    | *Cost Benefit Analysis Method*                                                                    | Metodologia          |
@@ -51,6 +53,7 @@ Este é um glossário centralizado de siglas e abreviações utilizadas na docum
 | **CLI**                     | *Command-Line Interface*                                                                          | *Software*           |
 | **CNF**                     | *Cloud-native Network Function*                                                                   | Rede & Virtualização |
 | **ConOps**                  | *Concept of Operations*                                                                           | Metodologia          |
+| **CPE**                     | *Customer Premises Equipment*                                                                     | *Hardware*           |
 | **CPU**                     | *Central Processing Unit*                                                                         | *Hardware*           |
 | **CSL**                     | *Citation Style Language*                                                                         | Metodologia          |
 | **CSV**                     | *Comma-Separated Values*                                                                          | *Software*           |
@@ -63,9 +66,10 @@ Este é um glossário centralizado de siglas e abreviações utilizadas na docum
 | **DNS**                     | *Domain Name System*                                                                              | Protocolo            |
 | **DOE**                     | U.S. *Department of Energy*                                                                       | Institucional        |
 | **DOI**                     | *Digital Object Identifier*                                                                       | Metodologia          |
-| **DTS**                     | *Digital Transmission System*                                                                     | Radio                |
+| **DTS**                     | *Digital Transmission System*                                                                     | Rádio                |
+| **E-UTRAN**                 | *Evolved* UTRAN                                                                                   | Rádio                |
 | **ECC**                     | *Error-Correcting Code*                                                                           | *Hardware*           |
-| **eNodeB**                  | *Evolved Node* B                                                                                  | Rádio                |
+| **eNB/eNodeB**              | *Evolved Node* B                                                                                  | Rádio                |
 | **EOF**                     | *End of File*                                                                                     | *Software*           |
 | **EPC**                     | *Evolved Packet Core*                                                                             | Rede & Virtualização |
 | **EPE**                     | Empresa de Pesquisa Energética                                                                    | Institucional        |
@@ -108,6 +112,7 @@ Este é um glossário centralizado de siglas e abreviações utilizadas na docum
 | **IEEE 42010:2011**         | *Architecture Description*                                                                        | Norma                |
 | **IOS**                     | *Internetwork Operating System*                                                                   | *Software*           |
 | **IP**                      | *Internet Protocol*                                                                               | Protocolo            |
+| **I/Q**                     | *In-phase/Quadrature*                                                                             | Protocolo            |
 | **ISO**                     | *International Organization for Standartization*                                                  | Institucional        |
 | **ISO 8601**                | *Date and Time Format Standard*                                                                   | Norma                |
 | **ISO 17025**               | *General Requirements for the Competence of Testing and Calibration Laboratories*                 | Norma                |
@@ -119,6 +124,8 @@ Este é um glossário centralizado de siglas e abreviações utilizadas na docum
 | **ISBN**                    | *International Standard Book Number*                                                              | Norma                |
 | **ISM**                     | *Industrial, Scientific and Medical*                                                              | Rádio                |
 | **IT**                      | *Information Technology*                                                                          | Operação             |
+| **ITU**                     | *International Telecommunication Union*                                                           | Norma                |
+| **ITU-T**                   | ITU’s *Telecommunication Standardization Sector*                                                  | Norma                |
 | **JSON**                    | *JavaScript Object Notation*                                                                      | *Software*           |
 | **JSON-LD**                 | *JavaScript Object Notation for Linked Data*                                                      | *Software*           |
 | **JSONL**                   | *JSON Lines*                                                                                      | *Software*           |
@@ -140,6 +147,7 @@ Este é um glossário centralizado de siglas e abreviações utilizadas na docum
 | **MDS**                     | *Microwave Data Systems*                                                                          | Instituição          |
 | **MFA**                     | *Multi-Factor Authentication*                                                                     | Operação             |
 | **MIB**                     | *Management Information Base*                                                                     | Protocolo            |
+| **MIMO**                    | *Multiple-Input Multiple-Output*                                                                  | Rádio                |
 | **ML**                      | *Machine Learning*                                                                                | Metodologia          |
 | **MME**                     | Ministério de Minas e Energia                                                                     | Institucional        |
 | **MME**                     | *Mobility Management Entity*                                                                      | Rede & Virtualização |
@@ -177,6 +185,7 @@ Este é um glossário centralizado de siglas e abreviações utilizadas na docum
 | **OT**                      | *Operational Technology*                                                                          | Operação             |
 | **OTA**                     | *Over-the-Air*                                                                                    | Rádio                |
 | **OVS**                     | *Open vSwitch*                                                                                    | Rede & Virtualização |
+| **P&D**                     | Pesquisa e Desenvolvimento                                                                        | Metodologia          |
 | **PAT**                     | *Personal Access Token*                                                                           | *Software*           |
 | **PER**                     | *Packet Error Rate*                                                                               | Rádio                |
 | **PDF**                     | *Portable Document Format*                                                                        | *Software*           |
@@ -184,7 +193,7 @@ Este é um glossário centralizado de siglas e abreviações utilizadas na docum
 | **PIC**                     | *Product Innovation Charter*                                                                      | Metodologia          |
 | **PKI**                     | *Public Key Infrastructure*                                                                       | Operação             |
 | **PLC**                     | *Programmable Logic Controller*                                                                   | Operação             |
-| **pLTE**                    | *Private LTE*                                                                                     |                      |
+| **pLTE**                    | *Private LTE*                                                                                     | Rádio                |
 | **PNG**                     | *Portable Network Graphics*                                                                       | *Software*           |
 | **PR**                      | *Pull Request*                                                                                    | *Software*           |
 | **PROV**                    | W3C *Provenance*                                                                                  | Metodologia          |
@@ -197,6 +206,7 @@ Este é um glossário centralizado de siglas e abreviações utilizadas na docum
 | **RAID**                    | *Redundant Array of Independent Disks*                                                            | *Hardware*           |
 | **RAID**                    | *Risks, Assumptions, Issues, and Dependencies*                                                    | Metodologia          |
 | **RAM**                     | *Random Access Memory*                                                                            | *Hardware*           |
+| **RAN**                     | *Radio Access Network*                                                                            | Rádio                |
 | **RAT**                     | *Radio Access Technology*                                                                         | Rádio                |
 | **RBAC**                    | *Role-Based Access Control*                                                                       | Operação             |
 | **RDP**                     | *Remote Desktop Protocol*                                                                         | Protocolo            |
@@ -209,6 +219,7 @@ Este é um glossário centralizado de siglas e abreviações utilizadas na docum
 | **RL**                      | *Reinforcement Learning*                                                                          | Metodologia          |
 | **RM**                      | *Remote Master*                                                                                   | Rádio                |
 | **RPi**                     | *Raspberry Pi*                                                                                    | *Hardware*           |
+| **RRU**                     | *Remote Radio Unit*                                                                               | Rádio                |
 | **RSSI**                    | *Received Signal Strength Indicator*                                                              | Rádio                |
 | **RSA**                     | *Rivest-Shamir-Adleman*                                                                           | Protocolo            |
 | **RTC**                     | *Real-Time Clock*                                                                                 | *Hardware*           |
@@ -229,6 +240,7 @@ Este é um glossário centralizado de siglas e abreviações utilizadas na docum
 | **SPDX**                    | *Software Package Data Exchange*                                                                  | Norma                |
 | **SPAN**                    | *Switched Port Analyzer*                                                                          | Rede & Virtualização |
 | **SRS**                     | *Software Requirements Specification*                                                             | Metodologia          |
+| **SRS**                     | *Software Radio Systems*                                                                          | Institucional        |
 | **SSD**                     | *Solid-State Drive*                                                                               | *Hardware*           |
 | **SSH**                     | *Secure Shell*                                                                                    | Protocolo            |
 | **SSoT**                    | *Single Source of Truth*                                                                          | Metodologia          |
@@ -250,6 +262,7 @@ Este é um glossário centralizado de siglas e abreviações utilizadas na docum
 | **USB**                     | *Universal Serial Bus*                                                                            | *Hardware*           |
 | **USRP**                    | *Universal Software Radio Peripheral*                                                             | Rádio                |
 | **UTC**                     | *Coordinated Universal Time*                                                                      | Metodologia          |
+| **UTRAN**                   | *Universal Terrestrial Radio Access Network*                                                      | Rádio                |
 | **UX**                      | *User Experience*                                                                                 | *Software*           |
 | **VACM**                    | *View-based Access Control Model*                                                                 | Protocolo            |
 | **UUID**                    | *Universal Unique Identifier*                                                                     | *Software*           |

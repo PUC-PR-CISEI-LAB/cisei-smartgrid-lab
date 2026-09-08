@@ -119,6 +119,7 @@ The platform evolves through evidence-based increments. Resources described as p
 
 | Recurso | Conteúdo |
 | --- | --- |
+| [Base de Conhecimento](docs/wiki/README.md) | Fundamentos dos conceitos científicos e de engenharia investigados no laboratório. / Foundations of the scientific and engineering concepts investigated in the lab. |
 | [Termo de Abertura da Plataforma de Pesquisa](docs/charter.md) | Propósito, tese de valor, escopo, governança e princípios de evolução da plataforma. / Purpose, value thesis, scope, governance, and evolution principles. |
 | [Glossário](docs/glossary.md) | Vocabulário usado na documentação pública. / Terms used in the public documentation. |
 | [Bibliografia](docs/bibliography.bib) | Registros bibliográficos que sustentam a documentação. / Bibliographic records supporting the documentation. |
