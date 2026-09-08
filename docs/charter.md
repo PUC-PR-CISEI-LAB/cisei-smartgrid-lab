@@ -1,49 +1,50 @@
 # Termo de Abertura da Plataforma de Pesquisa — CISEI SmartGrid Lab
 
-> **Versão:** 3.3
+> **Versão:** 3.4
 >
-> **Status:** homologado
+> **Status:** em revisão
 >
-> **Data:** 2026-08-25
+> **Data:** 2026-08-31
 >
 > **Plataforma:** ambiente de rede estável, configurável e orientado por dados para pesquisa aplicada em redes de comunicação destinadas a sistemas elétricos inteligentes
 >
-> **Horizonte:** contínuo, realizado por incrementos sucessivos
+> **Horizonte:** contínuo, realizado por incrementos sucessivos em trilhas de projeto paralelas
 
 ---
 
 ## Histórico de Versões
 
-| **Versão** | **Data**               | **Alteração**                                                                                                |
-| ---------- | ---------------------- | ------------------------------------------------------------------------------------------------------------ |
-| 2.0        | 2026&#8209;08&#8209;17 | Reestruturação segundo o PIC: objetivos, medidas, premissas e diretrizes estratégicas                        |
-| 2.2        | 2026-08-19             | Atribuição de estado de execução à decomposição do trabalho                                                  |
-| 3.0        | 2026-08-19             | Reorientação ao eixo de capacidade                                                                           |
-| 3.1        | 2026-08-21             | Declaração do grau de inovação e posicionamento da plataforma (§1.4)                                         |
-| 3.2        | 2026-08-22             | Objetivos reordenados por dependência e **renumerados** para que o identificador expresse a sequência (§4.2) |
+| **Versão** | **Data**               | **Alteração**                                                                                                                                                                                                                             |
+| ---------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2.0        | 2026&#8209;08&#8209;17 | Reestruturação segundo o PIC: objetivos, medidas, premissas e diretrizes estratégicas                                                                                                                                                     |
+| 2.2        | 2026-08-19             | Atribuição de estado de execução à decomposição do trabalho                                                                                                                                                                               |
+| 3.0        | 2026-08-19             | Reorientação ao eixo de capacidade                                                                                                                                                                                                        |
+| 3.1        | 2026-08-21             | Declaração do grau de inovação e posicionamento da plataforma (§1.4)                                                                                                                                                                      |
+| 3.2        | 2026-08-22             | Objetivos reordenados por dependência e **renumerados** para que o identificador expresse a sequência (§4.2)                                                                                                                              |
 | 3.3        | 2026-08-25             | Redenominação do artefato de *Product Charter* para **Termo de Abertura da Plataforma de Pesquisa**; declaração da natureza do instrumento e da custódia institucional; distinção entre a estrutura tomada do PIC e o objeto do documento |
+| 3.4        | 2026-09-03             | Revisão e melhorias de entendimento do texto do documento em geral                                                                                                                                                                        |
 
 ---
 
 ## Resumo
 
-Este **Termo de Abertura da Plataforma de Pesquisa** (*Research Platform Charter*) estabelece a orientação estratégica de longo prazo do CISEI SmartGrid Lab. Seu objetivo é descrever a capacidade da plataforma de configurar, executar, observar e reproduzir experimentos em redes físicas, virtuais e híbridas. Além disso, o ambiente deve gerar e analisar dados segundo práticas científicas e normas de engenharia. Com isso, deve ser possível investigar o emprego progressivo de inteligência artificial na configuração, no diagnóstico e na autorrecuperação de redes de comunicação.
+Este **Termo de Abertura da Plataforma de Pesquisa** (*Research Platform Charter*) estabelece a orientação estratégica de longo prazo do CISEI SmartGrid Lab. Seu objetivo é descrever a capacidade da plataforma de configurar, executar, observar e reproduzir experimentos em diferentes redes físicas, virtuais e híbridas. Além disso, o ambiente deve gerar e analisar dados segundo boas práticas de pesquisa científica e normas de engenharia. 
 
-O laboratório vai além de uma instalação física, de um conjunto de equipamentos ou de uma arquitetura tecnológica particular. Seu valor está em converter questões de pesquisa e problemas de relevância técnica em cenários controlados, dados confiáveis, análises reproduzíveis, modelos passíveis de avaliação e decisões rastreáveis.
+O laboratório não se reduz à instalação física, ao acervo de equipamentos ou a uma arquitetura tecnológica específica. Sua proposta de valor consiste em transformar questões de pesquisa e problemas técnicos relevantes em cenários controlados e experimentos reproduzíveis, dos quais resultem dados com qualidade e proveniência conhecidas, análises verificáveis, modelos avaliados contra evidências e conclusões ou decisões rastreáveis, com incertezas e limitações devidamente mapeadas.
 
-Este documento define a identidade, a tese e o grau de inovação da plataforma (§1), o foco e suas fronteiras (§2), a experiência experimental que o laboratório deve proporcionar (§3), os objetivos permanentes (§4), as medidas de sucesso (§5), as premissas e incertezas estratégicas (§6) e as diretrizes de governança e evolução (§7).
+O presente documento define a identidade, a tese e o grau de inovação da plataforma (§1), o foco e suas fronteiras (§2), a experiência experimental que o laboratório deve proporcionar (§3), os objetivos permanentes (§4), as medidas de sucesso (§5), as premissas e incertezas que podem impactar a viabilidade técnica (§6) e as diretrizes de governança e a estratégia de evolução (§7).
 
-**Palavras-chave:** plataforma de pesquisa; redes configuráveis; redes físicas e virtuais; emulação de tráfego; análise de dados; proveniência; gêmeo digital; SDN; NFV; inteligência artificial; autorrecuperação; experimentação reproduzível; grau de inovação; posicionamento.
+**Palavras-chave:** plataforma de pesquisa; redes configuráveis; redes físicas e virtuais; emulação de tráfego; análise de dados; proveniência; gêmeo digital; SDN; NFV; inteligência artificial; autorrecuperação; experimentação reproduzível; grau de inovação.
 
 ---
 
 ## Nota Metodológica
 
-Este documento é um instrumento de governança de propriedade institucional, versionado e mantido sob controle de alterações, sob custódia do CISEI SmartGrid Lab. Não constitui metodologia proprietária ou de marca; as referências que informam sua estrutura são adotadas como orientação e não configuram alegação de conformidade ou de certificação.
+A estrutura adota como referência principal o conceito de *Product Innovation Charter* — PIC, entendido como expressão escrita da estratégia de inovação de produto [Crawford1980] [Bart2002] [BartPujari2007] [Anderson2024]. O modelo organiza antecedentes, foco, metas e objetivos, medidas de avaliação e diretrizes estratégicas para cenários de longo prazo. 
 
-A estrutura adota como referência principal o conceito de *Product Innovation Charter* — PIC, entendido como expressão escrita da estratégia de inovação do produto [Crawford1980] [Bart2002] [BartPujari2007] [Anderson2024]. O modelo organiza antecedentes, foco, metas e objetivos, medidas de avaliação e diretrizes estratégicas. Dele se adota a **estrutura**, e não o objeto: o que este Termo estabelece é a orientação de uma plataforma de pesquisa de capacidade permanente e horizonte contínuo, e não de um produto. 
+Embora tenha sido inicialmente concebida para promover a inovação constante em produtos comerciais, a **estrutura** apresentada aqui orienta uma plataforma com um horizonte contínuo e de longo prazo, capaz de acomodar e permitir a coexistência de diferentes domínios sem que estes interfiram ou comprometam a qualidade dos dados e modelos em suas respectivas pesquisas acadêmicas ou consultas técnicas. 
 
-Por se tratar de uma plataforma de pesquisa e desenvolvimento, o documento explicita premissas, incertezas e critérios de revisão em consonância com o caráter sistemático, criativo, incerto e reprodutível da P&D [OECDFrascati2015]. Para a gestão de dados e da evidência, são adotados como referências os princípios FAIR [Wilkinson2016], o modelo de proveniência PROV-DM [W3CPROVDM] e, como orientação para competência, imparcialidade e consistência dos processos experimentais, a ISO/IEC 17025:2017 [ISO17025]. Essa adoção não constitui alegação de acreditação ou conformidade integral.
+Por se tratar de uma plataforma de pesquisa e desenvolvimento, este Termo ainda explicita premissas, incertezas e condições de revisão, em consonância com os critérios de novidade, criatividade, incerteza, sistematicidade e transferibilidade ou reprodutibilidade que caracterizam as atividades de P&D [OECDFrascati2015]. Na gestão de dados e evidências, são adotados como referências os princípios FAIR [Wilkinson2016] e o modelo de proveniência PROV-DM [W3CPROVDM]. A ISO/IEC 17025:2017 [ISO17025], por sua vez, orienta aspectos relativos à competência, à imparcialidade e à operação consistente dos processos experimentais. É importante ressaltar que o emprego dessas referências não constitui declaração de conformidade integral nem, no caso da ISO/IEC 17025:2017, alegação de acreditação.
 
 O gerenciamento de riscos associados à inteligência artificial toma como referência o NIST AI RMF 1.0 [NISTAIRMF2023]. As referências orientam o desenho da plataforma; os controles verificáveis e sua implementação pertencem aos documentos derivados.
 
@@ -53,30 +54,26 @@ O gerenciamento de riscos associados à inteligência artificial toma como refer
 
 ### 1.1 Identidade
 
-O CISEI SmartGrid Lab é uma plataforma permanente de pesquisa aplicada dedicada ao estudo de redes de comunicação que sustentam funções de sistemas elétricos inteligentes. Integra infraestrutura de rede física, ambientes virtualizados e simulados, geração e emulação de tráfego, instrumentação, automação, gestão de dados, métodos analíticos e inteligência artificial em uma experiência experimental comum.
+O CISEI SmartGrid Lab é uma plataforma permanente de pesquisa aplicada dedicada à investigação de redes de comunicação que sustentam operações de sistemas elétricos inteligentes. Ela integra infraestrutura de rede física, ambientes virtualizados e simulados, geração e emulação de tráfego, instrumentação, automação, gestão de dados, métodos analíticos e inteligência artificial em uma única experiência experimental.
 
-O laboratório é governado como plataforma continuada, porque possui usuários, proposta de valor, capacidades permanentes, critérios de sucesso e evolução contínua. Projetos temporários financiam, constroem ou aperfeiçoam incrementos; nenhum projeto isolado esgota a plataforma.
-
+O laboratório é governado como plataforma permanente porque reúne usuários, proposta de valor, capacidades compartilhadas, critérios de sucesso e evolução contínua em diferentes domínios e linhas de pesquisa que podem compor investigações e reutilizar infraestrutura, dados, métodos e serviços comuns. Deste modo, são preservados, quando necessário, fronteiras de responsabilidade, isolamento de recursos e independência de execução, de modo que uma atividade não interfira em outra, salvo quando essa interação for deliberada e integrar o cenário experimental. Projetos temporários financiam, contribuem ou aperfeiçoam incrementos da plataforma, mas nenhum deles, isoladamente, define seu propósito, condiciona sua continuidade ou esgota suas possibilidades de uso.
 ### 1.2 Problema
 
-Pesquisadores, estudantes e organizações parceiras necessitam avaliar redes destinadas a serviços críticos sem depender de intervenções em ambientes produtivos, de configurações artesanais difíceis de reproduzir ou de dados cuja origem e qualidade sejam desconhecidas. Em laboratórios heterogêneos, a introdução sucessiva de equipamentos, ferramentas e linhas de pesquisa tende a produzir demora de preparação, resultados incomparáveis, dependência de conhecimento tácito, fragmentação de dados e aumento do custo de manutenção.
+Pesquisadores, estudantes e organizações parceiras que necessitam avaliar redes destinadas a serviços críticos sem depender de intervenções em ambientes produtivos, de configurações artesanais difíceis de reproduzir ou de dados cuja origem e qualidade sejam desconhecidas. Em laboratórios heterogêneos, a introdução sucessiva de equipamentos, ferramentas e linhas de pesquisa tende a produzir demora de preparação, resultados incomparáveis, dependência de conhecimento tácito, fragmentação de dados e aumento do custo de manutenção.
 
-O problema central não é apenas disponibilizar equipamentos. É permitir que diferentes perguntas sejam investigadas com rapidez e rigor por meio de cenários configuráveis, perfis de tráfego e falha controlados, observação confiável e análise reprodutível, preservando a distinção entre resultado físico, resultado virtual, simulação, inferência analítica e decisão operacional.
+O problema central não é apenas disponibilizar equipamentos. É permitir que diferentes questões sejam investigadas com rapidez e rigor por meio de cenários configuráveis, perfis de tráfego e falha controlados, observação confiável e análise reprodutível, preservando a distinção entre resultado físico, resultado virtual, simulação, inferência analítica e decisão operacional.
 
 ### 1.3 Oportunidade e Tese de Valor
 
 O laboratório pode reduzir o custo e o tempo de preparação de experimentos, ampliar sua repetibilidade e produzir conhecimento comparável entre ambientes físicos, virtuais e híbridos. Sobre uma base comum de configuração e dados, torna-se possível desenvolver e avaliar mecanismos de inteligência artificial que auxiliem a escolha de configurações, detectem condições anômalas e promovam recuperação segura da rede.
 
-> **Tese da plataforma.** Se topologias, parâmetros de enlace, perfis de tráfego, falhas, instrumentação, critérios de aceite e políticas de recuperação forem descritos de forma versionada e executável sobre ambientes físicos, virtuais e híbridos, então pesquisadores e engenheiros de campo poderão realizar experimentos com menor esforço de preparação e maior reprodutibilidade. Se os dados resultantes possuírem qualidade, proveniência e contexto experimental explícitos, então métodos analíticos e modelos de inteligência artificial poderão ser avaliados com rigor e empregados, de maneira progressiva e controlada, no controle e na autorrecuperação da rede.
+> **Tese da plataforma:** se topologias, parâmetros de enlace, perfis de tráfego, falhas, instrumentação, critérios de aceite e políticas de recuperação forem descritos de forma versionada e executável sobre ambientes físicos, virtuais e híbridos, então pesquisadores e engenheiros de campo poderão realizar experimentos com menor esforço de preparação e maior reprodutibilidade. Se os dados resultantes possuírem qualidade, proveniência e contexto experimental explícitos, então métodos analíticos e modelos de inteligência artificial poderão ser avaliados com rigor e empregados, de maneira progressiva e controlada, na direção e na autorrecuperação da rede.
 
 ### 1.4 Grau de Inovação e Posicionamento
 
-A declaração do grau de inovação pretendido é elemento do enquadramento PIC [Crawford1980] [Bart2002] [Anderson2024]. Parte da plataforma reproduz prática consolidada — automação, integração contínua, observabilidade, SDN e NFV, dados FAIR —, o que é decisão de infraestrutura legítima e não alegação de contribuição.
+A declaração do grau de inovação pretendido é elemento do enquadramento PIC [Crawford1980] [Bart2002] [Anderson2024]. Parte da plataforma incorpora práticas e tecnologias consolidadas — como automação, integração contínua, observabilidade, SDN, NFV e gestão de dados orientada pelos princípios FAIR — que constituem sua base habilitadora. A adoção desses elementos é uma decisão legítima de engenharia, mas não representa, por si só, alegação de novidade nem de contribuição científica ou tecnológica..
 
-A ambição concentra-se em três frentes, condicionadas a evidência ainda não produzida: caracterização empírica e sombra calibrada do enlace sub-GHz proprietário da planta, qualidade experimental — proveniência, portabilidade, reprodução por operador distinto — como critério de avaliação de *testbed* e um protocolo de promoção de autonomia sobre ativo físico, com independência demonstrada entre execução, verificação e interrupção. Nenhuma dessas frentes se propõe como alegação, ou seja, cada uma delas deve ser abandonada se a evidência não a sustentar.
-
-A base comparativa — instalações, plataformas e literatura confrontadas trilha a trilha, com registro das buscas e suas limitações — está em `docs/reviews/
-innovation-positioning-2026-08-21.md`.
+A intenção se concentra em três frentes, condicionadas à evidência de caracterização empírica e sombra calibrada do enlace sub-GHz proprietário da planta, qualidade experimental — proveniência, portabilidade, reprodução por operador distinto — como critério de avaliação de *testbed* e um protocolo de promoção de autonomia sobre ativo físico, com independência demonstrada entre execução, verificação e interrupção. Nenhuma dessas frentes se propõe como alegação, ou seja, cada uma delas pode ser abandonada se a evidência não a sustentar.
 
 ---
 
@@ -92,83 +89,97 @@ A missão do CISEI SmartGrid Lab é prover, manter e evoluir um ambiente experim
 
 ### 2.3 Partes Interessadas e Necessidades Principais
 
-| **Parte interessada**                               | **Necessidade Principal**                                                                                          |
+| **Parte interessada**                               | **Necessidade**                                                                                                    |
 | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Pesquisadores                                       | Formular e reproduzir experimentos, comparar alternativas e produzir evidência publicável                          |
+| Pesquisadores                                       | Formular modelos e reproduzir experimentos, comparar alternativas e produzir evidência publicável                  |
 | Estudantes                                          | Aprender e aperfeiçoar experimentos em ambiente controlado                                                         |
 | Equipes técnicas parceiras / engenheiros de campo   | Avaliar arquiteturas, configurações, tráfego, degradações e estratégias de recuperação antes de aplicação em campo |
-| Responsáveis por redes, observabilidade e segurança | Compreender estados, riscos, limites e efeitos das ações propostas ou executadas                                   |
+| Responsáveis por redes, observabilidade e segurança | Identificar e compreender estados, riscos, limites e efeitos das ações propostas ou executadas                     |
 | Gestores de pesquisa e inovação                     | Preservar infraestrutura, conhecimento e valor entre projetos, equipes e parcerias sucessivas                      |
 
 ### 2.4 Fundamentos da Plataforma
 
-1. **Experimentação configurável e multiplataforma.** Cenários devem ser compostos por perfis reutilizáveis e aplicáveis, conforme sua compatibilidade, a redes físicas (*bare metal*), virtuais, simuladas ou híbridas. A configuração efetiva deve ser lida de volta e comparada ao estado pretendido.
+1. **Experimentação configurável e multiplataforma:** cenários devem ser compostos por perfis reutilizáveis e aplicáveis, conforme sua compatibilidade, a redes físicas (*bare metal*), virtuais, simuladas ou híbridas. A configuração efetiva deve ser lida de volta e comparada ao estado pretendido.
 
-2. **Emulação controlada de tráfego, degradações e falhas.** O laboratório deve representar padrões normais e adversos de comunicação por perfis versionados de carga, prioridade, periodicidade, rajada, concorrência, perda, atraso, variação de atraso, indisponibilidade e falha de componentes, sem confundir emulação controlada com ocorrência de campo.
+2. **Emulação controlada de tráfego, degradações e falhas:** o laboratório deve representar padrões normais e adversos de comunicação por perfis versionados de carga, prioridade, periodicidade, rajada, concorrência, perda, atraso, variação de atraso, indisponibilidade e falha de componentes, sem confundir emulação controlada com ocorrência de campo.
 
-3. **Dados e análises governados.** Dados brutos, transformações, indicadores, conjuntos de dados, códigos analíticos e modelos devem possuir identidade, proveniência, qualidade, versão, critérios de inclusão, incertezas e limitações suficientes para exame e reutilização. A prática analítica deve separar exploração, calibração, validação e avaliação reservada sempre que a pergunta exigir inferência ou comparação de modelos. Reprodução exige, além disso, que o **ambiente de execução** seja declarado e recuperável e que as **fontes de aleatoriedade** de toda execução ou análise dependente de sorteio sejam registradas. Quando a identidade exata do resultado não for alcançável, declara-se a **tolerância** e o critério — valor, estatística ou decisão de aceite — dentro dos quais a reprodução é considerada bem-sucedida.
+3. **Dados e análises governados:** dados brutos, transformações, indicadores, conjuntos de dados, códigos analíticos e modelos devem possuir identidade, proveniência, qualidade, versão, critérios de inclusão, incertezas e limitações suficientes para exame e reutilização. A prática analítica deve separar exploração, calibração, validação e avaliação reservada sempre que a pergunta exigir inferência ou comparação de modelos. Reprodução exige, além disso, que o **ambiente de execução** seja declarado e recuperável e que as **fontes de aleatoriedade** de toda execução ou análise dependente de sorteio sejam registradas. Quando a identidade exata do resultado não for alcançável, declara-se a **tolerância** e o critério — valor, estatística ou decisão de aceite — dentro dos quais a reprodução é considerada bem-sucedida.
 
-4. **Inteligência artificial para configuração e resiliência.** A IA deve evoluir de observação e diagnóstico para recomendação, execução supervisionada e autorrecuperação delimitada. Seu desempenho deve ser comparado a linhas de base, e cada ação deve respeitar a política de atuação, os limites operacionais da planta e os mecanismos de verificação e reversão. A integridade e a proveniência da telemetria e do contexto que alimentam o mecanismo são condição de validade de sua decisão: entrada forjada, corrompida ou de origem não verificável invalida a ação proposta ou executada, ainda que ela permaneça dentro da política de atuação. O próprio mecanismo — suas entradas, seu contexto e suas credenciais — constitui superfície de ataque a ser modelada e testada, e não apenas um componente a ser avaliado por desempenho.
-5. **Aprendizagem e continuidade institucional.** Cenários, dados, resultados, decisões e limitações devem permanecer compreensíveis e reutilizáveis por novos participantes. A expansão do laboratório deve aumentar sua capacidade de investigação sem produzir fragmentação desnecessária.
+4. **Inteligência artificial aplicada à configuração e à resiliência:** a IA deve evoluir de observação e diagnóstico para recomendação, execução supervisionada e autorrecuperação delimitada. Seu desempenho deve ser comparado a critérios de base, e cada ação deve respeitar a política de atuação, os limites operacionais da planta e os mecanismos de verificação e reversão. A integridade e a proveniência da telemetria e do contexto que alimentam o mecanismo são condição de validade de sua decisão: entrada forjada, corrompida ou de origem não verificável invalida a ação proposta ou executada, ainda que ela permaneça dentro da política de atuação. O próprio mecanismo — suas entradas, seu contexto e suas credenciais — constitui superfície de ataque a ser modelada e testada, e não apenas um componente a ser avaliado por desempenho.
+5. **Aprendizagem e continuidade institucional:** cenários, dados, resultados, decisões e limitações devem permanecer compreensíveis e reutilizáveis por novos participantes. A expansão do laboratório deve aumentar sua capacidade de investigação sem produzir fragmentação desnecessária.
 
 ### 2.5 Escopo da Plataforma
 
 Integram o escopo permanente:
 
-- redes de comunicação relevantes para sistemas elétricos inteligentes, com ênfase inicial em *backhaul* sem fio;
-- ambientes físicos, virtuais, simulados e híbridos;
-- sombras e gêmeos digitais de rede, calibrados e avaliados contra medição física;
-- configuração declarativa de topologias, enlaces, serviços e funções de rede;
-- SDN e NFV como mecanismos de programabilidade, isolamento e composição experimental, e não como fins em si mesmos;
-- geração e emulação de perfis de tráfego, degradação e falha;
-- observabilidade independente e coleta sincronizada de dados;
-- engenharia, governança e análise de dados experimentais;
-- modelos estatísticos, aprendizado de máquina e sistemas de IA aplicados à configuração, detecção, diagnóstico, previsão e recuperação;
-- avaliação de segurança, desempenho, confiabilidade, interoperabilidade e eficiência operacional;
-- preservação de cenários, evidências, software, conhecimento e competência humana.
+- Redes de comunicação relevantes para sistemas elétricos inteligentes, com ênfase inicial em *backhaul* sem fio.
+- Ambientes físicos, virtuais, simulados e híbridos.
+- Sombras e gêmeos digitais de rede, calibrados e avaliados contra medição física.
+- Configuração declarativa de topologias, enlaces, serviços e funções de rede.
+- SDN e NFV como mecanismos de programabilidade, isolamento e composição experimental.
+- Geração e emulação de perfis de tráfego, degradação e falha.
+- Observabilidade independente e coleta sincronizada de dados.
+- Engenharia, governança e análise de dados experimentais.
+- Modelos estatísticos, aprendizado de máquina e sistemas de IA aplicados à configuração, à detecção, ao diagnóstico, à previsão e à recuperação.
+- Avaliação de segurança, desempenho, confiabilidade, interoperabilidade e eficiência operacional.
+- Preservação de cenários, evidências, software, conhecimento e competência humana.
 
-Neste Termo, **sombra digital** designa o modelo alimentado por medições da planta física, sem via de retorno, e **gêmeo digital**, aquele cuja correspondência com a planta é mantida nos dois sentidos. A distinção é normativa e vale para ambos: nenhum modelo pode ser apresentado como representação da planta enquanto sua fidelidade não tiver sido avaliada contra medição reservada e sua faixa de validade declarada. O critério que a separa — correspondência mantida nos dois sentidos — converge com a definição de rede-gêmea digital da ITU&#8209;T Y.3090 [ITUY3090], à qual este Termo remete; o que aqui se acrescenta é a condição de fidelidade avaliada, não a distinção em si.
+Neste Termo, **sombra digital** designa o modelo alimentado por medições da planta física, sem via de retorno, e **gêmeo digital**, aquele cuja correspondência com a planta é mantida nos dois sentidos. A distinção é normativa e vale para ambos: nenhum modelo pode ser apresentado como representação da planta enquanto sua fidelidade não tiver sido avaliada contra medição reservada e sua faixa de validade declarada. O critério que a separa — correspondência mantida nos dois sentidos — converge com a definição de rede-gêmea digital da ITU-T Y.3090 [ITUY3090], à qual este Termo remete a condição de fidelidade avaliada.
 
-**Limites operacionais da planta física.** O que um perfil pode representar em ambiente físico é limitado pela planta instalada. A planta vigente é composta por enlaces sem fio em faixa não licenciada e de baixa taxa de transmissão; está prevista sua extensão por uma planta LTE privada, sujeita a autorização de uso de radiofrequência. Faixa, taxas, potência, número de nós e demais limites operacionais de cada planta são declarados nos documentos derivados e não são reproduzidos aqui, para que este Termo não envelheça a cada mudança de inventário. Deles decorre uma regra permanente: **condição que exceda os limites operacionais da planta vigente não pode ser afirmada por execução física** — é objeto de ambiente virtual ou simulado, com a diferença entre ambientes medida e declarada (OBJ&#8209;09). A incorporação de nova planta amplia esses limites e não altera esta regra.
+Em relação aos **limites operacionais da planta física**, o que um perfil pode representar em ambiente físico é limitado pela planta instalada. A planta vigente é composta por enlaces sem fio em faixa não licenciada e de baixa taxa de transmissão; está prevista sua extensão por uma planta LTE privada, com a possibilidade de enlace por SDR, sujeita à autorização de uso de radiofrequência. Faixa, taxas, potência, número de nós e demais limites operacionais de cada planta são declarados nos documentos derivados e não são reproduzidos aqui, para que o presente documento não se desatualize a cada mudança de inventário. Deles decorre uma regra permanente: as **condições que excedam os limites operacionais da planta vigente que não podem ser confirmadas por execução física** são objetos de ambiente virtual ou simulado, com a diferença entre ambientes medida e declarada (OBJ-09). A incorporação de nova planta amplia esses limites e não altera esta regra.
 
 ### 2.6 Fora de Escopo
 
 Não constituem finalidade da plataforma:
 
-- operar ou controlar diretamente redes elétricas ou redes de telecomunicações de produção;
-- providenciar uma equivalência automática entre os resultados de laboratório e o desempenho de campo;
-- homologar comercialmente equipamentos ou certificar conformidade regulatória sem mandato e método específicos;
-- permitir autonomia irrestrita ou ações sem identidade, autorização, limites, verificação e possibilidade de interrupção segura;
-- emitir radiofrequência fora das faixas, potências e condições autorizadas, ou sem responsável técnico designado quando exigido, inclusive quando a emissão provier de instrumento de laboratório.
+- Operar ou controlar diretamente redes elétricas ou redes de telecomunicações em ambientes de produção.
+- Providenciar uma equivalência imediata entre os resultados de laboratório e o desempenho de campo.
+- Homologar comercialmente equipamentos ou certificar conformidade regulatória sem mandato e método específicos.
+- Permitir autonomia irrestrita ou ações sem identidade, autorização, limites, verificação e possibilidade de interrupção segura.
+- Emitir radiofrequência fora das faixas, potências e condições autorizadas, ou sem responsável técnico designado quando exigido, inclusive quando a emissão provier de instrumento de laboratório.
 
-**Condição regulatória de capacidade.** Capacidade cujo funcionamento dependa de autorização de uso de radiofrequência é **condicionada**: pode ser planejada, especificada, desenvolvida e validada em ambiente virtual, simulado ou em caminho conduzido, mas não é declarada disponível antes de obtida a autorização da autoridade competente e designado o responsável técnico correspondente. Esta é a única classe de restrição da plataforma que não depende de esforço próprio do laboratório, e por isso é tratada também como premissa estratégica (§6). Os instrumentos regulatórios aplicáveis a cada planta são identificados nos documentos derivados.
+A **condição regulatória de capacidade**, cujo funcionamento dependa de autorização de uso de radiofrequência pode ser planejada, especificada, desenvolvida e validada em ambiente virtual, simulado ou em caminho conduzido, mas não é declarada disponível antes de obtida a autorização da autoridade competente e designado o responsável técnico correspondente. Esta é a única classe de restrição da plataforma que não depende de esforço próprio do laboratório, e por isso é tratada também como premissa estratégica (§6). Os instrumentos regulatórios aplicáveis a cada planta são identificados nos documentos derivados.
 
 ---
 
 ## 3. Experiência Experimental da Plataforma
 
+Este capítulo descreve como uma pergunta de pesquisa se transforma em evidência. Em um primeiro passo, a pergunta é expressa como um **cenário**, composto por perfis reutilizáveis. Em seguida, seleciona-se um **ambiente** compatível, aplica-se o cenário, observa-se sua execução e preservam-se os dados e as evidências resultantes. Quando o experimento inclui diagnóstico, recomendação ou atuação automatizada sobre a rede, aplicam-se também os níveis e controles de autonomia definidos no §3.3.
+
 ### 3.1 Unidade Configurável de Cenário
 
-A experiência central do laboratório é um cenário reproduzível, descrito por composição de perfis. A representação tecnológica poderá evoluir, mas deverá expressar, quando aplicável:
+A unidade configurável da experiência é o **cenário**: a descrição completa do que se pretende investigar, em quais condições e segundo quais critérios. Cada cenário é composto por **perfis**, que descrevem dimensões reutilizáveis do experimento, e é realizado em um **ambiente** físico, virtual, simulado ou híbrido. A representação tecnológica dos perfis poderá evoluir, mas deverá expressar, quando aplicável:
 
-| **Perfil**         | **Conteúdo mínimo**                                                                                                                                                |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Ambiente           | Alvo físico, virtual, simulado ou híbrido; recursos e versões                                                                                                      |
-| Topologia          | Nós, enlaces, funções, relações e endereçamento lógico                                                                                                             |
-| Enlace ou rádio    | Parâmetros que o ambiente permite controlar e condições que só podem ser caracterizadas por medição — capacidade, propagação, qualidade e interferência entre elas |
-| Tráfego            | Fontes, destinos, protocolos, classes, periodicidade, rajadas, volumes e prioridades                                                                               |
-| Falha e degradação | Condição injetada, instante, duração, intensidade e estado esperado                                                                                                |
-| Observabilidade    | Relógios, sinais, frequências, unidades, pontos de coleta e controles de qualidade                                                                                 |
-| Aceite             | Hipóteses, indicadores, limiares, comparações e critérios de encerramento                                                                                          |
-| Recuperação        | Condições de disparo, ações permitidas, restrições, verificação e reversão                                                                                         |
+| **Perfil**             | **Conteúdo mínimo**                                                                                                                                                |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Ambiente**           | Alvo físico, virtual, simulado ou híbrido; recursos e versões                                                                                                      |
+| **Topologia**          | Nós, enlaces, funções, relações e endereçamento lógico                                                                                                             |
+| **Enlace ou rádio**    | Parâmetros que o ambiente permite controlar e condições que só podem ser caracterizadas por medição — capacidade, propagação, qualidade e interferência entre elas |
+| **Tráfego**            | Fontes, destinos, protocolos, classes, periodicidade, rajadas, volumes e prioridades                                                                               |
+| **Falha e degradação** | Condição injetada, instante, duração, intensidade e estado esperado                                                                                                |
+| **Observabilidade**    | Relógios, sinais, frequências, unidades, pontos de coleta e controles de qualidade                                                                                 |
+| **Aceite**             | Hipóteses, indicadores, limiares, comparações e critérios de encerramento                                                                                          |
+| **Recuperação**        | Condições de disparo, ações permitidas, restrições, verificação e reversão                                                                                         |
 
-**Controlado e observado.** Nem todo item de perfil é controlável em todo ambiente. Em ambiente simulado, propagação, interferência e qualidade de enlace são variáveis controladas; na planta física, são condições do meio, caracterizadas por medição e alteráveis apenas por meio físico — atenuação, blindagem, reposicionamento ou injeção controlada de sinal. O perfil deve distinguir, por ambiente, o que é **controlado** do que é **observado**: parâmetro que o ambiente não permite controlar é registrado como condição observada, e não como configuração. Nenhum procedimento de automação, isoladamente, cria ou comprova uma condição física. Trecho cuja única via de sincronização seja o próprio meio sob medição não admite afirmação de atraso unidirecional.
+Por exemplo, para investigar se uma estratégia de recuperação preserva um serviço após a degradação de um enlace, o cenário pode combinar uma topologia com caminhos alternativos, um perfil de tráfego, a degradação pretendida, os sinais que serão observados, os critérios de aceite e as ações de recuperação permitidas. Em simulação, a degradação pode ser configurada diretamente; na planta física, deve ser produzida por meio físico controlado ou registrada como condição observada. Se o estudo apenas comparar resultados, encerra-se com a evidência e a conclusão. Se recomendar ou executar uma recuperação, submete-se também ao §3.3.
 
-**Compatibilidade e portabilidade.** Um perfil é portável para um ambiente quando tudo o que ele controla é controlável naquele ambiente, tudo o que seus critérios de aceite exigem é observável ali, e suas demandas cabem nos limites operacionais correspondentes. A compatibilidade é, portanto, propriedade do par perfil–ambiente, e não de dois ambientes entre si; e não é simétrica. Executar um perfil mediante reparametrização, substituição de condição controlada por observada ou troca de indicador de aceite constitui **alteração semântica**: o cenário resultante é outro e deve ser declarado como tal.
+#### 3.1.1 Controlado e Observado
 
-"Facilidade de configuração" significa reduzir esforço manual sem ocultar o estado efetivo. Deve ser avaliada por tempo de preparação, quantidade de intervenções manuais, proporção de parâmetros declarados, portabilidade do perfil entre ambientes, detecção de deriva, leitura do estado aplicado e capacidade de desfazer o cenário.
+Nem todo item de perfil é controlável em todo ambiente. Em ambiente simulado, propagação, interferência e qualidade de enlace são variáveis controladas; na planta física, são condições do meio, caracterizadas por medição e alteráveis apenas por meio físico — atenuação, blindagem, reposicionamento ou injeção controlada de sinal. O perfil deve distinguir, por ambiente, o que é **controlado** do que é **observado**: parâmetro que o ambiente não permite controlar é registrado como condição observada, e não como configuração. Nenhum procedimento de automação, isoladamente, cria ou comprova uma condição física.
+
+O **limite de medição física** é definido pelo trecho cuja única via de sincronização seja o próprio meio sob medição não admite afirmação de atraso unidirecional.
+
+#### 3.1.2 Compatibilidade e Portabilidade
+
+Um perfil é portável para um ambiente quando todas as suas funcionalidades são controláveis nesse ambiente, todos os requisitos de seus critérios de aceite são observáveis lá e suas demandas se encaixam nos limites operacionais correspondentes. A compatibilidade é, portanto, propriedade do par perfil–ambiente, mas não é simétrica. Executar um perfil mediante reparametrização, substituição de condição controlada por observada ou troca de indicador de aceite constitui **alteração semântica**, ou seja, o cenário resultante é outro e deve ser declarado como tal.
+
+#### 3.1.3 Facilidade de configuração
+
+Neste Termo, **facilidade de configuração** significa reduzir esforço manual sem ocultar o estado efetivo. Deve ser avaliada por tempo de preparação, quantidade de intervenções manuais, proporção de parâmetros declarados, portabilidade do perfil entre ambientes, detecção de deriva, leitura do estado aplicado e capacidade de desfazer o cenário.
 
 ### 3.2 Ciclo Experimental Canônico
+
+Todo experimento percorre um fluxo comum até a análise. Diagnóstico, recomendação e atuação são extensões opcionais desse fluxo e somente integram o cenário quando a pergunta de pesquisa as exige.
 
 ```text
 pergunta e hipótese
@@ -184,15 +195,31 @@ pergunta e hipótese
   → evidência, conclusão e aprendizagem reutilizável
 ```
 
-Cada transição deve preservar a identidade do cenário, do ambiente, da execução, dos dados, dos agentes humanos ou automatizados e das transformações realizadas.
+Quando houver atuação, insere-se entre a análise e a conclusão o ramo correspondente:
+
+```text
+
+diagnóstico ou proposta de configuração/recuperação
+  → autorização segundo a política de atuação
+  → execução controlada
+  → verificação do resultado
+  → reversão ou parada segura, quando necessária
+  → evidência da decisão, da ação e de seus efeitos
+```
+
+  Cada transição deve preservar a identidade do cenário, do ambiente, da execução, dos dados, dos agentes humanos ou automatizados e das transformações realizadas.
 
 ### 3.3 Autonomia
+
+Esta seção aplica-se aos experimentos em que um mecanismo automatizado ou de inteligência artificial diagnostica, recomenda ou executa uma alteração. Os níveis de observação e recomendação integram a escala porque constituem a base de evidência necessária antes que o mecanismo receba autoridade para atuar.
 
 Para este Termo, **autorrecuperação** ou *self-healing* é o ciclo controlado pelo qual o laboratório detecta uma condição anômala, produz diagnóstico rastreável, seleciona uma ação permitida, avalia seus riscos, executa-a dentro de limites definidos, verifica a recuperação e realiza reversão ou parada segura quando o resultado não satisfaz os critérios estabelecidos.
 
 Entende-se por **política de atuação** o conjunto de ações permitidas ao mecanismo e das condições sob as quais são permitidas, declarado por classe de ação e por ambiente.
 
-A maturidade será expressa pelos seguintes níveis, cuja formulação converge deliberadamente com os níveis de rede autônoma da literatura normativa [TMFAN] [TS28100] — inclusive na regra de avaliar por cenário, e não globalmente — e com a governança de laço fechado que declara política, supervisão e ciclo de vida da ação [ZSM009]. O que este Termo acrescenta não é a escala, e sim o critério de promoção enunciado adiante:
+Uma **classe de ação** reúne alterações com finalidade, risco e controles equivalentes, como reiniciar um serviço, selecionar uma rota ou modificar um parâmetro de configuração. O nível é atribuído separadamente a cada classe de ação e ambiente; não existe um único nível global de autonomia do laboratório.
+
+A maturidade será expressa pelos seguintes níveis, cuja formulação converge deliberadamente com os níveis de rede autônoma da literatura normativa [TMFAN] [TS28100] — inclusive na regra de avaliar por cenário, e não globalmente — e com a governança retroativa que declara política, supervisão e ciclo de vida da ação [ZSM009]. Suplementarmente, este Termo acrescenta o critério de promoção que define a mudança de nível:
 
 | **Nível** | **Definição**                           | **Capacidade**                                                                                                                                                                                              |
 | --------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -203,7 +230,7 @@ A maturidade será expressa pelos seguintes níveis, cuja formulação converge 
 | **A4**    | Autonomia Delimitada — Ambiente Físico  | Ações previamente autorizadas podem ocorrer sobre ativos físicos do laboratório, após demonstração de segurança, desempenho e recuperação em níveis anteriores                                              |
 | **A5**    | Autonomia Composta sob Política         | O mecanismo compõe e aplica respostas a condições não antecipadas individualmente, sem aprovação por ação; a pessoa autorizada define a política de atuação e os critérios de parada, mas não cada execução |
 
-O estado registrado representa o nível alcançado por classe de ação e ambiente, com cada nível indicando a maturidade atingida. Isso implica que a autonomia superior é validada por meio de uma questão de pesquisa ou demanda operacional que ultrapasse o nível de autonomia inferior.
+O estado registrado representa o nível alcançado por **classe de ação** e what ambiente, com cada nível indicando a maturidade atingida. Isso implica que a autonomia superior é validada por meio de uma questão de pesquisa ou demanda operacional que ultrapasse o nível de autonomia inferior.
 
 O avanço de nível não é automático nem definitivo. Deve ocorrer por caso de uso, ambiente e classe de ação, com possibilidade de regressão quando a evidência se tornar insuficiente.
 
