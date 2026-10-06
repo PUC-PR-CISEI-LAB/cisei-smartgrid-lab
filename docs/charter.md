@@ -28,7 +28,7 @@
 
 ## Resumo
 
-Este **Termo de Abertura da Plataforma de Pesquisa** (*Research Platform Charter*) estabelece a orientação estratégica de longo prazo do CISEI SmartGrid Lab. Seu objetivo é descrever a capacidade da plataforma de configurar, executar, observar e reproduzir experimentos em diferentes redes físicas, virtuais e híbridas. Além disso, o ambiente deve gerar e analisar dados segundo boas práticas de pesquisa científica e normas de engenharia. 
+Este **Termo de Abertura da Plataforma de Pesquisa** (*Research Platform Charter*) estabelece a orientação estratégica de longo prazo do CISEI SmartGrid Lab. Seu objetivo é descrever a capacidade da plataforma de configurar, executar, observar e reproduzir experimentos em diferentes redes físicas, virtuais e híbridas. Além disso, o ambiente deve gerar, armazenar e analisar dados segundo boas práticas de pesquisa científica e normas de engenharia. 
 
 O laboratório não se reduz à instalação física, ao acervo de equipamentos ou a uma arquitetura tecnológica específica. Sua proposta de valor consiste em transformar questões de pesquisa e problemas técnicos relevantes em cenários controlados e experimentos reproduzíveis, dos quais resultem dados com qualidade e proveniência conhecidas, análises verificáveis, modelos avaliados contra evidências e conclusões ou decisões rastreáveis, com incertezas e limitações devidamente mapeadas.
 
@@ -40,7 +40,7 @@ O presente documento define a identidade, a tese e o grau de inovação da plata
 
 ## Nota Metodológica
 
-A estrutura adota como referência principal o conceito de *Product Innovation Charter* — PIC, entendido como expressão escrita da estratégia de inovação de produto [Crawford1980] [Bart2002] [BartPujari2007] [Anderson2024]. O modelo organiza antecedentes, foco, metas e objetivos, medidas de avaliação e diretrizes estratégicas para cenários de longo prazo. 
+A gerência deste projeto adota como referência principal o conceito de *Product Innovation Charter* — PIC, entendido como expressão escrita da estratégia de inovação de produto [Crawford1980] [Bart2002] [BartPujari2007] [Anderson2024]. O modelo organiza antecedentes, foco, metas e objetivos, medidas de avaliação e diretrizes estratégicas para cenários de longo prazo. 
 
 Embora tenha sido inicialmente concebida para promover a inovação constante em produtos comerciais, a **estrutura** apresentada aqui orienta uma plataforma com um horizonte contínuo e de longo prazo, capaz de acomodar e permitir a coexistência de diferentes domínios sem que estes interfiram ou comprometam a qualidade dos dados e modelos em suas respectivas pesquisas acadêmicas ou consultas técnicas. 
 
@@ -230,7 +230,7 @@ A maturidade será expressa pelos seguintes níveis, cuja formulação converge 
 | **A4**    | Autonomia Delimitada — Ambiente Físico  | Ações previamente autorizadas podem ocorrer sobre ativos físicos do laboratório, após demonstração de segurança, desempenho e recuperação em níveis anteriores                                              |
 | **A5**    | Autonomia Composta sob Política         | O mecanismo compõe e aplica respostas a condições não antecipadas individualmente, sem aprovação por ação; a pessoa autorizada define a política de atuação e os critérios de parada, mas não cada execução |
 
-O estado registrado representa o nível alcançado por **classe de ação** e what ambiente, com cada nível indicando a maturidade atingida. Isso implica que a autonomia superior é validada por meio de uma questão de pesquisa ou demanda operacional que ultrapasse o nível de autonomia inferior.
+O estado registrado representa o nível alcançado por **classe de ação** e por ambiente, com cada nível indicando a maturidade atingida. Isso implica que a autonomia superior é validada por meio de uma questão de pesquisa ou demanda operacional que ultrapasse o nível de autonomia inferior.
 
 O avanço de nível não é automático nem definitivo. Deve ocorrer por caso de uso, ambiente e classe de ação, com possibilidade de regressão quando a evidência se tornar insuficiente.
 
