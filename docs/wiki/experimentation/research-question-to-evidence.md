@@ -1,3 +1,13 @@
+---
+id: research-question-to-evidence
+title: "Da pergunta de pesquisa à evidência"
+type: overview
+domain: experimentation
+summary: "Um experimento liga uma pergunta a uma conclusão por meio de condições declaradas, observações rastreáveis e critérios definidos antes da interpretação dos dados."
+links:
+  related: [experimental-environments, observability-and-provenance, progressive-autonomy]
+references: [OECDFrascati2015, ISO17025, Wilkinson2016, W3CPROVDM, PowderComnet2021, PosCoNEXT2021]
+---
 # Da pergunta de pesquisa à evidência
 
 > Um experimento liga uma pergunta a uma conclusão por meio de condições declaradas,
@@ -94,6 +104,7 @@ desenho fraco em experimento válido.
 - [Ambientes experimentais](experimental-environments.md)
 - [Observabilidade e proveniência](../data-and-evidence/observability-and-provenance.md)
 - [Automação progressiva](../intelligence/progressive-autonomy.md)
+- [Ablação e atribuição de contribuição](ablation.md)
 
 ## Referências
 

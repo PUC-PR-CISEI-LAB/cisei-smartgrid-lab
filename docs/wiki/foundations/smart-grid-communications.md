@@ -1,3 +1,13 @@
+---
+id: smart-grid-communications
+title: "Comunicações para sistemas elétricos inteligentes"
+type: overview
+domain: foundations
+summary: "Uma rede elétrica inteligente combina processos físicos, medição, computação, comunicação e decisão; a rede de comunicação é parte do sistema de controle, não apenas um meio de transporte de dados."
+links:
+  related: [network-quality, experimental-environments, defense-in-depth, observability-and-provenance]
+references: [NISTsp1108r4, IEC61850, Cintuglu2017, Smadi2021]
+---
 # Comunicações para sistemas elétricos inteligentes
 
 > Uma rede elétrica inteligente combina processos físicos, medição, computação,

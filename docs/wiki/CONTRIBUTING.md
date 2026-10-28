@@ -25,6 +25,17 @@ o público, elimine detalhes operacionais e cite fontes publicáveis.
 Use somente as seções necessárias, nesta ordem:
 
 ```markdown
+---
+id: nome-do-arquivo
+title: "Nome do conceito"
+type: concept
+domain: experimentation
+summary: "Definição curta, igual à da citação de abertura."
+links:
+  depends_on: [outra-nota]
+  related: [mais-uma-nota]
+references: [ChaveBibTeX2024]
+---
 # Nome do conceito
 
 > Definição curta em linguagem direta.
@@ -41,6 +52,43 @@ Use somente as seções necessárias, nesta ordem:
 Uma página deve responder qual problema o conceito resolve, quais variáveis ou
 relações o definem, como pode ser observado e o que não se pode concluir a partir
 dele. Fórmulas devem definir todas as grandezas e unidades.
+
+## Metadados e ligações tipadas
+
+Cada nota abre com um bloco de metadados YAML. A pasta define o domínio da nota; as
+ligações tipadas definem suas relações com as demais. O
+[mapa de conceitos](concept-map.md) é gerado a partir desses metadados e não deve ser
+editado manualmente.
+
+| Campo | Regra |
+| --- | --- |
+| `id` | Igual ao nome do arquivo, sem extensão. |
+| `title` | Igual ao título da nota. |
+| `type` | `overview` (panorama de um domínio), `concept`, `method` ou `technology`. |
+| `domain` | Igual ao nome da pasta. Um domínio novo exige registro no gerador. |
+| `summary` | Uma frase; reaparece no índice do mapa. |
+| `links` | Ligações tipadas, cada uma com uma lista de `id` de notas existentes. |
+| `references` | Chaves existentes em [`bibliography.bib`](../bibliography.bib). |
+
+| Ligação | Leitura |
+| --- | --- |
+| `depends_on` | A pressupõe B: compreender A exige B. |
+| `part_of` | A é componente de B. |
+| `specializes` | A é caso particular de B. |
+| `evaluates` | O método A é usado para avaliar B. |
+| `alternative_to` | A e B resolvem o mesmo problema por caminhos distintos. |
+| `related` | Relação fraca, sem semântica adicional. Prefira um tipo mais preciso. |
+
+Declare cada ligação em uma só nota; o mapa a desenha uma vez. Toda ligação declarada
+precisa de um link correspondente em **Conceitos relacionados**, e todo link para outra
+nota precisa de uma ligação declarada em um dos dois sentidos.
+
+Após editar metadados, regenere e confira o mapa:
+
+```bash
+python docs/assets/src/render_concept_map.py
+python docs/assets/src/render_concept_map.py --check
+```
 
 ## Linguagem e nomes
 

@@ -1,3 +1,13 @@
+---
+id: private-lte
+title: "LTE privada como rede de missão crítica"
+type: overview
+domain: networking
+summary: "Uma rede LTE privada oferece controle local sobre acesso, cobertura e políticas; sua adequação a uma função crítica precisa ser demonstrada de ponta a ponta."
+links:
+  related: [network-quality, experimental-environments, defense-in-depth]
+references: [NISTsp1108r4, AmarisoftDigitalTwin2024, Testbed5GUnisinos2023, SmartGridSimNS3, Energies2024]
+---
 # LTE privada como rede de missão crítica
 
 > Uma rede LTE privada oferece controle local sobre acesso, cobertura e políticas;

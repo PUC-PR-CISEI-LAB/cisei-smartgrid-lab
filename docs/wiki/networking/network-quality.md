@@ -1,3 +1,13 @@
+---
+id: network-quality
+title: "Qualidade de rede: atraso, variação, perda e disponibilidade"
+type: overview
+domain: networking
+summary: "Qualidade de comunicação é a adequação mensurável da rede a uma função, sob condições e período definidos."
+links:
+  related: [smart-grid-communications, private-lte, observability-and-provenance]
+references: [NISTsp1108r4, IEEE2030_2011, IEC61850, Energies2024]
+---
 # Qualidade de rede: atraso, variação, perda e disponibilidade
 
 > Qualidade de comunicação é a adequação mensurável da rede a uma função, sob

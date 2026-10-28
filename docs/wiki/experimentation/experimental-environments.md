@@ -1,3 +1,13 @@
+---
+id: experimental-environments
+title: "Ambientes físicos, virtuais, emulados e simulados"
+type: overview
+domain: experimentation
+summary: "O ambiente experimental determina quais mecanismos estão presentes, quais são representados por modelos e até onde uma conclusão pode ser generalizada."
+links:
+  related: [research-question-to-evidence, network-quality, observability-and-provenance]
+references: [Cintuglu2017, Smadi2021, HELICS2024, GridLABD2024, AmarisoftDigitalTwin2024, ITUY3090, ITUY3093]
+---
 # Ambientes físicos, virtuais, emulados e simulados
 
 > O ambiente experimental determina quais mecanismos estão presentes, quais são
