@@ -1,3 +1,13 @@
+---
+id: programmable-infrastructure
+title: "Infraestrutura programável: SDN, NFV e automação"
+type: overview
+domain: networking
+summary: "Programabilidade transforma configuração e comportamento de rede em artefatos declarados, verificáveis e repetíveis, mas também amplia o impacto de erros."
+links:
+  related: [network-quality, progressive-autonomy, defense-in-depth]
+references: [FeamsterRexford2018, Kephart2003, ETSIzsm, ZSM009, FABRIC2019]
+---
 # Infraestrutura programável: SDN, NFV e automação
 
 > Programabilidade transforma configuração e comportamento de rede em artefatos

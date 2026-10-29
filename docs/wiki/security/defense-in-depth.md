@@ -1,3 +1,13 @@
+---
+id: defense-in-depth
+title: "Segurança em experimentos de tecnologia operacional"
+type: overview
+domain: security
+summary: "Segurança experimental protege pessoas, processo físico, infraestrutura, dados e continuidade da pesquisa por meio de limites técnicos e organizacionais."
+links:
+  related: [programmable-infrastructure, progressive-autonomy, observability-and-provenance]
+references: [IEC62443, IEC62351, NISTIR7628r1, NISTAIRMF2023, Manadhata2011]
+---
 # Segurança em experimentos de tecnologia operacional
 
 > Segurança experimental protege pessoas, processo físico, infraestrutura, dados e

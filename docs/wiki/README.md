@@ -31,6 +31,9 @@ uma rede programável. Ele mostra a cadeia mínima que permite ligar uma pergunt
 uma conclusão: declarar condições, executar, observar, preservar o contexto e
 interpretar o resultado dentro de seus limites de validade.
 
+O [mapa de conceitos](concept-map.md) mostra todas as notas e suas ligações tipadas.
+Ele é gerado a partir dos metadados de cada nota e cresce com a coleção.
+
 ## Trilhas de leitura
 
 ### Começar pelo problema
@@ -38,6 +41,7 @@ interpretar o resultado dentro de seus limites de validade.
 1. [Comunicações para sistemas elétricos inteligentes](foundations/smart-grid-communications.md)
 2. [Da pergunta de pesquisa à evidência](experimentation/research-question-to-evidence.md)
 3. [Ambientes físicos, virtuais, emulados e simulados](experimentation/experimental-environments.md)
+4. [Ablação e atribuição de contribuição](experimentation/ablation.md)
 
 ### Entender a infraestrutura de comunicação
 

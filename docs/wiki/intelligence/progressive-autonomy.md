@@ -1,3 +1,13 @@
+---
+id: progressive-autonomy
+title: "Automação progressiva e autonomia responsável"
+type: overview
+domain: intelligence
+summary: "Autonomia é uma capacidade avaliada por tarefa e cenário: observar, recomendar ou executar são níveis de autoridade diferentes e exigem evidências diferentes."
+links:
+  related: [programmable-infrastructure, defense-in-depth, observability-and-provenance]
+references: [Kephart2003, NISTAIRMF2023, FeamsterRexford2018, TS28100, TMFAN, ZSM009, Cornetto2026]
+---
 # Automação progressiva e autonomia responsável
 
 > Autonomia é uma capacidade avaliada por tarefa e cenário: observar, recomendar ou

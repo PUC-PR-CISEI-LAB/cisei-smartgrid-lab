@@ -1,3 +1,13 @@
+---
+id: observability-and-provenance
+title: "Observabilidade, qualidade de dados e proveniência"
+type: overview
+domain: data-and-evidence
+summary: "Observar é produzir sinais sobre o sistema; confiar em uma conclusão exige também conhecer a qualidade, o contexto e a história desses sinais."
+links:
+  related: [research-question-to-evidence, network-quality, experimental-environments]
+references: [Wilkinson2016, W3CPROVDM, GoFAIR, DataCite44, ISO17025]
+---
 # Observabilidade, qualidade de dados e proveniência
 
 > Observar é produzir sinais sobre o sistema; confiar em uma conclusão exige também
