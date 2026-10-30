@@ -6,8 +6,20 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/P0_Underlay-conclu%C3%ADdo-009E73?style=flat-square" alt="P0 Underlay concluído">
-  <img src="https://img.shields.io/badge/gate-P1_Baseline_T1_em_andamento-F0E442?style=flat-square" alt="P1 baseline T1 em andamento">
+  <img src="https://img.shields.io/badge/sub--GHz-450_MHz_%C2%B7_900_MHz-0072B2?style=flat-square" alt="Faixas sub-GHz: 450 MHz e 900 MHz">
+  <img src="https://img.shields.io/badge/pLTE-Banda_31-0072B2?style=flat-square" alt="LTE privada na Banda 31">
+  <img src="https://img.shields.io/badge/simula%C3%A7%C3%A3o-ns--3-009E73?style=flat-square" alt="Simulação: ns-3">
+  <img src="https://img.shields.io/badge/RAN-srsRAN_4G-009E73?style=flat-square" alt="RAN: srsRAN 4G">
+  <img src="https://img.shields.io/badge/n%C3%BAcleo-Open5GS-009E73?style=flat-square" alt="Núcleo de rede: Open5GS">
+  <br>
+  <img src="https://img.shields.io/badge/an%C3%A1lise_RF-Anritsu_S332E-D55E00?style=flat-square" alt="Análise de RF: Anritsu S332E">
+  <img src="https://img.shields.io/badge/SDR-ADALM--Pluto-D55E00?style=flat-square" alt="SDR: ADALM-Pluto">
+  <img src="https://img.shields.io/badge/SDR-USRP_B210_%C2%B7_planejado-999999?style=flat-square" alt="SDR: USRP B210, planejado">
+  <img src="https://img.shields.io/badge/SDR-LimeSDR_%C2%B7_planejado-999999?style=flat-square" alt="SDR: LimeSDR, planejado">
+  <br>
+  <img src="https://img.shields.io/badge/IA-PyTorch-CC79A7?style=flat-square" alt="IA: PyTorch">
+  <img src="https://img.shields.io/badge/GPU-NVIDIA_A2_%C2%B7_CUDA-CC79A7?style=flat-square" alt="GPU: NVIDIA A2 com CUDA">
+  <img src="https://img.shields.io/badge/agentes_de_IA-tr%C3%A1fego_smart_grid_%C2%B7_planejado-999999?style=flat-square" alt="Agentes de IA para tráfego smart grid, planejado">
   <img src="https://img.shields.io/badge/licen%C3%A7a-CC--BY--4.0-555555?style=flat-square" alt="Documentação sob CC BY 4.0">
 </p>
 
