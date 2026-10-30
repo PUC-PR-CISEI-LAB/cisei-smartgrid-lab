@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/pLTE-Banda_31-0072B2?style=flat-square" alt="LTE privada na Banda 31">
   <img src="https://img.shields.io/badge/simula%C3%A7%C3%A3o-ns--3-009E73?style=flat-square" alt="Simulação: ns-3">
   <img src="https://img.shields.io/badge/RAN-srsRAN_4G-009E73?style=flat-square" alt="RAN: srsRAN 4G">
-  <img src="https://img.shields.io/badge/n%C3%BAcleo-Open5GS-009E73?style=flat-square" alt="Núcleo de rede: Open5GS">
+  <img src="https://img.shields.io/badge/core-Open5GS-009E73?style=flat-square" alt="Core de rede: Open5GS">
   <br>
   <img src="https://img.shields.io/badge/an%C3%A1lise_RF-Anritsu_S332E-D55E00?style=flat-square" alt="Análise de RF: Anritsu S332E">
   <img src="https://img.shields.io/badge/SDR-ADALM--Pluto-D55E00?style=flat-square" alt="SDR: ADALM-Pluto">
