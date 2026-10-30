@@ -14,12 +14,12 @@
   <br>
   <img src="https://img.shields.io/badge/an%C3%A1lise_RF-Anritsu_S332E-D55E00?style=flat-square" alt="Análise de RF: Anritsu S332E">
   <img src="https://img.shields.io/badge/SDR-ADALM--Pluto-D55E00?style=flat-square" alt="SDR: ADALM-Pluto">
-  <img src="https://img.shields.io/badge/SDR-USRP_B210_%C2%B7_planejado-999999?style=flat-square" alt="SDR: USRP B210, planejado">
-  <img src="https://img.shields.io/badge/SDR-LimeSDR_%C2%B7_planejado-999999?style=flat-square" alt="SDR: LimeSDR, planejado">
+  <img src="https://img.shields.io/badge/SDR-USRP_B210-D55E00?style=flat-square" alt="SDR: USRP B210">
+  <img src="https://img.shields.io/badge/SDR-LimeSDR-D55E00?style=flat-square" alt="SDR: LimeSDR">
   <br>
   <img src="https://img.shields.io/badge/IA-PyTorch-CC79A7?style=flat-square" alt="IA: PyTorch">
   <img src="https://img.shields.io/badge/GPU-NVIDIA_A2_%C2%B7_CUDA-CC79A7?style=flat-square" alt="GPU: NVIDIA A2 com CUDA">
-  <img src="https://img.shields.io/badge/agentes_de_IA-tr%C3%A1fego_smart_grid_%C2%B7_planejado-999999?style=flat-square" alt="Agentes de IA para tráfego smart grid, planejado">
+  <img src="https://img.shields.io/badge/agentes_de_IA-tr%C3%A1fego_smart_grid-CC79A7?style=flat-square" alt="Agentes de IA para tráfego smart grid">
   <img src="https://img.shields.io/badge/licen%C3%A7a-CC--BY--4.0-555555?style=flat-square" alt="Documentação sob CC BY 4.0">
 </p>
 
