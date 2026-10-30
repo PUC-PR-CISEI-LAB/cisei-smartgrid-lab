@@ -144,11 +144,13 @@ Os repositórios de pesquisa e operação do laboratório são privados. O acess
 
 The lab's research and operational repositories are private. Access is granted through a request and review by the laboratory coordinator.
 
-1. Abra uma [solicitação de acesso](../../issues/new?template=access-request.yml) neste repositório. / Open an [access request](../../issues/new?template=access-request.yml) in this repository.
-2. Preencha todos os campos do formulário. Para estudantes, vínculo institucional, orientação e linha de pesquisa são obrigatórios. / Complete every form field. Students must provide their institutional affiliation, adviser, and intended research line.
-3. A solicitação será analisada. Quando aprovada, o solicitante receberá um convite do GitHub para o repositório correspondente, e a *issue* será fechada com a decisão registrada. / The request will be reviewed. If approved, the requester will receive a GitHub invitation to the appropriate repository and the issue will be closed with the recorded decision.
+Há dois papéis para quem vem de fora da coordenação: **pesquisador(a)**, que executa experimentos e contribui com código, dados ou documentação, e **leitor(a)**, que acompanha, revisa e estuda o material sem executar experimentos. / There are two roles for people outside the lab coordination: **researcher**, who runs experiments and contributes code, data, or documentation, and **reader**, who follows, reviews, and studies the material without running experiments.
 
-> **Privacidade / Privacy:** a solicitação abre uma *issue* pública do GitHub. Envie apenas as informações pedidas no formulário; não inclua documentos, telefones, credenciais, dados de rede, dados de pesquisa não publicados ou qualquer outra informação sensível. The request opens a public GitHub issue. Submit only the requested information; do not include documents, phone numbers, credentials, network details, unpublished research data, or any other sensitive information.
+1. Com a sua conta GitHub, abra uma [solicitação de acesso](../../issues/new?template=access-request.yml) neste repositório. Essa conta é a sua identidade no laboratório. / Using your GitHub account, open an [access request](../../issues/new?template=access-request.yml) in this repository. That account is your identity in the lab.
+2. Informe o papel pretendido, o vínculo e uma justificativa curta. / State the intended role, your affiliation, and a short justification.
+3. A coordenação confirma o vínculo por canal institucional e registra a decisão na *issue*. Quando aprovada, a conta recebe um convite do GitHub. / The coordination confirms the affiliation through an institutional channel and records the decision in the issue. If approved, the account receives a GitHub invitation.
+
+> **Privacidade / Privacy:** a solicitação abre uma *issue* pública do GitHub. O formulário não pede dados pessoais; não inclua nome completo, e-mail, telefone, documentos, credenciais, dados de rede ou dados de pesquisa não publicados. The request opens a public GitHub issue. The form asks for no personal data; do not include your full name, e-mail, phone number, documents, credentials, network details, or unpublished research data.
 
 ### Elegibilidade / Eligibility
 
