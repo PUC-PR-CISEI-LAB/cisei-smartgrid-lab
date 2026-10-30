@@ -14,7 +14,8 @@ body:
       label: Papel pretendido
       options:
         - Pesquisador(a) — executa experimentos e contribui com código, dados ou documentação
-        - Leitor(a) — acompanha, revisa e estuda o material, sem executar experimentos
+        - Revisor(a) — revisa e comenta resultados e documentação, sem executar experimentos
+        - Convidado(a) — acompanha e estuda o material, sem participar do trabalho
     validations:
       required: true
   - type: dropdown
