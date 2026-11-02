@@ -2,9 +2,9 @@
 
 > **Versão:** 3.5.1
 >
-> **Status:** em revisão
+> **Status:** homologado
 >
-> **Data:** 2026-10-14
+> **Data:** 2026-11-02
 >
 > **Plataforma:** ambiente de rede estável, configurável e orientado por dados para pesquisa aplicada em redes de comunicação destinadas a sistemas elétricos inteligentes
 >
@@ -25,7 +25,7 @@
 | 3.3        | 2026-08-25 | Redenominação para Termo de Abertura da Plataforma de Pesquisa; declaração da custódia institucional e distinção entre a estrutura tomada do PIC e o objeto do documento                                                                                                                                   |
 | 3.4        | 2026-08-31 | Reestruturação da experiência experimental (§3), com separação do fluxo comum e da atuação opcional e consolidação dos critérios de promoção de autonomia. A edição pública recebeu revisões editoriais em 2026-09-03 e 2026-09-30 sob o mesmo número de versão.                                           |
 | 3.5        | 2026-10-14 | Consolidação das edições do documento em uma fonte pública única, mantendo suas diretrizes essenciais (como compatibilidade e autonomia), substituição da remissão privada do §1.4 e adição de duas referências: a nota conceitual do NIST (abril de 2026) e a norma ISO/IEC 42001:2023 para gestão de IA. |
-
+| 3.5.1      | 2026-11-02 | Homologação do Termo como fonte única de verdade, com revisões editoriais da nota metodológica, do §4.2 e do §7                                                                                                                                                                                            |
 
 ---
 
@@ -45,7 +45,7 @@ O presente documento define a identidade, a tese e o grau de inovação da plata
 
 Este documento é um instrumento de governança de propriedade institucional, versionado e mantido sob controle de alterações, sob custódia do CISEI SmartGrid Lab. A estrutura adota como referência principal o conceito de *Product Innovation Charter* — PIC, entendido como expressão escrita da estratégia de inovação do produto [Crawford1980] [Bart2002] [BartPujari2007] [Anderson2024]. Desta forma, o modelo permite organizar antecedentes, foco, metas e objetivos, medidas de avaliação e diretrizes estratégicas. O que este Termo estabelece, baseado nessa estrutura, é a orientação de uma plataforma de pesquisa de capacidade permanente e horizonte contínuo, e não necessariamente um produto.
 
-Por se tratar de uma plataforma de pesquisa e desenvolvimento, o documento explicita premissas, incertezas e critérios de revisão em consonância com o caráter sistemático, criativo, incerto e reprodutível da P&D [OECDFrascati2015]. Para a gestão de dados e da evidência, são adotados como referências os princípios FAIR [Wilkinson2016], o modelo de proveniência PROV-DM [W3CPROVDM] e, como orientação para competência, imparcialidade e consistência dos processos experimentais, a ISO/IEC 17025:2017 [ISO17025]. 
+Por se tratar de uma plataforma de pesquisa e desenvolvimento, o documento explicita premissas, incertezas e critérios de revisão em consonância com o caráter sistemático, criativo, incerto e reprodutível da P&D [OECDFrascati2015]. Para a gestão de dados e da evidência, são adotados como referências os princípios FAIR [Wilkinson2016], o modelo de proveniência PROV-DM [W3CPROVDM] e, como orientação para competência, imparcialidade e consistência dos processos experimentais, a ISO/IEC 17025:2017 [ISO17025].
 
 O gerenciamento de riscos associados à inteligência artificial toma como referência o NIST AI RMF 1.0 [NISTAIRMF2023]. A nota conceitual de 7 de abril de 2026 para o perfil de IA confiável em infraestrutura crítica [ShehStanley2026] complementa essa referência como orientação em desenvolvimento. A nota anuncia a elaboração do perfil; não constitui um perfil finalizado nem fundamenta, por si só, uma declaração de conformidade.
 
@@ -275,7 +275,7 @@ experimentos.
 
 #### Camada 2 — Disciplinas Contínuas
 
-As disciplinas reunidas nesta camada não constituem entrega de etapa alguma, mas condição de validade que incide sobre todo experimento desde o primeiro. Sua instituição tardia é onerosa e retroage sobre o que já foi produzido, uma vez que proveniência, reprodutibilidade e rastreabilidade não podem ser atribuídas a posteriori a resultados obtidos sem elas. Sendo assim, o avanço de um *milestone* pode instituí-las ou reforçá-las, mas nenhum dos *milestones* as encerra.
+As disciplinas reunidas nesta camada não constituem entrega de etapa alguma, mas condição de validade que incide sobre todo experimento desde o primeiro. Sua instituição tardia é onerosa e retroage sobre o que já foi produzido, uma vez que proveniência, reprodutibilidade e rastreabilidade não podem ser atribuídas a posteriori a resultados obtidos sem elas.
 
 | **ID**           | **Objetivo**                                            | **Resultado Pretendido**                                                                                                               |
 | ---------------- | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -286,7 +286,7 @@ As disciplinas reunidas nesta camada não constituem entrega de etapa alguma, ma
 
 #### Camada 3 — Capacidades Avançadas
 
-As capacidades desta camada dependem das duas anteriores e guardam entre si uma ordem de precedência própria pela programabilidade e pela comparação entre ambientes que antecedem a inferência. A inferência, desta forma, antecede a atuação e a inversão dessa ordem produziria uma decisão automatizada sobre base cuja fidelidade não foi avaliada, sendo que essa hipótese é expressamente rejeitada por §3.3.
+As capacidades desta camada dependem das duas anteriores e guardam entre si uma ordem de precedência própria pela programabilidade e pela comparação entre ambientes que antecedem a inferência. A inferência, desta forma, antecede a atuação e a inversão dessa ordem produziria uma decisão automatizada sobre base cuja fidelidade não foi avaliada, sendo que essa hipótese é expressamente rejeitada pelo §3.3.
 
 | **ID**           | **Objetivo**                                                                  | **Resultado Pretendido**                                                                                                                                               |
 | ---------------- | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -295,7 +295,7 @@ As capacidades desta camada dependem das duas anteriores e guardam entre si uma 
 | **OBJ&#8209;10** | Aplicar IA à configuração e ao diagnóstico                                    | Modelos produzem recomendações avaliadas contra linhas de base, com confiança e limites explícitos                                                                     |
 | **OBJ&#8209;11** | Desenvolver autorrecuperação de rede segura e progressiva                     | Mecanismos detectam, diagnosticam, atuam, verificam e revertem dentro das políticas de atuação previamente avaliadas                                                   |
 
-**OBJ-08** habilita e fortalece a fundação experimental, ampliando a composição e o isolamento de cenários, e não constitui uma trilha tecnológica autônoma (§2.5). **OBJ-11**, por sua vez, exige, além do que estabelece **OBJ-10**, uma política de atuação declarada, sua reversão verificada e os caminhos de comando e observação independente do mecanismo que atua, conforme a condição
+**OBJ-08** habilita e fortalece a fundação experimental, ampliando a composição e o isolamento de cenários, e não constitui uma trilha tecnológica autônoma (§2.5). **OBJ-11**, por sua vez, exige, além do que estabelece **OBJ-10**, uma política de atuação declarada, sua reversão verificada e os caminhos de comando e observação independentes do mecanismo que atua, conforme a condição
 de promoção fixada no §3.3.
 
 ---
@@ -385,7 +385,7 @@ A edição corrente deste Termo é mantida exclusivamente em `cisei-smartgrid-la
 - **separação epistêmica:** medição, simulação, inferência, recomendação e decisão não devem ser apresentadas como equivalentes;
 - **segurança por progressão:** maior autonomia exige evidência acumulada, limites mais claros e recuperação demonstrada;
 - **neutralidade tecnológica responsável:** componentes são substituíveis, mas sua adoção deve considerar interoperabilidade, sustentabilidade e competência disponível;
-- **aprendizagem preservada:** resultados negativos e inconclusivos também integram o patrimônio experimental quando seu método é válido.
+- **aprendizagem preservada:** resultados negativos e inconclusivos também integram o patrimônio experimental quando seu método é válido;
 - **abertura por padrão, reserva justificada:** método, perfis de cenário, dados curados, resultados e limitações destinam-se à publicação; reserva-se o que, divulgado, exponha a operação a risco (endereçamento, configuração, credenciais, identificação de equipamento) ou descumpra confidencialidade com terceiro.
 
 A reserva é declarada como tal e não se confunde com artefato ainda não publicado por imaturidade; a classificação é feita por tipo de artefato, não caso a caso.
@@ -398,7 +398,7 @@ Nesses casos, a decisão padrão é consolidar ou simplificar a solução, mant�
 
 ### 7.4 Revisão Documental
 
-O *charter* deve ser revisto quando ocorrer ao menos uma das seguintes condições: rejeição de premissa estratégica, alteração relevante do mandato institucional ou dos usuários prioritários, incapacidade persistente de atingir objetivos, mudança substancial de risco, surgimento de oportunidade que altere a tese de valor ou expansão cujo custo não possa ser absorvido pelo modelo vigente.
+Este Termo deve ser revisto quando ocorrer ao menos uma das seguintes condições: rejeição de premissa estratégica, alteração relevante do mandato institucional ou dos usuários prioritários, incapacidade persistente de atingir objetivos, mudança substancial de risco, surgimento de oportunidade que altere a tese de valor ou expansão cujo custo não possa ser absorvido pelo modelo vigente.
 
 ---
 
