@@ -1,10 +1,10 @@
 # Termo de Abertura da Plataforma de Pesquisa — CISEI SmartGrid Lab
 
-> **Versão:** 3.5.1
+> **Versão:** 3.5.2
 >
 > **Status:** homologado
 >
-> **Data:** 2026-11-02
+> **Data:** 2026-11-03
 >
 > **Plataforma:** ambiente de rede estável, configurável e orientado por dados para pesquisa aplicada em redes de comunicação destinadas a sistemas elétricos inteligentes
 >
@@ -26,6 +26,7 @@
 | 3.4        | 2026-08-31 | Reestruturação da experiência experimental (§3), com separação do fluxo comum e da atuação opcional e consolidação dos critérios de promoção de autonomia. A edição pública recebeu revisões editoriais em 2026-09-03 e 2026-09-30 sob o mesmo número de versão.                                           |
 | 3.5        | 2026-10-14 | Consolidação das edições do documento em uma fonte pública única, mantendo suas diretrizes essenciais (como compatibilidade e autonomia), substituição da remissão privada do §1.4 e adição de duas referências: a nota conceitual do NIST (abril de 2026) e a norma ISO/IEC 42001:2023 para gestão de IA. |
 | 3.5.1      | 2026-11-02 | Homologação do Termo como fonte única de verdade, com revisões editoriais da nota metodológica, do §4.2 e do §7                                                                                                                                                                                            |
+| 3.5.2      | 2026-11-03 | Correção do §2.6: a condição regulatória deixa de ser apresentada como a única restrição alheia ao esforço próprio do laboratório e passa a ser distinguida pelo efeito sobre a declaração de disponibilidade; revisão de regência no §1.1                                                                  |
 
 ---
 
@@ -59,7 +60,7 @@ Para a governança organizacional da inteligência artificial, a ISO/IEC 42001:2
 
 O CISEI SmartGrid Lab é uma plataforma permanente de pesquisa aplicada dedicada à investigação de redes de comunicação que sustentam operações de sistemas elétricos inteligentes. Ela integra infraestrutura de rede física, ambientes virtualizados e simulados, geração e emulação de tráfego, instrumentação, automação, gestão de dados, métodos analíticos e inteligência artificial em uma única experiência experimental.
 
-O laboratório é governado como plataforma permanente porque reúne usuários, proposta de valor, capacidades compartilhadas, critérios de sucesso e evolução contínua em diferentes domínios e linhas de pesquisa que podem compor investigações e reutilizar infraestrutura, dados, métodos e serviços comuns. Deste modo, são preservados, quando necessário, fronteiras de responsabilidade, isolamento de recursos e independência de execução, de modo que uma atividade não interfira em outra, salvo quando essa interação for deliberada e integrar o cenário experimental. Projetos temporários financiam, contribuem ou aperfeiçoam incrementos da plataforma, mas nenhum deles, isoladamente, define seu propósito, condiciona sua continuidade ou esgota suas possibilidades de uso.
+O laboratório é governado como plataforma permanente porque reúne usuários, proposta de valor, capacidades compartilhadas, critérios de sucesso e evolução contínua em diferentes domínios e linhas de pesquisa que podem compor investigações e reutilizar infraestrutura, dados, métodos e serviços comuns. Deste modo, são preservados, quando necessário, fronteiras de responsabilidade, isolamento de recursos e independência de execução, de modo que uma atividade não interfira em outra, salvo quando essa interação for deliberada e integrar o cenário experimental. Projetos temporários financiam ou aperfeiçoam incrementos da plataforma, ou contribuem para eles, mas nenhum deles, isoladamente, define seu propósito, condiciona sua continuidade ou esgota suas possibilidades de uso.
 
 ### 1.2 Problema
 
@@ -144,7 +145,7 @@ Não constituem finalidade da plataforma:
 - permitir autonomia irrestrita ou ações sem identidade, autorização, limites, verificação e possibilidade de interrupção segura;
 - emitir radiofrequência fora das faixas, potências e condições autorizadas, ou sem responsável técnico designado quando exigido, inclusive quando a emissão provier de instrumento de laboratório.
 
-**Condição regulatória de capacidade.** Capacidade cujo funcionamento dependa de autorização de uso de radiofrequência é **condicionada**: pode ser planejada, especificada, desenvolvida e validada em ambiente virtual, simulado ou em caminho conduzido, mas não é declarada disponível antes de obtida a autorização da autoridade competente e designado o responsável técnico correspondente. Esta é a única classe de restrição da plataforma que não depende de esforço próprio do laboratório, e por isso é tratada também como premissa estratégica (§6). Os instrumentos regulatórios aplicáveis a cada planta são identificados nos documentos derivados.
+**Condição regulatória de capacidade.** Capacidade cujo funcionamento dependa de autorização de uso de radiofrequência é **condicionada**: pode ser planejada, especificada, desenvolvida e validada em ambiente virtual, simulado ou em caminho conduzido, mas não é declarada disponível antes de obtida a autorização da autoridade competente e designado o responsável técnico correspondente. Outras restrições também independem do esforço próprio do laboratório, como as que decorrem de serviços institucionais, de fornecedores e de financiamento; a condição regulatória distingue-se por impedir que seja declarada disponível uma capacidade já construída e validada, e por isso é tratada também como premissa estratégica (§6). Os instrumentos regulatórios aplicáveis a cada planta são identificados nos documentos derivados.
 
 ---
 
