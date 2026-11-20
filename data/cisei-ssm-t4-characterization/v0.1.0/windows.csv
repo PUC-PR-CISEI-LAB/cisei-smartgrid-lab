@@ -1,0 +1,5 @@
+window,start_utc,end_utc,note
+A,2026-11-19T12:48:00Z,2026-11-19T14:02:00Z,"Registro de erosão natural da margem do salto N5 → N3 (de cerca de 16 dB a 0 dB), corrigida depois por reaperto de conector; fora da referência."
+B,2026-11-19T14:31:00Z,2026-11-19T15:43:00Z,
+C,2026-11-19T16:51:00Z,2026-11-19T17:40:00Z,
+R,2026-11-19T23:13:00Z,2026-11-20T11:13:00Z,"Bancada ociosa, sem tráfego gerado; janela de referência da telemetria."

@@ -1,0 +1,32 @@
+{
+  "title": "CISEI SmartGrid Lab — public record and datasets",
+  "upload_type": "dataset",
+  "description": "<p>Public record of the CISEI SmartGrid Lab (PUC-PR): research reports, glossary, bibliography and versioned datasets of a physical 902–928 MHz frequency-hopping relay backhaul used for SCADA service experiments. Datasets are under <code>data/&lt;dataset_id&gt;/v&lt;version&gt;/</code>, each with a dataset card, codebook and manifest of SHA-256 hashes; the release notes name the dataset versions included.</p>",
+  "creators": [
+    {
+      "name": "Dantas, Fernando",
+      "affiliation": "Pontifícia Universidade Católica do Paraná (PUC-PR) — CISEI Lab"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "smart grid",
+    "SCADA",
+    "DNP3",
+    "wireless backhaul",
+    "900 MHz",
+    "frequency hopping",
+    "store-and-forward relay",
+    "testbed",
+    "dataset"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/PUC-PR-CISEI-LAB/cisei-smartgrid-lab",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

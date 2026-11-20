@@ -45,8 +45,9 @@ backhaul in the 902–928 MHz band.
   dwell, phase locking between the polling period and the dwell, packet concatenation, and
   queueing — and can a calibrated simulation model predict supervision capacity beyond the
   bench configuration within a declared error?
-- **RQ4 — Visibility of erosion.** Does the telemetry available to the network operations
-  centre show margin erosion before endpoint sessions fail?
+- **RQ4 — Visibility of erosion.** Does the in-band network management — SNMP polling
+  through the radio network, the view an operator has — show margin erosion before
+  endpoint sessions fail, measured against the out-of-band laboratory instrumentation?
 
 ### 1.3 Scope
 
@@ -166,9 +167,20 @@ definitions below apply to both workloads.
 
 ### 3.3 Network observation
 
-Radio telemetry is acquired through the Simple Network Management Protocol (SNMP) over a
-wired management network at a nominal polling interval of 30 s. Management traffic does
-not traverse the radio channel in this bench. The monitored variables comprise:
+Two planes observe the radios, and they are kept distinct.
+
+- **In-band network management.** The network under test has its own management, as an
+  operator would run it: SNMP and ICMP polling of each radio through the radio network
+  itself. This traffic traverses the radio channel, is part of the load the channel
+  carries, and stops arriving when the path to a radio degrades. Its view of the network
+  is the subject of RQ4.
+- **Out-of-band laboratory instrumentation.** The laboratory polls the same radios with the
+  Simple Network Management Protocol (SNMP) over a separate wired network that does not use
+  the radio channel, at 30 s during campaigns A–C and window R and at 15 s from 2026-11-20.
+  It keeps arriving when the radio network degrades and is the source of the radio
+  telemetry reported here and in the dataset.
+
+The monitored variables comprise:
 
 - per radio: average RSSI and LQI of the link to the parent; MAC counters of frames
   transmitted, retransmissions, and failures after the retransmission limit; sync
@@ -429,8 +441,12 @@ Socket-drop counters and reflector health metrics were not recorded.
 
 ## 9. Availability
 
-Run records and the time series of network indicators remain in the laboratory's custody.
-Publication with a persistent identifier will take place by version, after campaign D.
+Complete run records and time series remain in the laboratory's custody. Public data are
+released by version in `data/cisei-ssm-t4-characterization/`, each version with a dataset card,
+a codebook, and a manifest of SHA-256 hashes, and with a persistent identifier assigned at
+release. Version 0.1.0 contains the characterization windows A–C and the idle reference window
+R; campaign D data enter later versions. Intervals with generated traffic outside the scope of
+this study are withheld and listed in the dataset card.
 
 ## References
 

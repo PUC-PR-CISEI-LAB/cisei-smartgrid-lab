@@ -1,0 +1,69 @@
+telemetry.csv:
+  description: Radio telemetry collected by the network operations centre (SNMP, 30
+    s), long format.
+  columns:
+    timestamp_utc: Collection instant (UTC).
+    window: Observation window (windows.csv).
+    node: Radio reporting the value (N1–N6).
+    role: AP, SAF (store-and-forward relay) or RM (remote).
+    depth: Hops from the AP.
+    parent: Parent radio in the tree (empty for the AP).
+    kpi: Quantity; see `kpis`.
+    unit: Unit of `value`.
+    value: Reported value; alarm flags as a hexadecimal bit field.
+    peer: For AP peer-table rows, the remote the row describes.
+    channel: For per-channel rows, the hopping channel index.
+application_steps.csv:
+  description: Application-level results per sender and load step (UDP echo through
+    the backhaul).
+  columns:
+    window: Observation window.
+    run: 'Run identifier: window and sequence (runs.csv).'
+    regime: idle, capacity or reference (synthetic reference workload).
+    node: Sender (remote radio N1, N2 or N6).
+    depth: Hops from the AP.
+    step: Load step index.
+    offered_bps: Offered UDP payload rate (bit/s).
+    rate_pps: Datagrams per second.
+    sent: Requests sent in the step.
+    measured: Requests measured (after the warm-up).
+    replies: Replies received.
+    lost: Measured requests without reply.
+    loss_pct: Loss of measured requests (%).
+    reply_gap_max_s: Longest interval without replies in the step (s).
+    rtt_*: Round-trip time statistics of replied requests (ms), conditional on a reply.
+runs.csv:
+  description: 'Runs: window, regime, timing, senders and stop reason per sender.'
+windows.csv:
+  description: 'Observation windows: identifier, interval and note.'
+kpis:
+  radio_rssi_to_parent:
+    unit: dBm
+  radio_lqi_to_parent:
+    unit: index
+  mac_tx_success_total:
+    unit: frames
+  mac_tx_fail_total:
+    unit: frames
+  mac_tx_retry_total:
+    unit: frames
+  mac_sync_change_total:
+    unit: events
+  radio_alarm_flags:
+    unit: bits
+  ap_peer_uplink_rssi:
+    unit: dBm
+  ap_peer_uplink_snr:
+    unit: dB
+  ap_peer_downlink_rssi:
+    unit: dBm
+  ap_peer_downlink_lqi:
+    unit: index
+  ap_peer_downlink_snr:
+    unit: dB
+  channel_rssi:
+    unit: dBm
+  channel_lqi:
+    unit: index
+  radio_temperature:
+    unit: degC
