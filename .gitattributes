@@ -1,0 +1,2 @@
+# Pacotes de dados: bytes exatos, sem conversão de fim de linha — o manifesto traz o SHA-256 de cada arquivo.
+data/** -text
