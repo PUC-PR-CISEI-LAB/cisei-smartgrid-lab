@@ -1,12 +1,15 @@
-# Network Fault Management in a 900 MHz FHSS Relay Backhaul
+# SCADA Service Dimensioning and Margin in a 900 MHz FHSS Relay Backhaul
 
-| Field       | Value                                                                                   |
-| ----------- | --------------------------------------------------------------------------------------- |
-| Author      | Fernando Dantas — PUC-PR, CISEI Lab                                                     |
-| Execution   | 2026-11-19                                                                              |
-| Version     | 0.3 — draft                                                                             |
-| Status      | Research questions defined; characterization campaigns complete; fault campaigns planned |
-| Environment | Physical (radio bench) with containerized traffic generation                            |
+| Field       | Value                                                                                         |
+| ----------- | --------------------------------------------------------------------------------------------- |
+| Author      | Fernando Dantas — PUC-PR, CISEI Lab                                                           |
+| Execution   | 2026-11-19                                                                                    |
+| Version     | 0.4 — draft                                                                                   |
+| Status      | Research questions redefined; characterization campaigns complete; service campaigns planned |
+| Environment | Physical (radio bench) with containerized traffic generation                                  |
+
+Version 0.4 replaces the fault-management framing of version 0.3 with the service framing
+below. The environment, the characterization campaigns, and their results are unchanged.
 
 ---
 
@@ -21,56 +24,69 @@ expires for the configured number of retries, the master declares a communicatio
 for the device [CEPEL2020]. From that instant the operator loses supervision and remote
 control of that point of the feeder.
 
-The radio network has its own management plane: radio telemetry collected by the network
-operations centre, independently of the SCADA traffic. Fault management, in the sense of
-the management functions of ITU-T M.3400 [ITUM3400], comprises detecting a fault,
-localizing it, and reporting it as an alarm. The research addresses this function for a
-frequency-hopping spread-spectrum (FHSS) backhaul organized as a tree of store-and-forward
-relays, in which a single degraded hop affects every device beyond it.
+Each remote radio serves a gateway with a network of endpoints behind it. When the gateway
+forwards each endpoint session end to end, the master polls every endpoint individually
+[Zambenedetti2005]. The engineering question in planning such a backhaul is how much
+supervision it can carry — how many endpoints, at which polling rate, at which depth of a
+tree of store-and-forward relays — and how much margin remains before sessions start to
+fail. The research addresses this question for a frequency-hopping spread-spectrum (FHSS)
+backhaul in the 902–928 MHz band.
 
 ### 1.2 Research questions
 
-- **RQ1 — Observability.** Which fault classes of the relay tree produce a measurable
-  signature in the management telemetry available from the radios, and which hops and
-  directions remain unobserved?
-- **RQ2 — Timeliness and cost.** For each observable fault class, what is the detection
-  delay of threshold-based detection at a given telemetry collection interval, what is
-  its false-alarm rate in fault-free operation, and what collection load does it impose?
-- **RQ3 — Application horizon.** Is the fault detected and reported by the network
-  management plane before the SCADA application declares communication failure for the
-  affected devices?
-- **RQ4 — Localization.** Can a detected fault be attributed to a specific hop or node of
-  the tree from the telemetry and the known topology, given the observation constraints
-  of section 3.3?
+- **RQ1 — Supervision capacity.** For gateways that forward each endpoint session, what is
+  the largest service load (endpoints per gateway and polling rate) at each depth of the
+  relay tree for which every endpoint session meets the declared acceptance criteria?
+- **RQ2 — Margin erosion.** How does that capacity erode as the radio link margin of a hop
+  decreases, and in the presence of competing traffic (event bursts, bulk metering
+  transfers, network management collection)?
+- **RQ3 — Governing mechanisms and prediction.** Which radio mechanisms determine
+  transaction time and capacity — forwarding at the relays synchronized to the hopping
+  dwell, phase locking between the polling period and the dwell, packet concatenation, and
+  queueing — and can a calibrated simulation model predict supervision capacity beyond the
+  bench configuration within a declared error?
+- **RQ4 — Visibility of erosion.** Does the telemetry available to the network operations
+  centre show margin erosion before endpoint sessions fail?
 
 ### 1.3 Scope
 
-The scope is the radio backhaul: detection, localization to a hop or node of the tree,
-and alarm reporting. The gateways and endpoint networks attached to the remote radios are
-represented only through the traffic they offer to the backhaul; faults within them are
-outside this scope. Automated
-remediation, prediction of future faults, and capacity benchmarking of the radio product
-are outside this scope. Thresholds and the detection rule of each campaign are declared
-before data collection.
+The scope is the radio backhaul as carrier of SCADA supervision. Gateways and endpoint
+networks are represented by the sessions and traffic they place on the backhaul; their
+internal behaviour is outside the scope. The research does not attribute degradations to
+causes: degradations are imposed as declared factors, and their effect is measured on the
+service. Acceptance criteria are declared before data collection.
 
-## 2. Fault model
+## 2. Service model and factors
 
-Each fault class is induced in a controlled manner, with start time, end time, and
-magnitude recorded in the execution record of the run. The execution record is the ground
-truth for detection delay and false-alarm counting.
+### 2.1 Service and margin
 
-| Class | Fault                         | Induction                                                                                         | Status   |
-| ----- | ----------------------------- | ------------------------------------------------------------------------------------------------- | -------- |
-| F1    | Link-margin degradation       | Step attenuator on a hop, in increments, down to loss of association                              | Planned  |
-| F2    | Antenna-system fault          | Mismatched or open antenna path, observable as a reflected-power alarm                            | Planned  |
-| F3    | Relay or node loss            | Power removal of a relay, isolating its subtree; restoration and re-association measured          | Planned  |
-| F4    | Congestion                    | Offered load beyond the measured capacity of a path (section 6.2)                                 | Characterized |
-| F5    | In-band interference          | Software-defined radio over a conducted path or in a shielded enclosure only                      | Planned  |
+- **Endpoint session**: the master's association with one endpoint, carrying periodic
+  polls, event reports, and commands as transactions of request and response.
+- **Communication failure**: the declaration by the master, under the rule of section 4.3,
+  that a session has stopped responding.
+- **Supervision capacity**: the largest service load for which every session meets the
+  acceptance criteria of section 4.2.
+- **Load margin**: supervision capacity divided by the offered service load.
+- **Link margin to service failure**: the attenuation, in dB, that a hop tolerates at a
+  given service load before an acceptance criterion fails. It differs from the radio link
+  margin over receiver sensitivity, which says nothing about the service.
 
-A natural F1 episode occurred during campaign A: the margin of hop N5 → N3 decreased from
-approximately 16 dB to 0 dB across six runs and was corrected by re-tightening a connector
-(section 5). The episode was not induced, and its start time is not known with precision;
-it is retained as an observed fault record, separate from the induced campaigns.
+### 2.2 Factors
+
+| Factor            | Levels                                                                                     | Imposed by                                  | Status  |
+| ----------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------- | ------- |
+| Service load      | Endpoints per gateway; polling period                                                      | Traffic agents                              | Planned |
+| Depth             | 1, 2, and 3 hops                                                                           | Relay tree (section 3.1)                    | Fixed   |
+| Link margin       | Attenuation steps on the hops reaching N4, N2, and N3                                      | Step attenuators                            | Planned |
+| Competing traffic | Event bursts, bulk transfer, network management collection interval                        | Traffic agents; collection configuration    | Planned |
+| Polling phase     | Polling period commensurate or not with the 100 ms dwell; phase randomized per session     | Agent schedule                              | Planned |
+| Gateway mode      | End-to-end forwarding first; data-concentrating SCADA gateway and metering collector later | Traffic model                               | Planned |
+
+The relay tree places one remote at each depth, so that the service can be measured at
+1, 2, and 3 hops on the same radio network. A natural link-margin erosion occurred during
+campaign A: the margin of hop N5 → N3 decreased from approximately 16 dB to 0 dB across
+six runs and was corrected by re-tightening a connector (section 5). It was not imposed,
+and its start time is not known with precision; it is retained as an observed record.
 
 ## 3. Environment
 
@@ -111,8 +127,8 @@ averaging period is not documented by the manufacturer.
 | N5 → N3                                 | −75                | 20          |
 | N3 → N6                                 | −41                | 54          |
 
-The step attenuators on N4, N2, and N3 provide the induction point for F1 on the hops
-that reach those nodes.
+The step attenuators on N4, N2, and N3 impose the link-margin factor on the hops that
+reach those nodes.
 
 ### 3.2 Traffic generation and application metrics
 
@@ -124,9 +140,8 @@ All sources within a run start at the same wall-clock instant.
 In campaigns A–C the traffic is a **synthetic reference workload**: remote-originated,
 symmetric UDP echo at selected rates. It is not derived from any SCADA traffic model and
 represents no service condition; it serves only as a reproducible load for network
-characterization. Campaign D replaces it with the service workload of section 4.2, which
-also provides the application-level reference against which management-plane detection
-is compared (RQ3). The definitions below apply to both workloads.
+characterization. Campaign D uses the service workload of section 4.2 instead. The
+definitions below apply to both workloads.
 
 - **Datagram**: UDP, 200 bytes of payload, carrying run identifier, flow, sequence
   number, step number, and the sender's monotonic transmission time.
@@ -163,7 +178,7 @@ not traverse the radio channel in this bench. The monitored variables comprise:
   RSSI, LQI, and SNR, which describe the AP's reception of the last hop only;
 - per hopping channel: average RSSI and LQI.
 
-These variables define the observation constraints relevant to RQ1 and RQ4:
+These variables define the observation constraints relevant to RQ4:
 
 - the relays do not report their children, so the child-to-parent direction is observed
   only on hops that reach the AP;
@@ -231,62 +246,55 @@ descriptor before any campaign D run, with the following content:
 | Acceptance criteria  | Per endpoint session and per run: transaction success ratio, upper percentile of transaction time, number of communication failures (zero required), longest silence below the failure horizon, and absence of a monotonic trend in transaction time across the run |
 | Operating margin     | Ratio of the offered service load to the measured loss onset of each path (section 6.2), and verification that the acceptance criteria still hold at a declared multiple of the service load            |
 
-A fault-free validation run at the declared service workload must meet every acceptance
-criterion before campaign D starts. Only then is the workload designated the nominal
-service condition of the bench, and only that condition is used as the baseline of the
-fault runs.
+A validation run at the declared service workload, with no imposed degradation, must meet every acceptance
+criterion before campaign D starts. Only then is the workload designated the reference
+service condition of the bench, to which capacity and margins are referred.
 
-### 4.3 Fault-injection protocol (planned)
+### 4.3 Dimensioning and margin-erosion protocol (planned)
 
-Each fault run comprises five phases, all recorded in the execution record:
+Campaign D comprises two kinds of run, each recorded with its declared factors.
 
-1. **Baseline**: service workload of section 4.2, no fault, long enough to estimate the
-   fault-free distribution of each monitored variable at the declared collection interval;
-2. **Injection**: the fault of class F1–F5 is applied at a recorded instant and magnitude;
-3. **Hold**: the fault is maintained for a declared duration;
-4. **Removal**: the fault is removed at a recorded instant;
-5. **Recovery**: observation continues until every monitored variable returns to its
-   baseline distribution, and the recovery time is recorded.
+1. **Capacity search** (RQ1): at a declared gateway mode and polling phase, the service
+   load increases in declared steps — endpoints per gateway, then polling rate — until an
+   acceptance criterion fails in two consecutive steps. The supervision capacity is the
+   last step at which every criterion holds. The procedure adapts the throughput search of
+   RFC 2544 [RFC2544] from packets to service sessions.
+2. **Margin erosion** (RQ2): at a declared fraction of the measured capacity, the
+   attenuation on one hop increases in declared steps until an acceptance criterion fails,
+   giving the link margin to service failure of that hop at that load. The same run is
+   repeated with competing traffic.
 
-The detection rule and its thresholds, derived from the baseline of the bench condition,
-are declared before the campaign. For each run the analysis reports:
+The emulated master follows the declared communication-failure rule: after each scheduled
+request, or a keep-alive request on an idle session, it waits the response timeout and
+repeats up to the declared number of attempts; when all attempts fail, the session is
+declared failed. Timeout and attempts are configurable in the master [CEPEL2020] and are
+declared parameters of the campaign. Because the master notices a degradation only at its
+next request, the delay from onset to declaration lies between attempts × timeout and the
+request interval plus attempts × timeout, and the sessions behind one gateway fail at
+instants spread over approximately one request interval.
 
-- **detection delay**: first alarm minus injection instant, per monitored signal;
-- **application failure instant**: per endpoint session, the instant at which the
-  emulated SCADA master declares communication failure. The master follows the declared
-  rule: after each scheduled request, or a keep-alive request on an idle session, it waits
-  the response timeout and repeats up to the declared number of attempts; when all attempts
-  fail, the session is declared failed. Timeout and attempts are configurable in the
-  master [CEPEL2020] and are declared parameters of the campaign. Because the master
-  notices a fault only at its next request, the delay from fault onset to declaration lies
-  between attempts × timeout and the request interval plus attempts × timeout, and the
-  sessions behind one gateway fail at instants spread over approximately one request
-  interval;
-- **margin to the application horizon**: application failure instant minus detection
-  instant, per session, reported for the first and the last session to fail behind each
-  gateway (RQ3); a negative margin means the application failed before the network
-  reported the fault;
-- **localization outcome**: the hop or node reported, compared with the injected location
-  (RQ4);
-- **false alarms**: alarms raised during baseline and fault-free characterization runs,
-  per signal and per hour of observation (RQ2).
-
-The collection interval is an experimental factor: shorter intervals reduce detection
-delay and increase collection load on the radios and the management network (RQ2).
+For each run the analysis reports, per session, the transaction-time distribution, the
+transaction success ratio, and the communication-failure instants; per gateway, the
+capacity and the margins of section 2.1; and, for RQ4, the instant at which each monitored
+telemetry signal departs from its reference distribution, compared with the first and the
+last session failure behind each gateway. Polling periods both commensurate and
+incommensurate with the dwell are run, with the phase randomized per session and per run,
+because phase locking changes transaction time (section 6.5). Runs at the reference service
+load are interleaved with the dimensioning and erosion runs as controls.
 
 ## 5. Campaigns and experimental runs
 
 | Campaign | Regime         | Runs | Senders                                  | Status                                                                                                                                                                                  |
 | -------- | -------------- | ---- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| A        | Idle, capacity | 6    | —                                        | Retained as the record of a natural F1 episode (hop N5 → N3 margin decreasing from approximately 16 dB to 0 dB, corrected by connector re-tightening); excluded from the fault-free reference |
+| A        | Idle, capacity | 6    | —                                        | Retained as the record of a natural link-margin erosion (hop N5 → N3 margin decreasing from approximately 16 dB to 0 dB, corrected by connector re-tightening); excluded from the reference |
 | B        | Idle           | 3    | N1, N2, and N6                           | Complete                                                                                                                                                                                |
 | B        | Capacity       | 6    | N2 (1), N1 (2), N6 (3), two repetitions  | Complete                                                                                                                                                                                |
 | C        | Synthetic ref. | 5    | N1, N2, and N6                           | Complete                                                                                                                                                                                |
-| D        | Fault injection | —   | Master at N4; gateways at N1, N2, N6     | Planned (sections 4.2, 4.3)                                                                                                                                                               |
+| D        | Capacity, erosion | — | Master at N4; gateways at N1, N2, N6     | Planned (sections 4.2, 4.3)                                                                                                                                                               |
 
 Each run has a unique identifier and an execution record specifying the offered load per
 source and step, start time, step duration, termination criterion, and, for campaign D,
-the fault class, location, magnitude, and injection and removal instants.
+the declared service load, attenuation steps, competing traffic, and polling phase.
 
 ## 6. Results of the characterization campaigns
 
@@ -330,7 +338,8 @@ per step in parentheses (50 s × rate ÷ 1600 bit):
 Differences between the two repetitions are approximately 4 percentage points or less. At
 the terminal steps, RTT p95 characterizes only the 37–40 % of requests receiving a
 response. Transition locations are reported as intervals bounded by successive tested
-rates. These ramps define the congestion fault class F4 and its onset per path.
+rates. These ramps bound the payload capacity of each path; supervision capacity (RQ1) is
+measured in campaign D with the service workload.
 
 ### 6.3 Synthetic reference workload
 
@@ -354,8 +363,8 @@ nominal service condition, which campaign D defines separately (section 4.2).
 
 Within each run of the synthetic reference workload, RTT p95 decreased monotonically;
 for example, N1 decreased from approximately 143 to 108 ms across eight steps. The mechanism was not identified. A
-baseline that drifts within a run affects threshold derivation for RQ2 and is addressed
-in section 7.
+reference that drifts within a run affects the measurement of margin erosion (RQ2); the
+probable mechanism is described in section 6.5.
 
 ### 6.4 Application silences
 
@@ -364,8 +373,25 @@ The longest interval without responses was at most 0.44 s during the capacity ra
 missing probes at 1 datagram/s. Silence lengths depend on the probing rate and are not
 comparable across regimes. No characterization run produced a silence long enough to
 cause communication failure at a SCADA master with a response timeout and retry count of
-the order of tens of seconds; the fault-free reference therefore contains no
-application-level failures, as required for false-alarm accounting.
+the order of tens of seconds; the reference therefore contains no application-level
+failures.
+
+### 6.5 Relay delay and polling phase (preliminary)
+
+Within each run of the idle and reference regimes, the round-trip time at depths 2 and 3
+is nearly constant: the spread within a 60 s step is between 1 and 10 ms. Across the steps
+of a run it changes linearly, and it then jumps by approximately one dwell; in one
+reference run, the depth-3 median fell from 184 to 164 ms over six steps and then rose to
+258 ms. The polling periods used (1 s and 100 ms) are integer multiples of the 100 ms dwell,
+so every request reaches the relays at the same phase of the hopping cycle; a slow drift
+between the clocks of the edge computers and of the radios moves that phase. The working
+hypothesis is that the relays forward at transmit opportunities synchronized to the dwell,
+and that the measured relay delay is the wait for that opportunity at the phase of the
+run. A simulation with a single opportunity per relay per dwell does not reproduce the
+bench: it cannot produce the approximately 53 ms that the second relay adds, which is about
+half a dwell. The hypothesis is tested in campaign D with polling periods incommensurate
+with the dwell. Until then, round-trip times at depths 2 and 3 are conditional on an
+unknown phase, and section 6.1 reports one phase per run.
 
 ## 7. Measurement constraints
 
@@ -373,17 +399,17 @@ application-level failures, as required for false-alarm accounting.
 samples per 60 s step. Analysis retains only counter intervals wholly contained within a
 measurement window and flags intervals crossing boundaries. Actual polling timestamps and
 durations are recorded. Edge-computer clock offsets were not verified during the
-characterization campaigns; campaign D records clock offsets per run, since detection
-delay is computed across the management plane and the execution record.
+characterization campaigns; campaign D records clock offsets per run, since session
+events and telemetry are aligned across hosts (RQ4).
 
-**Baseline drift.** The synthetic reference runs were executed as a block. Campaign D
-interleaves fault-free control runs with fault runs, so that thresholds are derived from, and false
-alarms counted against, a baseline that spans the same period as the faults.
+**Reference drift.** The synthetic reference runs were executed as a block. Campaign D
+interleaves control runs at the reference service load with the dimensioning and erosion
+runs, so that capacity and margins are referred to a reference that spans the same period.
 
-**Counter coverage.** A fault on a hop whose child-to-parent direction is not reported
+**Counter coverage.** A degradation on a hop whose child-to-parent direction is not reported
 (section 3.3) is observable only through the parent-to-child direction, the MAC counters
 of the nodes involved, and the effect on downstream nodes. This constraint bounds the
-localization attainable in RQ4 and is reported per hop.
+erosion that the operations centre can observe (RQ4) and is reported per hop.
 
 **Traffic-generation verification.** The achieved source rate matched the configured rate
 (10.01 datagrams/s at 16 kbit/s), and per-step request counts matched the planned counts.
@@ -393,7 +419,7 @@ Socket-drop counters and reflector health metrics were not recorded.
 
 - Short-range bench: path losses and interference do not represent a field link.
 - Modem rate fixed at 1.25 Mbit/s: other rates are another experimental condition.
-- A single collision domain for the six radios: a fault on one branch can affect the
+- A single collision domain for the six radios: a degradation on one branch can affect the
   whole tree.
 - One source per depth: depth effects are confounded with path and device (section 6).
 - Management traffic is carried over a wired network in this bench; a field deployment in
@@ -417,9 +443,6 @@ DNP V3.0 no SAGE**. Rio de Janeiro: CEPEL, Oct. 2020. 7 p. Available at:
 https://sage.cepel.br/images/protocolos/profile_sage_dnp.pdf. Accessed on: 19 Nov. 2026.
 `[CEPEL2020]`
 
-INTERNATIONAL TELECOMMUNICATION UNION. **Recommendation ITU-T M.3400: TMN management
-functions**. Geneva: ITU, 2000. Available at: https://www.itu.int/rec/T-REC-M.3400.
-`[ITUM3400]`
 
 INTERNATIONAL TELECOMMUNICATION UNION. **Recommendation ITU-T Y.1541: network performance
 objectives for IP-based services**. Geneva: ITU, 2011. Available at:
