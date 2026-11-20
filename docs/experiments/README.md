@@ -31,7 +31,7 @@ Each experimental report specifies:
 
 ## Anonymization and configuration disclosure
 
-In the 900 MHz fault-management experiment, radios are designated N1–N6 and characterized by
+In the 900 MHz SCADA service experiment, radios are designated N1–N6 and characterized by
 network role (AP, SAF, or RM) and depth in the relay tree. Network addresses, equipment
 identifiers, firmware versions, and third-party operational data are excluded from the
 public record. Reported configuration parameters and bench measurements, including RSSI
@@ -54,7 +54,7 @@ repository's access-request issue template.
 
 | Date | Report | Status |
 |---|---|---|
-| 2026-11-19 | [Network fault management in a 900 MHz FHSS relay backhaul](fault-management-900mhz-2026-11-19.md) | Draft — characterization complete; fault-injection campaign planned |
+| 2026-11-19 | [SCADA service dimensioning and margin in a 900 MHz FHSS relay backhaul](scada-service-margin-900mhz-2026-11-19.md) | Draft v0.4 — characterization complete; service campaigns planned |
 
 ## Citation
 
