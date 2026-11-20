@@ -4,12 +4,14 @@
 | ----------- | --------------------------------------------------------------------------------------------- |
 | Author      | Fernando Dantas — PUC-PR, CISEI Lab                                                           |
 | Execution   | 2026-11-19                                                                                    |
-| Version     | 0.4 — draft                                                                                   |
+| Version     | 0.4.1 — draft                                                                                 |
 | Status      | Research questions redefined; characterization campaigns complete; service campaigns planned |
 | Environment | Physical (radio bench) with containerized traffic generation                                  |
 
 Version 0.4 replaces the fault-management framing of version 0.3 with the service framing
 below. The environment, the characterization campaigns, and their results are unchanged.
+Version 0.4.1 renames the unit behind each remote radio from gateway to field aggregator;
+nothing else changes.
 
 ---
 
@@ -24,7 +26,7 @@ expires for the configured number of retries, the master declares a communicatio
 for the device [CEPEL2020]. From that instant the operator loses supervision and remote
 control of that point of the feeder.
 
-Each remote radio serves a gateway with a network of endpoints behind it. When the gateway
+Each remote radio serves a field aggregator with a network of endpoints behind it. When the aggregator
 forwards each endpoint session end to end, the master polls every endpoint individually
 [Zambenedetti2005]. The engineering question in planning such a backhaul is how much
 supervision it can carry — how many endpoints, at which polling rate, at which depth of a
@@ -32,10 +34,15 @@ tree of store-and-forward relays — and how much margin remains before sessions
 fail. The research addresses this question for a frequency-hopping spread-spectrum (FHSS)
 backhaul in the 902–928 MHz band.
 
+The term *field aggregator* is used instead of *gateway* because, in utility practice, *gateway*
+also designates the access point at the head end of the backhaul and, in the radio
+configuration, the parent radio of a remote. The aggregator is named for its effect on the
+backhaul in all of its modes: the sessions of many endpoints carried over a single radio link.
+
 ### 1.2 Research questions
 
-- **RQ1 — Supervision capacity.** For gateways that forward each endpoint session, what is
-  the largest service load (endpoints per gateway and polling rate) at each depth of the
+- **RQ1 — Supervision capacity.** For field aggregators that forward each endpoint session, what is
+  the largest service load (endpoints per aggregator and polling rate) at each depth of the
   relay tree for which every endpoint session meets the declared acceptance criteria?
 - **RQ2 — Margin erosion.** How does that capacity erode as the radio link margin of a hop
   decreases, and in the presence of competing traffic (event bursts, bulk metering
@@ -51,7 +58,7 @@ backhaul in the 902–928 MHz band.
 
 ### 1.3 Scope
 
-The scope is the radio backhaul as carrier of SCADA supervision. Gateways and endpoint
+The scope is the radio backhaul as carrier of SCADA supervision. Aggregators and endpoint
 networks are represented by the sessions and traffic they place on the backhaul; their
 internal behaviour is outside the scope. The research does not attribute degradations to
 causes: degradations are imposed as declared factors, and their effect is measured on the
@@ -76,12 +83,12 @@ service. Acceptance criteria are declared before data collection.
 
 | Factor            | Levels                                                                                     | Imposed by                                  | Status  |
 | ----------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------- | ------- |
-| Service load      | Endpoints per gateway; polling period                                                      | Traffic agents                              | Planned |
+| Service load      | Endpoints per aggregator; polling period                                                   | Traffic agents                              | Planned |
 | Depth             | 1, 2, and 3 hops                                                                           | Relay tree (section 3.1)                    | Fixed   |
 | Link margin       | Attenuation steps on the hops reaching N4, N2, and N3                                      | Step attenuators                            | Planned |
 | Competing traffic | Event bursts, bulk transfer, network management collection interval                        | Traffic agents; collection configuration    | Planned |
 | Polling phase     | Polling period commensurate or not with the 100 ms dwell; phase randomized per session     | Agent schedule                              | Planned |
-| Gateway mode      | End-to-end forwarding first; data-concentrating SCADA gateway and metering collector later | Traffic model                               | Planned |
+| Aggregator mode   | End-to-end forwarding first; SCADA data concentrator and metering collector later          | Traffic model                               | Planned |
 
 The relay tree places one remote at each depth, so that the service can be measured at
 1, 2, and 3 hops on the same radio network. A natural link-margin erosion occurred during
@@ -243,7 +250,7 @@ measured airtime.
 ### 4.2 Service workload for campaign D (to be declared)
 
 Campaign D uses a service workload derived from SCADA traffic over the backhaul, not the
-synthetic reference. Each remote radio serves a gateway in transparent-router mode, which
+synthetic reference. Each remote radio serves a field aggregator in transparent-router mode, which
 forwards the session of every endpoint behind it end to end; the SCADA master polls each
 endpoint individually, as documented for distribution automation over serial-to-IP
 converters [Zambenedetti2005]. The workload is fully declared in the campaign
@@ -251,7 +258,7 @@ descriptor before any campaign D run, with the following content:
 
 | Element              | Declaration                                                                                                                                                                                                     |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Traffic matrix       | Master attached to the AP (N4); gateways at N1, N2, and N6; number of endpoints per gateway; direction of each flow (master-originated polls and commands, endpoint-originated event reports and confirmations) |
+| Traffic matrix       | Master attached to the AP (N4); field aggregators at N1, N2, and N6; number of endpoints per aggregator; direction of each flow (master-originated polls and commands, endpoint-originated event reports and confirmations) |
 | Timing               | Event-poll period per endpoint, start offsets between endpoints, integrity-scan period, connection keep-alive period, clock-synchronization period, and the instants of declared event bursts and commands  |
 | Message sizes        | Request and response sizes per message type, from the DNP3 framing, with the transport overhead stated                                                                                                         |
 | Transaction behavior | At most one outstanding transaction per endpoint session; response timeout; retry count; the rule by which an endpoint session is declared in communication failure                                          |
@@ -266,8 +273,8 @@ service condition of the bench, to which capacity and margins are referred.
 
 Campaign D comprises two kinds of run, each recorded with its declared factors.
 
-1. **Capacity search** (RQ1): at a declared gateway mode and polling phase, the service
-   load increases in declared steps — endpoints per gateway, then polling rate — until an
+1. **Capacity search** (RQ1): at a declared aggregator mode and polling phase, the service
+   load increases in declared steps — endpoints per aggregator, then polling rate — until an
    acceptance criterion fails in two consecutive steps. The supervision capacity is the
    last step at which every criterion holds. The procedure adapts the throughput search of
    RFC 2544 [RFC2544] from packets to service sessions.
@@ -282,14 +289,14 @@ repeats up to the declared number of attempts; when all attempts fail, the sessi
 declared failed. Timeout and attempts are configurable in the master [CEPEL2020] and are
 declared parameters of the campaign. Because the master notices a degradation only at its
 next request, the delay from onset to declaration lies between attempts × timeout and the
-request interval plus attempts × timeout, and the sessions behind one gateway fail at
+request interval plus attempts × timeout, and the sessions behind one aggregator fail at
 instants spread over approximately one request interval.
 
 For each run the analysis reports, per session, the transaction-time distribution, the
-transaction success ratio, and the communication-failure instants; per gateway, the
+transaction success ratio, and the communication-failure instants; per aggregator, the
 capacity and the margins of section 2.1; and, for RQ4, the instant at which each monitored
 telemetry signal departs from its reference distribution, compared with the first and the
-last session failure behind each gateway. Polling periods both commensurate and
+last session failure behind each aggregator. Polling periods both commensurate and
 incommensurate with the dwell are run, with the phase randomized per session and per run,
 because phase locking changes transaction time (section 6.5). Runs at the reference service
 load are interleaved with the dimensioning and erosion runs as controls.
@@ -302,7 +309,7 @@ load are interleaved with the dimensioning and erosion runs as controls.
 | B        | Idle           | 3    | N1, N2, and N6                           | Complete                                                                                                                                                                                |
 | B        | Capacity       | 6    | N2 (1), N1 (2), N6 (3), two repetitions  | Complete                                                                                                                                                                                |
 | C        | Synthetic ref. | 5    | N1, N2, and N6                           | Complete                                                                                                                                                                                |
-| D        | Capacity, erosion | — | Master at N4; gateways at N1, N2, N6     | Planned (sections 4.2, 4.3)                                                                                                                                                               |
+| D        | Capacity, erosion | — | Master at N4; aggregators at N1, N2, N6  | Planned (sections 4.2, 4.3)                                                                                                                                                               |
 
 Each run has a unique identifier and an execution record specifying the offered load per
 source and step, start time, step duration, termination criterion, and, for campaign D,
