@@ -1,0 +1,69 @@
+{
+ "dataset_id": "cisei-ssm-t4-characterization",
+ "version": "0.1.0",
+ "license": "CC-BY-4.0",
+ "generated_at_utc": "2026-11-20T11:56:12Z",
+ "windows": [
+  {
+   "id": "A",
+   "start": "2026-11-19T12:48:00Z",
+   "end": "2026-11-19T14:02:00Z"
+  },
+  {
+   "id": "B",
+   "start": "2026-11-19T14:31:00Z",
+   "end": "2026-11-19T15:43:00Z"
+  },
+  {
+   "id": "C",
+   "start": "2026-11-19T16:51:00Z",
+   "end": "2026-11-19T17:40:00Z"
+  },
+  {
+   "id": "R",
+   "start": "2026-11-19T23:13:00Z",
+   "end": "2026-11-20T11:13:00Z"
+  }
+ ],
+ "withheld": [
+  {
+   "start": "2026-11-19T17:41:00Z",
+   "end": "2026-11-19T20:09:00Z",
+   "reason": "Carga de um emissor elevada acima da referência; regime fora do escopo deste estudo."
+  }
+ ],
+ "transformations": [
+  "radios and senders renamed to public nodes N1–N6",
+  "only allowlisted telemetry quantities exported, under semantic names with units",
+  "samples outside the windows or inside withheld intervals removed",
+  "addresses, equipment identifiers, MAC addresses and firmware removed",
+  "regime names normalized to idle, capacity and reference",
+  "runs identified by window and sequence"
+ ],
+ "files": {
+  "application_steps.csv": {
+   "sha256": "b5ccfc79d5cc2adadfda5b3900fd36f6a1106276db165e2599e8ec721a245161",
+   "rows": 269
+  },
+  "codebook.yaml": {
+   "sha256": "8750337379fc3c46c19e0f2f38650833a2cee66da7df9bbf646d890877678d7f",
+   "rows": null
+  },
+  "README.md": {
+   "sha256": "0b9e011a7262d20a53d66e7d87c1915fd7a069a838b52b4461edfd672bde3cb3",
+   "rows": null
+  },
+  "runs.csv": {
+   "sha256": "e5235465b80119fcad236f1bfa5c52031ade6b0ce646a9f07771072ba2e18297",
+   "rows": 20
+  },
+  "telemetry.csv": {
+   "sha256": "9bc6d8d2ca0425aacc3ed72b4d8ed11d2f581db1fac868b8daea5807509c10aa",
+   "rows": 183503
+  },
+  "windows.csv": {
+   "sha256": "80b88c0ff6b5cc92e91978846a404e35bb7d0fc2ebe20b7a8f3d782f2e4bd24d",
+   "rows": 4
+  }
+ }
+}

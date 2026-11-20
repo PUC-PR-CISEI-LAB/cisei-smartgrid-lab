@@ -45,8 +45,9 @@ offered load per source and step, start time, step duration, and termination cri
 These records support temporal alignment of observations with experimental interventions
 and documentation of entity–activity–agent relationships using PROV-DM [W3CPROVDM].
 
-Dataset publication is planned as versioned releases with persistent identifiers (DOIs),
-following finalization of the annotation scheme. Data curation is guided by the FAIR
+Datasets are published as versioned packages under [`data/`](../../data/), each with a
+dataset card, a codebook, and a manifest of SHA-256 hashes, and receive a persistent
+identifier (DOI) at release. Data curation is guided by the FAIR
 principles [Wilkinson2016]. Before public release, access may be requested through the
 repository's access-request issue template.
 
